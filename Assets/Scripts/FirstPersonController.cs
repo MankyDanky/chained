@@ -19,7 +19,13 @@ public class FirstPersonController : MonoBehaviour
     private float dashTime = 0.2f;
     private float dashCD = 2.5f;
 
+    public static Transform Instance;
 
+
+    void Awake()
+    {
+        Instance = transform;
+    }
 
 
 
