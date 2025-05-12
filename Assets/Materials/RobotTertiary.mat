@@ -121,6 +121,7 @@ Material:
     - _ShadowStep: 0.3
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
+    - _SpecularCutoff: 0.9
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1

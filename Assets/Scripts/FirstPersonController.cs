@@ -10,17 +10,17 @@ public class FirstPersonController : MonoBehaviour
     private float playerHeight = 1f;
     private float xRotation = 0f;
     private float yRotation = 0f;
-
     public float jumpForce = 5f;
-
+    public static Transform Instance;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void FixedUpdate()
+    void Awake()
     {
+        Instance = transform;
     }
 
     void Update()
