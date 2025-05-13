@@ -9,14 +9,20 @@ public class Health : MonoBehaviour
     public float currentHealth;
     private string currentSceneName;
 
+
+    public HealthBar healthBar;
+
     private void Awake()
     {
-        currentHealth = MaxHealth; 
+        currentHealth = MaxHealth;
+        healthBar.SetMaxHP(MaxHealth);
     }
 
-    public void takeDamage (int damageNum)
+    public void takeDamage(int damageNum)
     {
         currentHealth -= damageNum;
+        healthBar.SetHealth(currentHealth);
+
         Debug.Log(gameObject.name + " took" + damageNum + " damage");
 
         if (currentHealth <= 0)
@@ -28,12 +34,12 @@ public class Health : MonoBehaviour
     //Coroutine for dying
     private IEnumerator Die()
     {
-        
+
         Debug.Log(gameObject.name + " Died!");
         yield return new WaitForSeconds(2f);
         currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
-        
+
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,6 +50,6 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

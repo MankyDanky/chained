@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class CubeAttackTest : MonoBehaviour
+public class AttackTest : MonoBehaviour
 {
 
     public int damage = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void Attack(GameObject target) { 
+    public void Attack(GameObject target)
+    {
         Health health = target.GetComponent<Health>();
 
         if (health != null)
@@ -20,13 +21,13 @@ public class CubeAttackTest : MonoBehaviour
     }
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter(Collision collision)
