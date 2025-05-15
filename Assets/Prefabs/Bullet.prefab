@@ -235,7 +235,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8129130854191216553}
   serializedVersion: 4
-  m_Mass: 0.1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -253,7 +253,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3117076609078782509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,4 +266,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affa5a1cffb894301a7d70ad5045543c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyEffect: {fileID: 2340278475638198624, guid: 5f2fe7ad93c4d40bb9761165c35931b2, type: 3}
+  destroyEffect: {fileID: 8874534853475733122, guid: 5f2fe7ad93c4d40bb9761165c35931b2, type: 3}

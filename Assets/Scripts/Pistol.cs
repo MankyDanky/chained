@@ -6,6 +6,7 @@ public class Pistol : MonoBehaviour
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private float bulletSpeed = 20f;
     [SerializeField] private float fireRate = 0.5f;
+    [SerializeField] private GameObject muzzleFlashPrefab;
     private float nextFireTime = 0f;
 
     void Start()
@@ -26,5 +27,9 @@ public class Pistol : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        muzzleFlash.transform.SetParent(this.transform);
+        muzzleFlash.transform.localScale = new Vector3(5f, 5f, 5f);
+        Destroy(muzzleFlash, 0.4f);
     }
 }
