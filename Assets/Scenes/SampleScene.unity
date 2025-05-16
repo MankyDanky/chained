@@ -141,6 +141,8 @@ MonoBehaviour:
   bulletSpeed: 50
   fireRate: 0.5
   muzzleFlashPrefab: {fileID: 3955237482200955204, guid: ddb9282fa2ec647a99ecf7b8a2407e0a, type: 3}
+  gunPivot: {fileID: 1583544786}
+  recoil: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,11 +590,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7946830120252843281, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+--- !u!1 &1583544786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2206155093615653542, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+  m_PrefabInstance: {fileID: 4038017385692834520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1812371973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3548695637645785024, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}

@@ -7,7 +7,12 @@ public class Pistol : MonoBehaviour
     [SerializeField] private float bulletSpeed = 20f;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private GameObject muzzleFlashPrefab;
+    [SerializeField] private GameObject gunPivot;
+    private float targetRecoil = 0.0f;
+    private float recoil = 0.0f;
+    private float lastFireTime = 0f;
     private float nextFireTime = 0f;
+    
 
     void Start()
     {
@@ -16,6 +21,19 @@ public class Pistol : MonoBehaviour
 
     void Update()
     {
+        lastFireTime += Time.deltaTime;
+        recoil = Mathf.Lerp(recoil, targetRecoil, lastFireTime * 10f);
+        gunPivot.transform.localRotation = Quaternion.Euler(-recoil, 0f, 0f);
+
+        if (targetRecoil > 0f)
+        {
+            targetRecoil -= Time.deltaTime * 10f;
+        }
+        else
+        {
+            targetRecoil = 0f;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             Fire();
@@ -29,7 +47,8 @@ public class Pistol : MonoBehaviour
         bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
         GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         muzzleFlash.transform.SetParent(this.transform);
-        muzzleFlash.transform.localScale = new Vector3(5f, 5f, 5f);
         Destroy(muzzleFlash, 0.4f);
+        lastFireTime = 0f;
+        targetRecoil += 3f;
     }
 }
