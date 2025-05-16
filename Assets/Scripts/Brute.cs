@@ -38,13 +38,11 @@ public class Brute : Enemy
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         } else if (Vector3.Distance(transform.position, player.position) < attackRange)
         {
-            Debug.Log("Grunt is in range to attack!");
             animator.SetBool("isWalking", false);
             animator.SetTrigger("attack");
         }
         else
         {
-            Debug.Log("Grunt is moving towards player!");
             animator.SetBool("isWalking", true);
             animator.ResetTrigger("attack");
             return;

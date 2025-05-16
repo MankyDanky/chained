@@ -45,9 +45,11 @@ public class Pistol : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
-        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        float scale = Random.Range(0.02f, 0.05f);
+        float rotation = Random.Range(0f, 360f);
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation * Quaternion.Euler(rotation, -90f, 0f));
+        muzzleFlash.transform.localScale = new Vector3(scale, scale, scale);
         muzzleFlash.transform.SetParent(this.transform);
-        Destroy(muzzleFlash, 0.4f);
         lastFireTime = 0f;
         targetRecoil += 3f;
     }
