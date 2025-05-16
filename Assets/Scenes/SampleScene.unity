@@ -142,7 +142,6 @@ MonoBehaviour:
   fireRate: 0.5
   muzzleFlashPrefab: {fileID: 3955237482200955204, guid: ddb9282fa2ec647a99ecf7b8a2407e0a, type: 3}
   gunPivot: {fileID: 1583544786}
-  recoil: 0
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +618,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5622948564381709093, guid: 5fb7bcc4212864fb481cdc3b54ca0227, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.146
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5622948564381709093, guid: 5fb7bcc4212864fb481cdc3b54ca0227, type: 3}
       propertyPath: m_LocalPosition.y
@@ -627,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5622948564381709093, guid: 5fb7bcc4212864fb481cdc3b54ca0227, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.456
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5622948564381709093, guid: 5fb7bcc4212864fb481cdc3b54ca0227, type: 3}
       propertyPath: m_LocalRotation.w
@@ -796,9 +795,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 84068941247900701, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1041456109144162056, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046578609026764610, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046578609026764610, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1327425676379115514, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: outlineMode
@@ -820,6 +831,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1479122919889645832, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1489323297623758953, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -831,6 +846,10 @@ PrefabInstance:
     - target: {fileID: 1551153359518412439, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551153359518412439, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1669624619958547740, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
@@ -859,6 +878,10 @@ PrefabInstance:
     - target: {fileID: 3060906673983968760, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060906673983968760, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3271674685369299594, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
@@ -956,6 +979,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5237159105221310632, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5259091104619360986, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -971,6 +998,10 @@ PrefabInstance:
     - target: {fileID: 6031578993732279846, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6031578993732279846, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6831289443405855411, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: outlineMode

@@ -3,11 +3,21 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] GameObject destroyEffect;
+    Rigidbody rb;
 
-    void OnCollisionEnter(Collision collision)
+    void Start()
     {
-        GameObject effect = Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        Destroy(effect, 2f);
-        Destroy(gameObject);
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        Debug.DrawRay(transform.position, rb.linearVelocity * 100, Color.red);
+        if (Physics.Raycast(transform.position, rb.linearVelocity, out RaycastHit hit, rb.linearVelocity.magnitude * Time.deltaTime * 10.0f))
+        {
+            GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);
+            Destroy(effect, 2f);
+            Destroy(gameObject);
+        }
     }
 }

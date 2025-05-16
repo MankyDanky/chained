@@ -22,7 +22,7 @@ public class Pistol : MonoBehaviour
     void Update()
     {
         lastFireTime += Time.deltaTime;
-        recoil = Mathf.Lerp(recoil, targetRecoil, lastFireTime * 10f);
+        recoil = Mathf.Lerp(recoil, targetRecoil, lastFireTime * 20f);
         gunPivot.transform.localRotation = Quaternion.Euler(-recoil, 0f, 0f);
 
         if (targetRecoil > 0f)
