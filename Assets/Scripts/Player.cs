@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.IO;
 using UnityEngine;
@@ -19,6 +20,11 @@ public class FirstPersonController : MonoBehaviour
     private float dashPower = 96f;
     private float dashTime = 0.2f;
     private float dashCD = 2.5f;
+    private Transform gunPivot;
+    private float gunPivotY;
+    [SerializeField] float bobAmplitude;
+    [SerializeField] private float bobSmoothing = 10f; // Add this line
+    private Vector3 targetGunPosition; // Add this line
 
     public bool isWalking;
 
@@ -40,6 +46,8 @@ public class FirstPersonController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         animator = transform.Find("Model").GetComponent<Animator>();
+        gunPivot = transform.Find("Main Camera/GunPivot");
+        gunPivotY = gunPivot.localPosition.y;
     }
 
     void FixedUpdate()
@@ -103,15 +111,24 @@ public class FirstPersonController : MonoBehaviour
             isWalking = true;
             Vector3 moveDirection = (transform.forward * forwardVelocity + transform.right * rightVelocity).normalized;
             rb.linearVelocity = new Vector3(moveDirection.x * speed, rb.linearVelocity.y, moveDirection.z * speed);
+            float progress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
+            
+            // Calculate target position with bob
+            targetGunPosition = new Vector3(
+                gunPivot.localPosition.x,
+                gunPivotY + Mathf.Sin(progress * Mathf.PI * 4) * bobAmplitude,
+                gunPivot.localPosition.z
+            );
         }
         else
         {
             animator.SetBool("isWalking", false);
             isWalking = false;
+            targetGunPosition = new Vector3(gunPivot.localPosition.x, gunPivotY, gunPivot.localPosition.z);
         }
 
-
-
+        // Smooth the gun position
+        gunPivot.localPosition = Vector3.Lerp(gunPivot.localPosition, targetGunPosition, Time.deltaTime * bobSmoothing);
 
         // Jumping
         RaycastHit hit;
