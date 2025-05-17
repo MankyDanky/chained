@@ -6,9 +6,10 @@ public class Brute : Enemy
     public float attackRange;
     bool stepping = false;
 
-    private void Update()
+    protected override void Update()
     {
         Move();
+        base.Update();
     }
 
     public override void Attack()

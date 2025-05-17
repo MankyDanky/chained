@@ -33,6 +33,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected void UpdateHealthBarVisibility()
     {
+        Debug.Log("Updating health bar visibility");
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector2 mousePos = Input.mousePosition;
 
