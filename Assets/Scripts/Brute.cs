@@ -8,6 +8,7 @@ public class Brute : Enemy
 
     protected override void Update()
     {
+        if (isDead) return;
         Move();
         base.Update();
     }

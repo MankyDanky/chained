@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
@@ -6,6 +7,8 @@ public abstract class Enemy : MonoBehaviour
     protected Animator animator;
     protected RectTransform healthBarFill;
     protected Canvas healthBarCanvas;
+    protected bool isDead = false;
+    [SerializeField] protected GameObject destroyEffect;
 
     public float maxHealth = 100f;
     public float health;
@@ -15,6 +18,18 @@ public abstract class Enemy : MonoBehaviour
     public abstract void TakeDamage(float amount);
     public virtual void Die()
     {
+        isDead = true;
+        animator.SetBool("isDead", true);
+
+        StartCoroutine(Destruct());
+        
+    }
+
+    IEnumerator Destruct()
+    {
+        yield return new WaitForSeconds(1.3f);
+        Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
     }
 
