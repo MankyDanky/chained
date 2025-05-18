@@ -4,6 +4,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Char1GrenadeScript : MonoBehaviour
 {
+
     public int damage = 30;
     public float explosionDelay = 2f;
     public Collider explosionTrigger;
