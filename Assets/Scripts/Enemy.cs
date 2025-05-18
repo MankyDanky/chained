@@ -9,6 +9,7 @@ public abstract class Enemy : MonoBehaviour
     protected Canvas healthBarCanvas;
     protected bool isDead = false;
     [SerializeField] protected GameObject destroyEffect;
+    [SerializeField] protected GameObject armature;
 
     public float maxHealth = 100f;
     public float health;
@@ -27,10 +28,30 @@ public abstract class Enemy : MonoBehaviour
 
     IEnumerator Destruct()
     {
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.5f);
+        this.GetComponent<Collider>().enabled = false;
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.3f);
-        Destroy(gameObject);
+        Destroy(armature);
+        animator.enabled = false;
+        Collider[] colliders = GetComponentsInChildren<Collider>();
+        foreach (Collider collider in colliders)
+        {
+            collider.enabled = true;
+        }
+        Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
+        foreach (Rigidbody rb in rigidbodies)
+        {
+            rb.isKinematic = false;
+            rb.AddExplosionForce(10f, transform.position, 5f);
+        }
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<Collider>() == null)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        Destroy(gameObject, 5f);
     }
 
     protected virtual void Start()
