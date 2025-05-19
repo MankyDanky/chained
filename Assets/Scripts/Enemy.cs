@@ -17,14 +17,22 @@ public abstract class Enemy : MonoBehaviour
     public float moveSpeed;
 
     public abstract void Attack();
-    public abstract void TakeDamage(float amount);
+    public virtual void TakeDamage(float amount) {
+        health -= amount;
+        UpdateHealthBar();
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
     public virtual void Die()
     {
         isDead = true;
         animator.SetBool("isDead", true);
 
         Destroy(this.gameObject, 1.5f);
-        
+
     }
 
     void OnDestroy()
@@ -48,7 +56,6 @@ public abstract class Enemy : MonoBehaviour
 
     protected void UpdateHealthBarVisibility()
     {
-        Debug.Log("Updating health bar visibility");
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector2 mousePos = Input.mousePosition;
 

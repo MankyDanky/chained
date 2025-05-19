@@ -20,12 +20,8 @@ public class Brute : Enemy
 
     public override void TakeDamage(float amount)
     {
-        health -= amount;
-        UpdateHealthBar();
-        if (health <= 0)
-        {
-            Die();
-        }
+        
+        base.TakeDamage(amount);
     }
 
     public override void Die()
