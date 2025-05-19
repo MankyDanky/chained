@@ -176,9 +176,6 @@
         },
         {
             "m_Id": "8e64cf3da6744edd9ffe84da350b5771"
-        },
-        {
-            "m_Id": "14fffc908afc40b5a0fb6d03939bb81c"
         }
     ],
     "m_GroupDatas": [],
@@ -1230,42 +1227,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "14fffc908afc40b5a0fb6d03939bb81c",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 2747.509521484375,
-            "y": -163.60940551757813,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "422f04d67ce9452ebe48382446754e41"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "f9818d38ce704330ad4761270fb1ae7e"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "166d647452054c52a5ccdbda7a537612",
     "m_Id": 2,
@@ -2020,31 +1981,6 @@
         "e32": 0.0,
         "e33": 1.0
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
-    "m_ObjectId": "422f04d67ce9452ebe48382446754e41",
-    "m_Id": 0,
-    "m_DisplayName": "ShadowPatternColor",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
 }
 
 {
@@ -4747,10 +4683,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 1544.9998779296875,
-            "y": -758.0,
-            "width": 181.0,
-            "height": 34.0
+            "x": 1545.0,
+            "y": -750.5,
+            "width": 179.4998779296875,
+            "height": 34.00006103515625
         }
     },
     "m_Slots": [
@@ -5604,7 +5540,7 @@
         "a": 0.0
     },
     "isMainColor": false,
-    "m_ColorMode": 1
+    "m_ColorMode": 0
 }
 
 {
