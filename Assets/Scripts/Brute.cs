@@ -18,10 +18,10 @@ public class Brute : Enemy
         Debug.Log("Grunt attacks with " + attackDamage + " damage!");
     }
 
-    public override void TakeDamage(float amount)
+    public override void TakeDamage(float amount, Vector3 hitPoint)
     {
         
-        base.TakeDamage(amount);
+        base.TakeDamage(amount, hitPoint);
     }
 
     public override void Die()

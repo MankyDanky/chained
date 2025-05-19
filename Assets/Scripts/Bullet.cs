@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
                 Enemy enemy = hit.collider.GetComponent<Enemy>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage(10f);
+                    enemy.TakeDamage(10f, hit.point);
                 }
             }
             GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);

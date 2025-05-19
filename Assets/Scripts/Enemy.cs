@@ -11,13 +11,16 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected GameObject destroyEffect;
     [SerializeField] protected GameObject armature;
     [SerializeField] protected GameObject remains;
+    [SerializeField] protected GameObject hitEffect;
 
     public float maxHealth = 100f;
     public float health;
     public float moveSpeed;
 
     public abstract void Attack();
-    public virtual void TakeDamage(float amount) {
+    public virtual void TakeDamage(float amount, Vector3 hitPoint) {
+        GameObject effect = Instantiate(hitEffect, hitPoint, Quaternion.identity);
+        effect.transform.LookAt(player.position);
         health -= amount;
         UpdateHealthBar();
         if (health <= 0)
