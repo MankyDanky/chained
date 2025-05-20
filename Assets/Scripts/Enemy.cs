@@ -6,6 +6,7 @@ public abstract class Enemy : MonoBehaviour
     protected Transform player;
     protected Animator animator;
     protected RectTransform healthBarFill;
+    protected float healthBarWidth;
     protected Canvas healthBarCanvas;
     protected bool isDead = false;
     [SerializeField] protected GameObject destroyEffect;
@@ -50,6 +51,7 @@ public abstract class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         healthBarFill = transform.Find("HealthBar/Health")?.GetComponent<RectTransform>();
         healthBarCanvas = transform.Find("HealthBar")?.GetComponent<Canvas>();
+        healthBarWidth = healthBarFill.sizeDelta.x;
     }
 
     protected virtual void Update()
@@ -73,7 +75,7 @@ public abstract class Enemy : MonoBehaviour
         if (healthBarFill != null)
         {
             float healthPercent = Mathf.Clamp01(health / maxHealth);
-            healthBarFill.localScale = new Vector3(healthPercent, 1f, 1f);
+            healthBarFill.sizeDelta = new Vector2(healthBarWidth * healthPercent, healthBarFill.sizeDelta.y);
         }
     }
 }

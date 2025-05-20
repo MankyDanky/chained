@@ -257,7 +257,7 @@ MonoBehaviour:
   m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 1
+  m_SoftShadowQuality: 3
 --- !u!1 &439831852
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,7 +1300,7 @@ Transform:
   m_GameObject: {fileID: 949717032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: -2.653, z: -1.541}
+  m_LocalPosition: {x: -1.04, y: -2.653, z: -1.541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6584,6 +6584,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1368063603}
+    - target: {fileID: 3591924018638494334, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -128395366, guid: d1da404b97ed44e91961f645d2cc3b1c, type: 3}
     - target: {fileID: 3696915740378551666, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
