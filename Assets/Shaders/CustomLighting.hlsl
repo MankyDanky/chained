@@ -21,7 +21,10 @@ void MainLight_float(float3 WorldPos, out float3 Direction, out float3 Color, ou
     DistanceAtten = mainLight.distanceAttenuation;
     ShadowSamplingData shadowSamplingData = GetMainLightShadowSamplingData();
     float shadowStrength = GetMainLightShadowStrength();
-    ShadowAtten = SampleShadowmap(shadowCoord, TEXTURE2D_ARGS(_MainLightShadowmapTexture, sampler_MainLightShadowmapTexture), shadowSamplingData, shadowStrength, false); 
+    // Add shadow bias handling
+    float bias = 0.005;
+    ShadowAtten = SampleShadowmap(shadowCoord, TEXTURE2D_ARGS(_MainLightShadowmapTexture, sampler_MainLightShadowmapTexture), shadowSamplingData, shadowStrength, false) + bias;
+    ShadowAtten = saturate(ShadowAtten); // Clamp between 0 and 1
 #endif
 }
 
@@ -33,19 +36,27 @@ void MainLight_half(float3 WorldPos, out half3 Direction, out half3 Color, out h
     DistanceAtten = 1;
     ShadowAtten = 1;
 #else
-#if SHADOWS_SCREEN
+// Make sure shadowCoord is correctly calculated based on the rendering pipeline
+#if defined(SHADOWS_SCREEN)
     half4 clipPos = TransformWorldToHClip(WorldPos);
     half4 shadowCoord = ComputeScreenPos(clipPos);
 #else
     half4 shadowCoord = TransformWorldToShadowCoord(WorldPos);
 #endif
+
+// Make sure to normalize the shadow coordinates if needed
+shadowCoord = shadowCoord / shadowCoord.w;
+
     Light mainLight = GetMainLight(shadowCoord);
     Direction = mainLight.direction;
     Color = mainLight.color;
     DistanceAtten = mainLight.distanceAttenuation;
     ShadowSamplingData shadowSamplingData = GetMainLightShadowSamplingData();
     float shadowStrength = GetMainLightShadowStrength();
-    ShadowAtten = SampleShadowmap(shadowCoord, TEXTURE2D_ARGS(_MainLightShadowmapTexture, sampler_MainLightShadowmapTexture), shadowSamplingData, shadowStrength, false); 
+    // Add shadow bias handling
+    float bias = 0.005;
+    ShadowAtten = SampleShadowmap(shadowCoord, TEXTURE2D_ARGS(_MainLightShadowmapTexture, sampler_MainLightShadowmapTexture), shadowSamplingData, shadowStrength, false) + bias;
+    ShadowAtten = saturate(ShadowAtten); // Clamp between 0 and 1
 #endif
 }
 
