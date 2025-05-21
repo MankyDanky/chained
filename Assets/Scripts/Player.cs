@@ -17,6 +17,7 @@ public class FirstPersonController : MonoBehaviour
     private float yRotation = 0f;
     private bool canDash = true;
     private bool isDashing;
+    private bool isSprinting;
     private float dashPower = 10f;
     private float dashTime = 0.2f;
     private float dashCD = 2.5f;
@@ -99,6 +100,11 @@ public class FirstPersonController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             currentSpeed = Mathf.Min(speed + sprintMulti, 12f);
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
         }
 
         // Handle movement
@@ -117,7 +123,7 @@ public class FirstPersonController : MonoBehaviour
             float progress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
             targetGunPosition = new Vector3(
                 gunPivot.localPosition.x,
-                gunPivotY + Mathf.Sin(progress * Mathf.PI * 4) * bobAmplitude,
+                gunPivotY + Mathf.Sin(progress * Mathf.PI * 4 * (isSprinting? 2f : 1f)) * bobAmplitude * (isSprinting? 2f : 1f),
                 gunPivot.localPosition.z
             );
         }

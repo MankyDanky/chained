@@ -67,7 +67,7 @@ public abstract class Enemy : MonoBehaviour
         float distanceToMouse = Vector2.Distance(screenPos, mousePos);
         float visibilityThreshold = 100f;
 
-        healthBarCanvas.enabled = distanceToMouse < visibilityThreshold && (transform.position - player.position).magnitude < 10f;
+        healthBarCanvas.enabled = distanceToMouse < visibilityThreshold && (transform.position - player.position).magnitude < 30f;
     }
 
     protected void UpdateHealthBar()
