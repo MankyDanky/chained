@@ -11,13 +11,13 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private Transform playerBody;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Animator animator;
-    [SerializeField] private CharacterController controller; // Replace Rigidbody with CharacterController
+    [SerializeField] private CharacterController controller; 
     private float playerHeight = 1f;
     private float xRotation = 0f;
     private float yRotation = 0f;
     private bool canDash = true;
     private bool isDashing;
-    private float dashPower = 10f; // Adjusted for CharacterController
+    private float dashPower = 10f;
     private float dashTime = 0.2f;
     private float dashCD = 2.5f;
     private Transform gunPivot;

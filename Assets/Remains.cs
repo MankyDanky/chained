@@ -28,7 +28,7 @@ public class Remains : MonoBehaviour
         {
             foreach (Material material in meshRenderer.materials)
             {
-                material.SetFloat("_CutoffHeight", Mathf.Lerp(5, -5, timer / 3f));
+                material.SetFloat("_CutoffHeight", Mathf.Lerp(transform.position.y + 5, transform.position.y - 5, timer / 3f));
             }
         }
     }

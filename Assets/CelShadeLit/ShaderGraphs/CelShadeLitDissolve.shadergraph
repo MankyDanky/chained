@@ -249,6 +249,9 @@
         },
         {
             "m_Id": "330e832cfde74982868b6d4a01377da5"
+        },
+        {
+            "m_Id": "bdca48b6c4a84eaa8469c51c69a1e551"
         }
     ],
     "m_GroupDatas": [
@@ -343,9 +346,9 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "0ecd38d8aa68416290c75111f0aad89b"
+                    "m_Id": "bdca48b6c4a84eaa8469c51c69a1e551"
                 },
-                "m_SlotId": 0
+                "m_SlotId": -310655960
             }
         },
         {
@@ -799,6 +802,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "bdca48b6c4a84eaa8469c51c69a1e551"
+                },
+                "m_SlotId": 1
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "0ecd38d8aa68416290c75111f0aad89b"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "cd6da02bf834480c8eaf4a2b8f2f6414"
                 },
                 "m_SlotId": 2
@@ -928,8 +945,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 81.0,
-            "y": 318.4999694824219
+            "x": 389.5000305175781,
+            "y": 321.0
         },
         "m_Blocks": [
             {
@@ -2203,6 +2220,31 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "2ba513bca52f4c0db2f988041781e2e1",
+    "m_Id": 1,
+    "m_DisplayName": "Out_Vector4",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "OutVector4",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "2d19d1d93d4c472cad97fa6173577926",
     "m_Group": {
@@ -2706,6 +2748,31 @@
     "m_Property": {
         "m_Id": "bb2eb8b37df84c3ca622f278fd296572"
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "4cd29ab7e14b45f181f875f0e8fcc2af",
+    "m_Id": -310655960,
+    "m_DisplayName": "Vector4",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Vector4",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -3650,7 +3717,7 @@
     "m_Title": "World-space Cutoff",
     "m_Position": {
         "x": -2911.5,
-        "y": 1607.5001220703125
+        "y": 1607.5
     }
 }
 
@@ -4884,7 +4951,7 @@
     "m_Title": "Noise Sample",
     "m_Position": {
         "x": -3611.0,
-        "y": 777.5000610351563
+        "y": 777.5
     }
 }
 
@@ -5263,6 +5330,51 @@
         "b": 0.0,
         "a": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
+    "m_ObjectId": "bdca48b6c4a84eaa8469c51c69a1e551",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "FogShader",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 364.0,
+            "y": 530.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "4cd29ab7e14b45f181f875f0e8fcc2af"
+        },
+        {
+            "m_Id": "2ba513bca52f4c0db2f988041781e2e1"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"622694329f8f54d10ba33b0841cd64e8\",\n        \"type\": 3\n    }\n}",
+    "m_PropertyGuids": [
+        "5a19c19b-1f97-4e36-b96d-d6929d77826b"
+    ],
+    "m_PropertyIds": [
+        -310655960
+    ],
+    "m_Dropdowns": [],
+    "m_DropdownSelectedEntries": []
 }
 
 {
