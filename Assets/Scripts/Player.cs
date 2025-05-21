@@ -10,37 +10,35 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float sprintMulti = 3f;
     [SerializeField] private Transform playerBody;
     [SerializeField] private Camera playerCamera;
-    [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator animator;
+    [SerializeField] private CharacterController controller; // Replace Rigidbody with CharacterController
     private float playerHeight = 1f;
     private float xRotation = 0f;
     private float yRotation = 0f;
     private bool canDash = true;
     private bool isDashing;
-    private float dashPower = 96f;
+    private float dashPower = 10f; // Adjusted for CharacterController
     private float dashTime = 0.2f;
     private float dashCD = 2.5f;
     private Transform gunPivot;
     private float gunPivotY;
     [SerializeField] float bobAmplitude;
-    [SerializeField] private float bobSmoothing = 10f; // Add this line
-    private Vector3 targetGunPosition; // Add this line
+    [SerializeField] private float bobSmoothing = 10f;
+    private Vector3 targetGunPosition;
+
+    // For CharacterController
+    private Vector3 playerVelocity;
+    private bool isGrounded;
+    [SerializeField] private float gravity = -9.81f;
+    public float jumpForce = 2f;
 
     public bool isWalking;
-
-
     public static Transform Instance;
-
 
     void Awake()
     {
         Instance = transform;
     }
-
-
-
-    public float jumpForce = 5f;
-
 
     void Start()
     {
@@ -48,16 +46,22 @@ public class FirstPersonController : MonoBehaviour
         animator = transform.Find("Model").GetComponent<Animator>();
         gunPivot = transform.Find("Main Camera/GunPivot");
         gunPivotY = gunPivot.localPosition.y;
-    }
-
-    void FixedUpdate()
-    {
+        
+        // Get the CharacterController component
+        if (controller == null)
+            controller = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        //if dashing lock movement
         if (isDashing) { return; }
+
+        // Check if grounded
+        isGrounded = controller.isGrounded;
+        if (isGrounded && playerVelocity.y < 0)
+        {
+            playerVelocity.y = -2f; // Small negative value to keep the controller grounded
+        }
 
         // Get mouse input
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
@@ -71,7 +75,6 @@ public class FirstPersonController : MonoBehaviour
 
         float forwardVelocity = 0;
         float rightVelocity = 0;
-
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -91,29 +94,27 @@ public class FirstPersonController : MonoBehaviour
             rightVelocity = 1;
         }
 
-        //Sprint 
+        // Sprint 
+        float currentSpeed = speed;
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            speed = speed + sprintMulti;
-            if (speed > 12f)
-            {
-                speed = 12f;
-            }
-        }
-        else
-        {
-            speed = 5;
+            currentSpeed = Mathf.Min(speed + sprintMulti, 12f);
         }
 
+        // Handle movement
         if (forwardVelocity != 0 || rightVelocity != 0)
         {
             animator.SetBool("isWalking", true);
             isWalking = true;
-            Vector3 moveDirection = (transform.forward * forwardVelocity + transform.right * rightVelocity).normalized;
-            rb.linearVelocity = new Vector3(moveDirection.x * speed, rb.linearVelocity.y, moveDirection.z * speed);
-            float progress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
             
-            // Calculate target position with bob
+            // Calculate movement direction
+            Vector3 moveDirection = (transform.forward * forwardVelocity + transform.right * rightVelocity).normalized;
+            
+            // Move the character controller
+            controller.Move(moveDirection * currentSpeed * Time.deltaTime);
+            
+            // Calculate gun bob
+            float progress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
             targetGunPosition = new Vector3(
                 gunPivot.localPosition.x,
                 gunPivotY + Mathf.Sin(progress * Mathf.PI * 4) * bobAmplitude,
@@ -127,44 +128,45 @@ public class FirstPersonController : MonoBehaviour
             targetGunPosition = new Vector3(gunPivot.localPosition.x, gunPivotY, gunPivot.localPosition.z);
         }
 
+        // Apply gravity
+        playerVelocity.y += gravity * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
+
         // Smooth the gun position
         gunPivot.localPosition = Vector3.Lerp(gunPivot.localPosition, targetGunPosition, Time.deltaTime * bobSmoothing);
 
         // Jumping
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position - new Vector3(0, playerHeight / 2, 0), Vector3.down, out hit, 0.5f))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            }
+            playerVelocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
 
-
-        //Dash
-        if (Input.GetKey(KeyCode.Q) && canDash == true)
+        // Dash
+        if (Input.GetKey(KeyCode.Q) && canDash)
         {
             StartCoroutine(Dash());
         }
     }
-    //Dash mechanic
+
     private IEnumerator Dash()
     {
         canDash = false;
         isDashing = true;
-        rb.useGravity = false;
-
+        
         Vector3 dashDirection = (transform.forward * Input.GetAxisRaw("Vertical") + transform.right * Input.GetAxisRaw("Horizontal")).normalized;
-
+        
         if (dashDirection == Vector3.zero)
         {
             dashDirection = transform.forward;
         }
-
-        rb.linearVelocity = dashDirection * dashPower;
-
-        yield return new WaitForSeconds(dashTime);
-        rb.useGravity = true;
+        
+        float startTime = Time.time;
+        while (Time.time < startTime + dashTime)
+        {
+            controller.Move(dashDirection * dashPower * Time.deltaTime);
+            yield return null;
+        }
+        
         isDashing = false;
         yield return new WaitForSeconds(dashCD);
         canDash = true;
