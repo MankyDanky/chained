@@ -119,6 +119,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &76189129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5813030325868023232, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+  m_PrefabInstance: {fileID: 4038017385692834520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &76189134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76189129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7765fe039d0f340df876d8ae8943107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.8998743
+      outSlope: 0.8998743
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.18922777
+      value: 0.17028122
+      inSlope: -0.43592617
+      outSlope: -0.43592617
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.32838315
+    - serializedVersion: 3
+      time: 0.9833374
+      value: 0
+      inSlope: -0.005099394
+      outSlope: -0.005099394
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.58241844
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  duration: 1
 --- !u!1 &218872850 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
@@ -9388,6 +9440,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2083737508}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5813030325868023232, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 76189134}
     - targetCorrespondingSourceObject: {fileID: 6318538241023556463, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2096993950}

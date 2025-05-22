@@ -7,13 +7,6 @@ public class Shake : MonoBehaviour
     [SerializeField] AnimationCurve curve;
     [SerializeField] float duration = 1f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (start)
@@ -25,16 +18,16 @@ public class Shake : MonoBehaviour
 
     IEnumerator Shaking()
     {
-        Vector3 startPos = transform.position;
+        Vector3 startPos = transform.localPosition;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
             float strength = curve.Evaluate(elapsedTime / duration);
-            transform.position = startPos + Random.insideUnitSphere * strength;
+            transform.localPosition = startPos + Random.insideUnitSphere * strength;
             yield return null;
         }
-        transform.position = startPos;
+        transform.localPosition = startPos;
     }
 }

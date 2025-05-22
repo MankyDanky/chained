@@ -14,7 +14,8 @@ public class Grenade : MonoBehaviour
     void OnDestroy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
+        Shake shake = GameObject.FindWithTag("MainCamera").GetComponent<Shake>();
+        shake.start = true;
         foreach (GameObject enemy in enemies)
         {
             float distance = Vector3.Distance(transform.position, enemy.transform.position);
