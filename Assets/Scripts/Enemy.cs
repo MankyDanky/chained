@@ -8,6 +8,9 @@ public abstract class Enemy : MonoBehaviour
     protected RectTransform healthBarFill;
     protected float healthBarWidth;
     protected Canvas healthBarCanvas;
+    protected RectTransform healthBarIndicatorFill;
+    protected float healthBarIndicatorWidth;
+    protected float healthBarIndicatorTimer = 0f;
     protected bool isDead = false;
     [SerializeField] protected GameObject destroyEffect;
     [SerializeField] protected GameObject armature;
@@ -19,7 +22,8 @@ public abstract class Enemy : MonoBehaviour
     public float moveSpeed;
 
     public abstract void Attack();
-    public virtual void TakeDamage(float amount, Vector3 hitPoint) {
+    public virtual void TakeDamage(float amount, Vector3 hitPoint)
+    {
         GameObject effect = Instantiate(hitEffect, hitPoint, Quaternion.identity);
         effect.transform.LookAt(player.position);
         health -= amount;
@@ -50,6 +54,7 @@ public abstract class Enemy : MonoBehaviour
         player = FirstPersonController.Instance;
         animator = GetComponent<Animator>();
         healthBarFill = transform.Find("HealthBar/Health")?.GetComponent<RectTransform>();
+        healthBarIndicatorFill = transform.Find("HealthBar/Indicator")?.GetComponent<RectTransform>();
         healthBarCanvas = transform.Find("HealthBar")?.GetComponent<Canvas>();
         healthBarWidth = healthBarFill.sizeDelta.x;
     }
@@ -68,14 +73,17 @@ public abstract class Enemy : MonoBehaviour
         float visibilityThreshold = 100f;
 
         healthBarCanvas.enabled = distanceToMouse < visibilityThreshold && (transform.position - player.position).magnitude < 30f;
+
+        healthBarIndicatorTimer += Time.deltaTime;
+        healthBarIndicatorTimer = Mathf.Clamp01(healthBarIndicatorTimer);
+        healthBarIndicatorFill.sizeDelta = new Vector2(Mathf.Lerp(healthBarIndicatorWidth, healthBarFill.sizeDelta.x, healthBarIndicatorTimer), healthBarIndicatorFill.sizeDelta.y);
     }
 
     protected void UpdateHealthBar()
     {
-        if (healthBarFill != null)
-        {
-            float healthPercent = Mathf.Clamp01(health / maxHealth);
-            healthBarFill.sizeDelta = new Vector2(healthBarWidth * healthPercent, healthBarFill.sizeDelta.y);
-        }
+        float healthPercent = Mathf.Clamp01(health / maxHealth);
+        healthBarFill.sizeDelta = new Vector2(healthBarWidth * healthPercent, healthBarFill.sizeDelta.y);
+        healthBarIndicatorTimer = 0.0f;
+        healthBarIndicatorWidth = healthBarIndicatorFill.sizeDelta.x;
     }
 }

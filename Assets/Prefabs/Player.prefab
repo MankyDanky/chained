@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 84068941247900701}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00012338161, y: -0.7071068, z: 0.00012338161, w: -0.7071068}
-  m_LocalPosition: {x: -0.059118748, y: 0.0021245643, z: 0.009390282}
+  m_LocalPosition: {x: -0.0795, y: 0.0021245643, z: 0.009390282}
   m_LocalScale: {x: -1.7135794, y: -10.52221, z: -1.7135793}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -214,7 +214,7 @@ MonoBehaviour:
   bobAmplitude: 0.005
   bobSmoothing: 10
   gravity: -9.81
-  jumpForce: 5
+  jumpForce: 2
   isWalking: 0
 --- !u!143 &9157053153809182783
 CharacterController:
@@ -798,6 +798,10 @@ PrefabInstance:
       value: -180
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e99760ce31c304fd09ee391e49ecf98f, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e99760ce31c304fd09ee391e49ecf98f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e97912a7077b3492c9caaa3930ff79b0, type: 2}
@@ -835,6 +839,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e99760ce31c304fd09ee391e49ecf98f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 695360943776411798}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e99760ce31c304fd09ee391e49ecf98f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4085174475167312581}
   m_SourcePrefab: {fileID: 100100000, guid: e99760ce31c304fd09ee391e49ecf98f, type: 3}
 --- !u!1 &6318538241023556463 stripped
 GameObject:
@@ -859,6 +866,24 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &4085174475167312581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318538241023556463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99ba8950a9a844818c6583db56891a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8129130854191216553, guid: 5fb7bcc4212864fb481cdc3b54ca0227, type: 3}
+  bulletSpawnPoint: {fileID: 3548695637645785024}
+  bulletSpeed: 50
+  fireRate: 0.5
+  muzzleFlashPrefab: {fileID: 5923055871544199489, guid: ddb9282fa2ec647a99ecf7b8a2407e0a, type: 3}
+  gunPivot: {fileID: 2206155093615653542}
 --- !u!4 &6693516319622324693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e99760ce31c304fd09ee391e49ecf98f, type: 3}

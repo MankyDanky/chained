@@ -1,0 +1,32 @@
+using UnityEngine;
+
+public class Grenade : MonoBehaviour
+{
+    [SerializeField] private float explosionRadius = 5f;
+    [SerializeField] private float explosionDamage = 50f;
+    [SerializeField] private GameObject explosionEffect;
+
+    void Start()
+    {
+        Destroy(gameObject, 3f);
+    }
+
+    void OnDestroy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distance <= explosionRadius)
+            {
+                Enemy enemyScript = enemy.GetComponent<Enemy>();
+                if (enemyScript != null)
+                {
+                    enemyScript.TakeDamage(explosionDamage, enemy.transform.position);
+                }
+            }
+        }
+        Instantiate(explosionEffect, transform.position, Quaternion.identity);
+    }
+}
