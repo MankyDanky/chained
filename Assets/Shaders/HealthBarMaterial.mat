@@ -42,10 +42,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0.5
-    - _BorderWidth: 0.01
+    - _BorderWidth: 0.02
     - _ColorMask: 15
-    - _Health: 0.5
-    - _Height: 0.05
+    - _Health: 2.75
+    - _Height: 0.1
     - _Radius: 0.02
     - _Stencil: 0
     - _StencilComp: 8
@@ -54,10 +54,10 @@ Material:
     - _StencilWriteMask: 255
     - _UIMaskSoftnessX: 1
     - _UIMaskSoftnessY: 1
-    - _Width: 0.48
+    - _Width: 1
     m_Colors:
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
-    - _EdgeColor: {r: 1.2311444, g: 1.2311444, b: 1.2311444, a: 1}
-    - _LiquidColor: {r: 1, g: 0, b: 0, a: 1}
+    - _EdgeColor: {r: 2.9960785, g: 0.9468738, b: 0.9468738, a: 1}
+    - _LiquidColor: {r: 2.9960783, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
