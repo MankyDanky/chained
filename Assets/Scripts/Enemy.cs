@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected GameObject armature;
     [SerializeField] protected GameObject remains;
     [SerializeField] protected GameObject hitEffect;
+    protected NavMeshAgent agent;
 
     public float maxHealth = 100f;
     public float health;
@@ -57,6 +59,7 @@ public abstract class Enemy : MonoBehaviour
         healthBarIndicatorFill = transform.Find("HealthBar/Indicator")?.GetComponent<RectTransform>();
         healthBarCanvas = transform.Find("HealthBar")?.GetComponent<Canvas>();
         healthBarWidth = healthBarFill.sizeDelta.x;
+        agent = GetComponent<NavMeshAgent>();
     }
 
     protected virtual void Update()

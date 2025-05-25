@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
+    public float health = 100f;
+    public float maxHealth = 100f;
     [SerializeField] public float speed = 5f;
     [SerializeField] private float mouseSensitivity = 2f;
     [SerializeField] private float sprintMulti = 3f;

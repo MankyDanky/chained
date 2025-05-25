@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Brute : Enemy
 {
@@ -20,39 +21,47 @@ public class Brute : Enemy
 
     public override void TakeDamage(float amount, Vector3 hitPoint)
     {
-        
+
         base.TakeDamage(amount, hitPoint);
     }
 
     public override void Die()
     {
-        base.Die(); 
+        agent.speed = 0;
+        agent.isStopped = true;
+        base.Die();
     }
 
     private void Move()
     {
-        transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
+
         if (stepping)
         {
-            transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-        } else if (Vector3.Distance(transform.position, player.position) < attackRange)
+            agent.speed = moveSpeed;
+            agent.SetDestination(player.position);
+        }
+        else if (Vector3.Distance(transform.position, player.position) < attackRange)
         {
+            agent.speed = 0;
             animator.SetBool("isWalking", false);
             animator.SetTrigger("attack");
         }
         else
         {
+            agent.speed = 0;
             animator.SetBool("isWalking", true);
             animator.ResetTrigger("attack");
             return;
         }
     }
 
-    private void StartStep() {
+    private void StartStep()
+    {
         stepping = true;
     }
 
-    private void StopStep() {
+    private void StopStep()
+    {
         stepping = false;
     }
 }
