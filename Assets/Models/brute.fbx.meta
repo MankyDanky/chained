@@ -141,15 +141,15 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.58180803
-        functionName: SpawnSpike
+      - time: 0.57803506
+        functionName: SpawnSpecialAttackEffect
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.99832493
-        functionName: StopSpecialAttack
+      - time: 0.58180803
+        functionName: SpawnSpike
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

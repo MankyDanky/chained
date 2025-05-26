@@ -9,6 +9,7 @@ public class RockSpike : MonoBehaviour
     [SerializeField] GameObject[] spikePrefabs;
     [SerializeField] List<MeshRenderer> spikeMeshRenderers = new List<MeshRenderer>();
     public float spawnCount;
+    [SerializeField] LayerMask groundLayer;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class RockSpike : MonoBehaviour
     IEnumerator SpawnNextSpike()
     {
         yield return new WaitForSeconds(0.15f);
-        if (spawnCount < 8 && Physics.Raycast(transform.position + transform.forward * 1.5f + transform.up, Vector3.down, out RaycastHit hit, 2f))
+        if (spawnCount < 8 && Physics.Raycast(transform.position + transform.forward * 1.5f + transform.up, Vector3.down, out RaycastHit hit, 2f, groundLayer))
         {
             GameObject spikePrefab = spikePrefabs[Random.Range(0, spikePrefabs.Length)];
             GameObject newSpike = Instantiate(spikePrefab, hit.point, Quaternion.identity);

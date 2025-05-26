@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6349750058228212680}
   - component: {fileID: 9048737099523387054}
   - component: {fileID: 904419130308050194}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4902,7 +4902,7 @@ GameObject:
   - component: {fileID: 667201088042681602}
   - component: {fileID: 6865318170433179390}
   - component: {fileID: 1842937608363711000}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Shockwave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9842,6 +9842,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6093592463355912122, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -9850,6 +9854,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: cd370dff90ac14b6f8864dd3e138b63d, type: 2}
+    - target: {fileID: -5568371526223589888, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
+      propertyPath: m_Layer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -2577548232221058511, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9857,6 +9865,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       propertyPath: m_Name
       value: rock-spike-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       propertyPath: m_IsActive
@@ -9895,6 +9907,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 54872611353047311}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 873245148725895236}
   m_SourcePrefab: {fileID: 100100000, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
 --- !u!1 &6031544174803259558 stripped
 GameObject:
@@ -9941,6 +9956,30 @@ MonoBehaviour:
   - {fileID: 6031544174803259558}
   spikeMeshRenderers: []
   spawnCount: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 129
+--- !u!65 &873245148725895236
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031544174803259558}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7575933, y: 2.63196, z: 1.6877594}
+  m_Center: {x: 0, y: 1.3055677, z: 0.029144287}
 --- !u!4 &6412995941926291996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
@@ -10081,6 +10120,10 @@ PrefabInstance:
     - target: {fileID: 9104511306309097508, guid: 87b5f27b0f9d848229e5c533bea8230b, type: 3}
       propertyPath: m_Name
       value: SpikeAppearEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104511306309097508, guid: 87b5f27b0f9d848229e5c533bea8230b, type: 3}
+      propertyPath: m_Layer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9104511306309097508, guid: 87b5f27b0f9d848229e5c533bea8230b, type: 3}
       propertyPath: m_IsActive

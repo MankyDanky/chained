@@ -7,6 +7,7 @@ public class Brute : Enemy
     [SerializeField] float attackRange;
     [SerializeField] float specialAttackRange;
     [SerializeField] float specialAttackCooldown;
+    [SerializeField] GameObject specialAttackEffect;
     public float specialAttackTimer = 0f;
     bool stepping = false;
     bool attacking = false;
@@ -84,6 +85,16 @@ public class Brute : Enemy
     private void StopStep()
     {
         stepping = false;
+    }
+
+    private void SpawnSpecialAttackEffect()
+    {
+        Shake shake = Camera.main.GetComponent<Shake>();
+        shake.start = true;
+        if (Physics.Raycast(transform.position + transform.forward, Vector3.down, out RaycastHit hit, 2.0f))
+        {
+            Instantiate(specialAttackEffect, hit.point, Quaternion.identity);
+        }
     }
 
     private void SpawnSpike()
