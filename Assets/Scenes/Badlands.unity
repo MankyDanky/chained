@@ -4375,7 +4375,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 239
   m_UseGeometry: 1
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -9678,11 +9678,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6473506656431596784, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 8
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7946830120252843281, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946830120252843281, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
