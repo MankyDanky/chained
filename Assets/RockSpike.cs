@@ -5,6 +5,7 @@ using UnityEngine;
 public class RockSpike : MonoBehaviour
 {
     Transform player;
+    FirstPersonController playerController;
 
     [SerializeField] GameObject[] spikePrefabs;
     [SerializeField] List<MeshRenderer> spikeMeshRenderers = new List<MeshRenderer>();
@@ -21,6 +22,13 @@ public class RockSpike : MonoBehaviour
             }
         }
         player = FirstPersonController.Instance;
+        playerController = player.GetComponent<FirstPersonController>();
+        if ((transform.position - player.position).magnitude < 1.3f)
+        {
+            playerController.TakeDamage(10f);
+            playerController.gameObject.GetComponent<Rigidbody>().AddForce((player.position - transform.position).normalized * 10f, ForceMode.Impulse);
+        }
+
         StartCoroutine(SpawnNextSpike());
     }
 

@@ -13,7 +13,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private Transform playerBody;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Animator animator;
-    [SerializeField] private CharacterController controller; 
+    [SerializeField] private CharacterController controller;
     private float playerHeight = 1f;
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -49,7 +49,7 @@ public class FirstPersonController : MonoBehaviour
         animator = transform.Find("Model").GetComponent<Animator>();
         gunPivot = transform.Find("Main Camera/GunPivot");
         gunPivotY = gunPivot.localPosition.y;
-        
+
         // Get the CharacterController component
         if (controller == null)
             controller = GetComponent<CharacterController>();
@@ -114,18 +114,18 @@ public class FirstPersonController : MonoBehaviour
         {
             animator.SetBool("isWalking", true);
             isWalking = true;
-            
+
             // Calculate movement direction
             Vector3 moveDirection = (transform.forward * forwardVelocity + transform.right * rightVelocity).normalized;
-            
+
             // Move the character controller
             controller.Move(moveDirection * currentSpeed * Time.deltaTime);
-            
+
             // Calculate gun bob
             float progress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
             targetGunPosition = new Vector3(
                 gunPivot.localPosition.x,
-                gunPivotY + Mathf.Sin(progress * Mathf.PI * 4 * (isSprinting? 2f : 1f)) * bobAmplitude * (isSprinting? 2f : 1f),
+                gunPivotY + Mathf.Sin(progress * Mathf.PI * 4 * (isSprinting ? 2f : 1f)) * bobAmplitude * (isSprinting ? 2f : 1f),
                 gunPivot.localPosition.z
             );
         }
@@ -160,23 +160,33 @@ public class FirstPersonController : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-        
+
         Vector3 dashDirection = (transform.forward * Input.GetAxisRaw("Vertical") + transform.right * Input.GetAxisRaw("Horizontal")).normalized;
-        
+
         if (dashDirection == Vector3.zero)
         {
             dashDirection = transform.forward;
         }
-        
+
         float startTime = Time.time;
         while (Time.time < startTime + dashTime)
         {
             controller.Move(dashDirection * dashPower * Time.deltaTime);
             yield return null;
         }
-        
+
         isDashing = false;
         yield return new WaitForSeconds(dashCD);
         canDash = true;
+    }
+
+    public void TakeDamage(float amount)
+    {
+        health -= amount;
+    }
+    
+    public void ApplyImpulse(Vector3 force)
+    {
+        playerVelocity += force;
     }
 }
