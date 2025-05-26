@@ -9843,9 +9843,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -6093592463355912122, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6093592463355912122, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b60a23a8339df49289cec7ce0a8151bc, type: 2}
+      objectReference: {fileID: 2100000, guid: cd370dff90ac14b6f8864dd3e138b63d, type: 2}
     - target: {fileID: -2577548232221058511, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9871,9 +9875,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b60a23a8339df49289cec7ce0a8151bc, type: 2}
+      objectReference: {fileID: 2100000, guid: cd370dff90ac14b6f8864dd3e138b63d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -9931,6 +9939,8 @@ MonoBehaviour:
   - {fileID: 3991078426282895762, guid: de348ee777fef47d58ba85819484770b, type: 3}
   - {fileID: 7032260358728112203, guid: ae26783500f2b41b3acae74a3b1514b3, type: 3}
   - {fileID: 6031544174803259558}
+  spikeMeshRenderers: []
+  spawnCount: 0
 --- !u!4 &6412995941926291996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f6776177d79704c2d89c90291ead1d11, type: 3}
