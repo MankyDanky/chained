@@ -3,13 +3,18 @@ using UnityEngine.AI;
 
 public class Brute : Enemy
 {
-    public float attackDamage;
-    public float attackRange;
+    [SerializeField] float attackDamage;
+    [SerializeField] float attackRange;
+    [SerializeField] float specialAttackRange;
+    [SerializeField] float specialAttackCooldown;
+    public float specialAttackTimer = 0f;
     bool stepping = false;
+    bool attacking = false;
     [SerializeField] GameObject spike;
 
     protected override void Update()
     {
+        specialAttackTimer += Time.deltaTime;
         if (isDead) return;
         Move();
         base.Update();
@@ -43,22 +48,37 @@ public class Brute : Enemy
         }
         else if (Vector3.Distance(transform.position, player.position) < attackRange)
         {
+            stepping = false;
+            agent.speed = 0;
+            attacking = true;
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isAttacking", true);
+        }
+        else if (Vector3.Distance(transform.position, player.position) < specialAttackRange && specialAttackTimer >= specialAttackCooldown && !attacking)
+        {
             agent.speed = 0;
             animator.SetBool("isWalking", false);
-            animator.SetTrigger("attack");
+            animator.SetBool("isAttacking", false);
+            animator.SetTrigger("specialAttack");
+            specialAttackTimer = 0f;
         }
         else
         {
+            attacking = false;
             agent.speed = 0;
             animator.SetBool("isWalking", true);
-            animator.ResetTrigger("attack");
+            animator.SetBool("isAttacking", false);
+            animator.ResetTrigger("specialAttack");
             return;
         }
     }
 
     private void StartStep()
     {
-        stepping = true;
+        if (!attacking)
+        {
+            stepping = true;
+        }
     }
 
     private void StopStep()
