@@ -267,3 +267,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyEffect: {fileID: 8874534853475733122, guid: 5f2fe7ad93c4d40bb9761165c35931b2, type: 3}
+  splashEffect: {fileID: 2169505092314543729, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}

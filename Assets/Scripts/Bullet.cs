@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] GameObject destroyEffect;
+    [SerializeField] GameObject splashEffect;
     Rigidbody rb;
 
     void Start()
@@ -22,10 +23,24 @@ public class Bullet : MonoBehaviour
                 {
                     enemy.TakeDamage(10f, hit.point);
                 }
+                GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);
+                Destroy(effect, 2f);
+                Destroy(gameObject);
             }
-            GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);
-            Destroy(effect, 2f);
-            Destroy(gameObject);
+            else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Water"))
+            {
+                GameObject splash = Instantiate(splashEffect, hit.point, Quaternion.identity);
+                splash.transform.forward = hit.normal;
+                Color waterColor = hit.collider.GetComponent<Renderer>().material.GetColor("_BaseColor");
+                splash.GetComponent<Renderer>().material.SetColor("_Color", new Color(waterColor.r, waterColor.g, waterColor.b, 1f));
+                Destroy(gameObject);
+            }
+            else
+            {
+                GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);
+                Destroy(effect, 2f);
+                Destroy(gameObject);
+            }
         }
     }
 }

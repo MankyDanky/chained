@@ -60,7 +60,7 @@ Material:
     - _RippleDensity: 1000
     - _RippleSlimness: 10
     - _RippleSpeed: 0.5
-    - _WaveAmplitude: 1
+    - _WaveAmplitude: 0.1
     - _WaveSpeed: 1
     - _WaveTiling: 100
     m_Colors:
