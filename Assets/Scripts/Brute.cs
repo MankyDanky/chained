@@ -6,6 +6,7 @@ public class Brute : Enemy
     public float attackDamage;
     public float attackRange;
     bool stepping = false;
+    [SerializeField] GameObject spike;
 
     protected override void Update()
     {
@@ -63,5 +64,15 @@ public class Brute : Enemy
     private void StopStep()
     {
         stepping = false;
+    }
+
+    private void SpawnSpike()
+    {
+        if (Physics.Raycast(transform.position + transform.forward, Vector3.down, out RaycastHit hit, 2.0f))
+        {
+            Debug.DrawLine(transform.position + transform.forward, hit.point, Color.red, 2.0f);
+            GameObject spikeInstance = Instantiate(spike, hit.point, Quaternion.identity);
+            spikeInstance.transform.forward = transform.forward;
+        }
     }
 }
