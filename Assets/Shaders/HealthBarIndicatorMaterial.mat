@@ -44,7 +44,7 @@ Material:
     - _AlphaClip: 0.5
     - _BorderWidth: 0.02
     - _ColorMask: 15
-    - _Health: 0.8
+    - _Health: 0.6
     - _Height: 0.1
     - _Radius: 0.02
     - _Stencil: 0

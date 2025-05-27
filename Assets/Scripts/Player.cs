@@ -144,6 +144,16 @@ public class FirstPersonController : MonoBehaviour
         playerVelocity.y += gravity * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
 
+        // Apply gun movement on jump/fall
+        if (!isGrounded)
+        {
+            targetGunPosition = new Vector3(
+                gunPivot.localPosition.x,
+                gunPivotY - Mathf.Clamp(playerVelocity.y, -5, 5) * 0.01f, // Adjust the y position based on vertical velocity
+                gunPivot.localPosition.z
+            );
+        }
+
         // Smooth the gun position
         gunPivot.localPosition = Vector3.Lerp(gunPivot.localPosition, targetGunPosition, Time.deltaTime * bobSmoothing);
 
