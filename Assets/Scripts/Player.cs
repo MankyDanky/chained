@@ -14,6 +14,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterController controller;
+    [SerializeField] private HealthBar healthBar;
     private float playerHeight = 1f;
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -28,9 +29,10 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] float bobAmplitude;
     [SerializeField] private float bobSmoothing = 10f;
     private Vector3 targetGunPosition;
+    Shake shake;
 
     // For CharacterController
-    private Vector3 playerVelocity;
+    [SerializeField] private Vector3 playerVelocity;
     private bool isGrounded;
     [SerializeField] private float gravity = -9.81f;
     public float jumpForce = 2f;
@@ -45,6 +47,8 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
+        shake = Camera.main.GetComponent<Shake>();
+        healthBar = GameObject.Find("/Canvas/HealthBar").GetComponent<HealthBar>();
         Cursor.lockState = CursorLockMode.Locked;
         animator = transform.Find("Model").GetComponent<Animator>();
         gunPivot = transform.Find("Main Camera/GunPivot");
@@ -63,7 +67,7 @@ public class FirstPersonController : MonoBehaviour
         isGrounded = controller.isGrounded;
         if (isGrounded && playerVelocity.y < 0)
         {
-            playerVelocity.y = -2f; // Small negative value to keep the controller grounded
+            playerVelocity.y = -2f;
         }
 
         // Get mouse input
@@ -149,6 +153,28 @@ public class FirstPersonController : MonoBehaviour
             playerVelocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
 
+        // Damping
+        if (playerVelocity.x > 0)
+        {
+            playerVelocity.x -= playerVelocity.x * Time.deltaTime * 5f;
+            if (playerVelocity.x < 0.01f) { playerVelocity.x = 0; }
+        }
+        else if (playerVelocity.x < 0)
+        {
+            playerVelocity.x -= playerVelocity.x * Time.deltaTime * 5f;
+            if (playerVelocity.x > -0.01f) { playerVelocity.x = 0; }
+        }
+        if (playerVelocity.z > 0)
+        {
+            playerVelocity.z -= playerVelocity.z * Time.deltaTime * 5f;
+            if (playerVelocity.z < 0.01f && playerVelocity.z > -0.01f) { playerVelocity.z = 0; }
+        } else if (playerVelocity.z < 0)
+        {
+            playerVelocity.z -= playerVelocity.z * Time.deltaTime * 5f;
+            if (playerVelocity.z > -0.01f && playerVelocity.z < 0.01f) { playerVelocity.z = 0; }
+        }
+        
+
         // Dash
         if (Input.GetKey(KeyCode.Q) && canDash)
         {
@@ -183,6 +209,9 @@ public class FirstPersonController : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
+        healthBar.UpdateHealthBar();
+        shake.start = true;
+        shake.startHurt = true;
     }
     
     public void ApplyImpulse(Vector3 force)

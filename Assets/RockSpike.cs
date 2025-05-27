@@ -23,10 +23,10 @@ public class RockSpike : MonoBehaviour
         }
         player = FirstPersonController.Instance;
         playerController = player.GetComponent<FirstPersonController>();
-        if ((transform.position - player.position).magnitude < 1.3f)
+        if ((transform.position - player.position).magnitude < 1.5f)
         {
             playerController.TakeDamage(10f);
-            playerController.gameObject.GetComponent<Rigidbody>().AddForce((player.position - transform.position).normalized * 10f, ForceMode.Impulse);
+            playerController.ApplyImpulse(transform.forward * 10f + Vector3.up * 5f);
         }
 
         StartCoroutine(SpawnNextSpike());

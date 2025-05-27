@@ -5,6 +5,7 @@ using UnityEngine.AI;
 public abstract class Enemy : MonoBehaviour
 {
     protected Transform player;
+    protected FirstPersonController playerController;
     protected Animator animator;
     protected RectTransform healthBarFill;
     protected float healthBarWidth;
@@ -54,6 +55,7 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         player = FirstPersonController.Instance;
+        playerController = player.GetComponent<FirstPersonController>();
         animator = GetComponent<Animator>();
         healthBarFill = transform.Find("HealthBar/Health")?.GetComponent<RectTransform>();
         healthBarIndicatorFill = transform.Find("HealthBar/Indicator")?.GetComponent<RectTransform>();

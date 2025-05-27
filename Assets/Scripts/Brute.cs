@@ -12,6 +12,7 @@ public class Brute : Enemy
     bool stepping = false;
     bool attacking = false;
     [SerializeField] GameObject spike;
+    
 
     protected override void Update()
     {
@@ -54,6 +55,7 @@ public class Brute : Enemy
             attacking = true;
             animator.SetBool("isWalking", false);
             animator.SetBool("isAttacking", true);
+            transform.LookAt(new Vector3(player.position.x, transform.position.y, player.position.z));
         }
         else if (Vector3.Distance(transform.position, player.position) < specialAttackRange && specialAttackTimer >= specialAttackCooldown && !attacking)
         {
@@ -104,6 +106,15 @@ public class Brute : Enemy
             Debug.DrawLine(transform.position + transform.forward, hit.point, Color.red, 2.0f);
             GameObject spikeInstance = Instantiate(spike, hit.point, Quaternion.identity);
             spikeInstance.transform.forward = transform.forward;
+        }
+    }
+
+    void PunchPlayer()
+    {
+        if ((transform.position - player.position).magnitude < attackRange)
+        {
+            playerController.TakeDamage(attackDamage);
+            playerController.ApplyImpulse(transform.forward * 10f + Vector3.up * 5f);
         }
     }
 }
