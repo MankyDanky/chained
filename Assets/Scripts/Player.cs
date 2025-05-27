@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
+    Camera mainCamera;
+    Camera weaponCamera;
+    float targetFOV = 60f;
     public float health = 100f;
     public float maxHealth = 100f;
     [SerializeField] public float speed = 5f;
@@ -21,11 +24,13 @@ public class FirstPersonController : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private bool isSprinting;
-    private float dashPower = 10f;
+    private float dashPower = 20f;
     private float dashTime = 0.2f;
-    private float dashCD = 2.5f;
+    private float dashCooldown = 2.5f;
     private Transform gunPivot;
     private float gunPivotY;
+    private float gunPivotX;
+    private float gunPivotZ;
     [SerializeField] float bobAmplitude;
     [SerializeField] private float bobSmoothing = 10f;
     private Vector3 targetGunPosition;
@@ -47,21 +52,21 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        shake = Camera.main.GetComponent<Shake>();
+        mainCamera = Camera.main;
+        weaponCamera = mainCamera.transform.Find("WeaponCamera").GetComponent<Camera>();
+        shake = mainCamera.GetComponent<Shake>();
         healthBar = GameObject.Find("/Canvas/HealthBar").GetComponent<HealthBar>();
         Cursor.lockState = CursorLockMode.Locked;
         animator = transform.Find("Model").GetComponent<Animator>();
         gunPivot = transform.Find("Main Camera/GunPivot");
         gunPivotY = gunPivot.localPosition.y;
-
-        // Get the CharacterController component
-        if (controller == null)
-            controller = GetComponent<CharacterController>();
+        gunPivotX = gunPivot.localPosition.x;
+        gunPivotZ = gunPivot.localPosition.z;
+        controller = GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        if (isDashing) { return; }
 
         // Check if grounded
         isGrounded = controller.isGrounded;
@@ -70,51 +75,60 @@ public class FirstPersonController : MonoBehaviour
             playerVelocity.y = -2f;
         }
 
-        // Get mouse input
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        // Get mouse input (only if not dashing)
+        if (!isDashing)
+        {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        // Adjust camera and player rotation
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.Rotate(Vector3.up * mouseX);
+            // Adjust camera and player rotation
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+            playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            transform.Rotate(Vector3.up * mouseX);
+        }
 
         float forwardVelocity = 0;
         float rightVelocity = 0;
 
-        if (Input.GetKey(KeyCode.W))
+        // Only allow movement input if not dashing
+        if (!isDashing)
         {
-            forwardVelocity = 1;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            forwardVelocity = -1;
+            if (Input.GetKey(KeyCode.W))
+            {
+                forwardVelocity = 1;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                forwardVelocity = -1;
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                rightVelocity = -1;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                rightVelocity = 1;
+            }
         }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            rightVelocity = -1;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            rightVelocity = 1;
-        }
-
-        // Sprint 
+        // Sprint (only if not dashing)
         float currentSpeed = speed;
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+        if (!isDashing && (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
         {
+            targetFOV = 70f;
             currentSpeed = Mathf.Min(speed + sprintMulti, 12f);
             isSprinting = true;
         }
         else
         {
             isSprinting = false;
+            if (!isDashing) {targetFOV = 60f;}
         }
 
-        // Handle movement
-        if (forwardVelocity != 0 || rightVelocity != 0)
+        // Handle movement (only if not dashing)
+        if (!isDashing && (forwardVelocity != 0 || rightVelocity != 0))
         {
             animator.SetBool("isWalking", true);
             isWalking = true;
@@ -133,7 +147,7 @@ public class FirstPersonController : MonoBehaviour
                 gunPivot.localPosition.z
             );
         }
-        else
+        else if (!isDashing)
         {
             animator.SetBool("isWalking", false);
             isWalking = false;
@@ -154,11 +168,29 @@ public class FirstPersonController : MonoBehaviour
             );
         }
 
+        Vector3 planeVelocity = new Vector3(playerVelocity.x, 0, playerVelocity.z);
+        if (planeVelocity.magnitude > 1f)
+        {
+            float localVelocityX = Vector3.Dot(planeVelocity, transform.right);
+            float localVelocityZ = Vector3.Dot(planeVelocity, transform.forward);
+            Debug.Log(playerVelocity);
+            Debug.Log($"Local Velocity X: {localVelocityX}, Local Velocity Z: {localVelocityZ}");
+            targetGunPosition = new Vector3(
+                gunPivotX - localVelocityX * 0.01f,
+                targetGunPosition.y,
+                gunPivotZ - localVelocityZ * 0.01f
+            );
+        }
+
         // Smooth the gun position
         gunPivot.localPosition = Vector3.Lerp(gunPivot.localPosition, targetGunPosition, Time.deltaTime * bobSmoothing);
 
-        // Jumping
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        // Apply camera FOV
+        mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, targetFOV, Time.deltaTime * 5f);
+        weaponCamera.fieldOfView = Mathf.Lerp(weaponCamera.fieldOfView, targetFOV, Time.deltaTime * 5f);
+
+        // Jumping (only if not dashing)
+        if (!isDashing && isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             playerVelocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
         }
@@ -196,7 +228,7 @@ public class FirstPersonController : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
-
+        targetFOV = 80f;
         Vector3 dashDirection = (transform.forward * Input.GetAxisRaw("Vertical") + transform.right * Input.GetAxisRaw("Horizontal")).normalized;
 
         if (dashDirection == Vector3.zero)
@@ -204,15 +236,15 @@ public class FirstPersonController : MonoBehaviour
             dashDirection = transform.forward;
         }
 
-        float startTime = Time.time;
-        while (Time.time < startTime + dashTime)
-        {
-            controller.Move(dashDirection * dashPower * Time.deltaTime);
-            yield return null;
-        }
+        // Apply dash impulse to playerVelocity
+        Vector3 dashVelocity = dashDirection * dashPower;
+        playerVelocity.x = dashVelocity.x;
+        playerVelocity.z = dashVelocity.z;
 
+        yield return new WaitForSeconds(dashTime);
+        targetFOV = 60f;
         isDashing = false;
-        yield return new WaitForSeconds(dashCD);
+        yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
 
