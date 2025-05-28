@@ -16,6 +16,8 @@ public class SpiderTurret : Enemy
     [SerializeField] Transform laserSpawnPoint;
     bool canShoot = true;
     [SerializeField] float laserCooldown = 1f;
+    [SerializeField] float laserSpeed = 10f;
+    [SerializeField] Transform headBone;
 
 
     protected override void Start()
@@ -36,6 +38,7 @@ public class SpiderTurret : Enemy
     protected override void Update()
     {
         if (isDead) return;
+        headBone.LookAt(player.position);
         if ((player.position - transform.position).magnitude > attackRange)
         {
             agent.SetDestination(player.position);
@@ -118,6 +121,8 @@ public class SpiderTurret : Enemy
         GameObject laser = Instantiate(laserPrefab, laserSpawnPoint.position, Quaternion.identity);
         laser.transform.LookAt(player.position);
         canShoot = false;
+        Rigidbody laserRb = laser.GetComponent<Rigidbody>();
+        laserRb.linearVelocity = (player.position + Vector3.up - laserSpawnPoint.position).normalized * laserSpeed;
         yield return new WaitForSeconds(laserCooldown);
         canShoot = true;
     }

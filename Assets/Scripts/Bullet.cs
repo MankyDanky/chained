@@ -5,6 +5,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] GameObject destroyEffect;
     [SerializeField] GameObject splashEffect;
     Rigidbody rb;
+    public bool isEnemyBullet = false;
 
     void Start()
     {
@@ -13,15 +14,25 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawRay(transform.position, rb.linearVelocity * 100, Color.red);
         if (Physics.Raycast(transform.position, rb.linearVelocity, out RaycastHit hit, rb.linearVelocity.magnitude * Time.deltaTime * 10.0f))
         {
-            if (hit.collider.CompareTag("Enemy"))
+            if ((hit.collider.CompareTag("Enemy") && !isEnemyBullet) || hit.collider.CompareTag("Player") && isEnemyBullet)
             {
-                Enemy enemy = hit.collider.GetComponent<Enemy>();
-                if (enemy != null)
+                if (!isEnemyBullet)
                 {
-                    enemy.TakeDamage(10f, hit.point);
+                    Enemy enemy = hit.collider.GetComponent<Enemy>();
+                    if (enemy != null)
+                    {
+                        enemy.TakeDamage(10f, hit.point);
+                    }
+                }
+                else
+                {
+                    FirstPersonController player = hit.collider.GetComponent<FirstPersonController>();
+                    if (player != null)
+                    {
+                        player.TakeDamage(10f);
+                    }
                 }
                 GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);
                 Destroy(effect, 2f);
