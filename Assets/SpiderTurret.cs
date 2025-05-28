@@ -3,24 +3,23 @@ using UnityEngine;
 
 public class SpiderTurret : Enemy
 {
-
+    [SerializeField] float attackDamage;
+    [SerializeField] float attackRange;
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] Transform frontLeftRaycastStart;
-    [SerializeField] Transform frontLeftTarget;
-    [SerializeField] Vector3 frontLeftPosition;
-    Vector3 frontLeftRaycastEnd;
-    bool frontLeftMoving = false;
-    [SerializeField] Transform frontRightRaycastStart;
-    [SerializeField] Transform frontRightTarget;
-    [SerializeField] Vector3 frontRightPosition;
-    Vector3 frontRightRaycastEnd;
-    bool frontRightMoving = false;
-
+    [SerializeField] Transform[] raycastStarts = new Transform[4];
+    [SerializeField] Transform[] targets = new Transform[4];
+    Vector3[] positions = new Vector3[4];
+    Vector3[] raycastEnds = new Vector3[4];
+    bool[] moving = new bool[2];
+    int lastMoved = 0;
+    
 
     protected override void Start()
     {
-        frontRightPosition = frontRightTarget.position;
-        frontLeftPosition = frontLeftTarget.position;
+        for (int i = 0; i < 4; i++)
+        {
+            positions[i] = targets[i].position;
+        }
         base.Start();
     }
 
@@ -32,55 +31,53 @@ public class SpiderTurret : Enemy
 
     protected override void Update()
     {
-        frontLeftTarget.position = frontLeftPosition;
-        if (!frontLeftMoving)
+        if (isDead) return;
+        if ((player.position - transform.position).magnitude > attackRange)
         {
-            if (Physics.Raycast(frontLeftRaycastStart.position, -frontLeftRaycastStart.up, out RaycastHit hit, 10f, groundLayer))
-            {
-                frontLeftRaycastEnd = hit.point;
-            }
-            if (Vector3.Distance(frontLeftTarget.position, frontLeftRaycastEnd) > 0.3f)
-            {
-                StartCoroutine(moveFrontLeft());
-            }
+            agent.SetDestination(player.position);
+            agent.speed = moveSpeed;
         }
-        frontRightTarget.position = frontRightPosition;
-        if (!frontRightMoving)
+        else
         {
-            if (Physics.Raycast(frontRightRaycastStart.position, -frontRightRaycastStart.up, out RaycastHit hit, 10f, groundLayer))
+            agent.speed = 0;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            targets[i].position = positions[i];
+        }
+        if (!moving[0] && !moving[1])
+        {
+            for (int i = 0; i < 4; i++)
             {
-                frontRightRaycastEnd = hit.point;
+                if (Physics.Raycast(raycastStarts[i].position, -raycastStarts[i].up, out RaycastHit hit3, 10f, groundLayer))
+                {
+                    raycastEnds[i] = hit3.point;
+                }
             }
-            if (Vector3.Distance(frontRightTarget.position, frontRightRaycastEnd) > 0.3f)
+            if (Vector3.Distance(targets[0].position, raycastEnds[0]) > 0.3f && lastMoved != 0)
             {
-                StartCoroutine(moveFrontRight());
+                StartCoroutine(moveLeg(0));
+            }
+            else if (Vector3.Distance(targets[1].position, raycastEnds[1]) > 0.3f && lastMoved != 1)
+            {
+                StartCoroutine(moveLeg(1));
             }
         }
 
         base.Update();
     }
 
-    IEnumerator moveFrontLeft()
+    IEnumerator moveLeg(int index)
     {
-        frontLeftMoving = true;
-        while (Vector3.Distance(frontLeftTarget.position, frontLeftRaycastEnd) > 0.01f)
+        moving[index] = true;
+        while (Vector3.Distance(targets[index].position, raycastEnds[index]) > 0.01f ||
+               Vector3.Distance(targets[index + 2].position, raycastEnds[index + 2]) > 0.01f)
         {
-            frontLeftPosition = Vector3.MoveTowards(frontLeftTarget.position, frontLeftRaycastEnd, Time.deltaTime * 2f);
+            positions[index] = Vector3.MoveTowards(targets[index].position, raycastEnds[index], Time.deltaTime * 4f);
+            positions[index + 2] = Vector3.MoveTowards(targets[index + 2].position, raycastEnds[index + 2], Time.deltaTime * 4f);
             yield return null;
         }
-        yield return new WaitForSeconds(0.35f);
-        frontLeftMoving = false;
-    }
-
-    IEnumerator moveFrontRight()
-    {
-        frontRightMoving = true;
-        while (Vector3.Distance(frontRightTarget.position, frontRightRaycastEnd) > 0.01f)
-        {
-            frontRightPosition = Vector3.MoveTowards(frontRightTarget.position, frontRightRaycastEnd, Time.deltaTime * 2f);
-            yield return null;
-        }
-        yield return new WaitForSeconds(0.35f);
-        frontRightMoving = false;
+        moving[index] = false;
+        lastMoved = index;
     }
 }
