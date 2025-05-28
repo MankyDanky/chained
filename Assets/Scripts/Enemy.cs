@@ -18,6 +18,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected GameObject armature;
     [SerializeField] protected GameObject remains;
     [SerializeField] protected GameObject hitEffect;
+    [SerializeField] float deathDelay = 1.5f;
     protected NavMeshAgent agent;
 
     public float maxHealth = 100f;
@@ -42,7 +43,7 @@ public abstract class Enemy : MonoBehaviour
         isDead = true;
         animator.SetBool("isDead", true);
 
-        Destroy(this.gameObject, 1.5f);
+        Destroy(this.gameObject, deathDelay);
 
     }
 

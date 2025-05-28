@@ -12,7 +12,11 @@ public class SpiderTurret : Enemy
     Vector3[] raycastEnds = new Vector3[4];
     bool[] moving = new bool[2];
     int lastMoved = 0;
-    
+    [SerializeField] GameObject laserPrefab;
+    [SerializeField] Transform laserSpawnPoint;
+    bool canShoot = true;
+    [SerializeField] float laserCooldown = 1f;
+
 
     protected override void Start()
     {
@@ -40,6 +44,10 @@ public class SpiderTurret : Enemy
         else
         {
             agent.speed = 0;
+            if (canShoot)
+            {
+                StartCoroutine(ShootLaser());
+            }
         }
         for (int i = 0; i < 4; i++)
         {
@@ -70,14 +78,47 @@ public class SpiderTurret : Enemy
     IEnumerator moveLeg(int index)
     {
         moving[index] = true;
-        while (Vector3.Distance(targets[index].position, raycastEnds[index]) > 0.01f ||
-               Vector3.Distance(targets[index + 2].position, raycastEnds[index + 2]) > 0.01f)
+        Vector3 startPoint1 = targets[index].position;
+        Vector3 endPoint1 = raycastEnds[index];
+        Vector3 startPoint2 = targets[index + 2].position;
+        Vector3 endPoint2 = raycastEnds[index + 2];
+
+        float duration = 0.2f;
+        float elapsed = 0;
+
+        while (elapsed < duration)
         {
-            positions[index] = Vector3.MoveTowards(targets[index].position, raycastEnds[index], Time.deltaTime * 4f);
-            positions[index + 2] = Vector3.MoveTowards(targets[index + 2].position, raycastEnds[index + 2], Time.deltaTime * 4f);
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+
+            Vector3 mid1 = (startPoint1 + endPoint1) / 2 + Vector3.up * 0.1f;
+            Vector3 pos1 = Vector3.Lerp(
+                Vector3.Lerp(startPoint1, mid1, t),
+                Vector3.Lerp(mid1, endPoint1, t),
+                t
+            );
+            positions[index] = pos1;
+
+            Vector3 mid2 = (startPoint2 + endPoint2) / 2 + Vector3.up * 0.1f;
+            Vector3 pos2 = Vector3.Lerp(
+                Vector3.Lerp(startPoint2, mid2, t),
+                Vector3.Lerp(mid2, endPoint2, t),
+                t
+            );
+            positions[index + 2] = pos2;
+
             yield return null;
         }
         moving[index] = false;
         lastMoved = index;
+    }
+
+    IEnumerator ShootLaser()
+    {
+        GameObject laser = Instantiate(laserPrefab, laserSpawnPoint.position, Quaternion.identity);
+        laser.transform.LookAt(player.position);
+        canShoot = false;
+        yield return new WaitForSeconds(laserCooldown);
+        canShoot = true;
     }
 }
