@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -35,6 +37,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float bobSmoothing = 10f;
     private Vector3 targetGunPosition;
     Shake shake;
+    public bool isDead = false;
 
     // For CharacterController
     [SerializeField] private Vector3 playerVelocity;
@@ -67,7 +70,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-
+        if (isDead) return;
         // Check if grounded
         isGrounded = controller.isGrounded;
         if (isGrounded && playerVelocity.y < 0)
@@ -124,7 +127,7 @@ public class FirstPersonController : MonoBehaviour
         else
         {
             isSprinting = false;
-            if (!isDashing) {targetFOV = 60f;}
+            if (!isDashing) { targetFOV = 60f; }
         }
 
         // Handle movement (only if not dashing)
@@ -210,12 +213,13 @@ public class FirstPersonController : MonoBehaviour
         {
             playerVelocity.z -= playerVelocity.z * Time.deltaTime * 5f;
             if (playerVelocity.z < 0.01f && playerVelocity.z > -0.01f) { playerVelocity.z = 0; }
-        } else if (playerVelocity.z < 0)
+        }
+        else if (playerVelocity.z < 0)
         {
             playerVelocity.z -= playerVelocity.z * Time.deltaTime * 5f;
             if (playerVelocity.z > -0.01f && playerVelocity.z < 0.01f) { playerVelocity.z = 0; }
         }
-        
+
 
         // Dash
         if (Input.GetKey(KeyCode.Q) && canDash)
@@ -250,14 +254,42 @@ public class FirstPersonController : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        if (isDead) return;
         health -= amount;
         healthBar.UpdateHealthBar();
         shake.start = true;
         shake.startHurt = true;
+        if (health <= 0)
+        {
+            StartCoroutine(Die());
+        }
     }
-    
+
     public void ApplyImpulse(Vector3 force)
     {
         playerVelocity += force;
+    }
+
+    IEnumerator Die()
+    {
+        isDead = true;
+        Volume globalVolume = FindAnyObjectByType<Volume>();
+        DepthOfField depthOfField;
+        ColorAdjustments colorAdjustments;
+        globalVolume.profile.TryGet<DepthOfField>(out depthOfField);
+        globalVolume.profile.TryGet<ColorAdjustments>(out colorAdjustments);
+        depthOfField.active = true;
+        colorAdjustments.colorFilter.overrideState = true;
+        colorAdjustments.colorFilter.Override(Color.white);
+        depthOfField.focalLength.Override(0.1f);
+        float elapsedTime = 0f;
+        while (elapsedTime < 1f)
+        {
+            elapsedTime += Time.deltaTime;
+            Time.timeScale = Mathf.Lerp(1f, 0f, elapsedTime);
+            depthOfField.focalLength.Override(Mathf.Lerp(0.1f, 300f, elapsedTime));
+            colorAdjustments.colorFilter.Override(Color.Lerp(Color.white, Color.gray, elapsedTime));
+            yield return null;
+        }
     }
 }
