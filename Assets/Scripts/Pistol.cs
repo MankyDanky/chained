@@ -6,10 +6,12 @@ public class Pistol : MonoBehaviour
     public float grenadeTimer = 0f;
     public bool canThrowGrenade = true;
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject secondaryBulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private float bulletSpeed = 20f;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private GameObject muzzleFlashPrefab;
+    [SerializeField] private GameObject secondaryMuzzleFlashPrefab;
     [SerializeField] private GameObject gunPivot;
     [SerializeField] private GameObject grenade;
     [SerializeField] private GameObject grenadeSpawnPoint;
@@ -45,6 +47,10 @@ public class Pistol : MonoBehaviour
         {
             Fire();
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            FireSecondary();
+        }
 
         if (Input.GetKeyDown(KeyCode.G) && canThrowGrenade)
         {
@@ -73,9 +79,66 @@ public class Pistol : MonoBehaviour
         float rotation = Random.Range(0f, 360f);
         GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation * Quaternion.Euler(rotation, -90f, 0f));
         muzzleFlash.transform.localScale = new Vector3(scale, scale, scale);
-        muzzleFlash.transform.SetParent(this.transform);
+        muzzleFlash.transform.SetParent(this.transform.parent);
         lastFireTime = 0f;
         targetRecoil += 3f;
+    }
+
+    void FireSecondary()
+    {
+        GameObject bullet = Instantiate(secondaryBulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+        bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
+        
+        // Find closest enemy to center of screen and set as target
+        ZagBullet zagBullet = bullet.GetComponent<ZagBullet>();
+        if (zagBullet != null)
+        {
+            Transform closestEnemy = FindClosestEnemyToScreenCenter();
+            if (closestEnemy != null)
+            {
+                zagBullet.target = closestEnemy.gameObject;
+            }
+        }
+        
+        float scale = Random.Range(0.015f, 0.03f);
+        float rotation = Random.Range(0f, 360f);
+        GameObject muzzleFlash = Instantiate(secondaryMuzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation * Quaternion.Euler(rotation, -90f, 0f));
+        muzzleFlash.transform.localScale = new Vector3(scale, scale, scale);
+        muzzleFlash.transform.SetParent(this.transform.parent);
+        lastFireTime = 0f;
+        targetRecoil += 5f;
+    }
+
+    private Transform FindClosestEnemyToScreenCenter()
+    {
+        Camera playerCamera = Camera.main; // Or get reference to player camera
+        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+        
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Transform closestEnemy = null;
+        float closestDistance = float.MaxValue;
+        
+        foreach (GameObject enemy in enemies)
+        {
+            // Convert enemy world position to screen position
+            Vector3 screenPos = playerCamera.WorldToScreenPoint(enemy.transform.position);
+            
+            // Check if enemy is in front of camera
+            if (screenPos.z > 0)
+            {
+                // Calculate distance from screen center
+                float screenDistance = Vector2.Distance(new Vector2(screenPos.x, screenPos.y), new Vector2(screenCenter.x, screenCenter.y));
+                
+                if (screenDistance < closestDistance)
+                {
+                    closestDistance = screenDistance;
+                    closestEnemy = enemy.transform;
+                }
+            }
+        }
+        
+        return closestEnemy;
     }
 
     public void SpawnGrenade()
