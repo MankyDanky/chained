@@ -266,6 +266,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affa5a1cffb894301a7d70ad5045543c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyEffect: {fileID: 8874534853475733122, guid: 5f2fe7ad93c4d40bb9761165c35931b2, type: 3}
+  destroyEffect: {fileID: 4919095613740006806, guid: afd02e6f5c0e141378d414a71857b569, type: 3}
   splashEffect: {fileID: 2169505092314543729, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
   isEnemyBullet: 1
