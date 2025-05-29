@@ -122,7 +122,8 @@ public class SpiderTurret : Enemy
         laser.transform.LookAt(player.position);
         canShoot = false;
         Rigidbody laserRb = laser.GetComponent<Rigidbody>();
-        laserRb.linearVelocity = (player.position + Vector3.up - laserSpawnPoint.position).normalized * laserSpeed;
+        float distance = Vector3.Distance(laserSpawnPoint.position, player.position);
+        laserRb.linearVelocity = (player.position + Vector3.up * distance/20 - laserSpawnPoint.position).normalized * laserSpeed;
         yield return new WaitForSeconds(laserCooldown);
         canShoot = true;
     }
