@@ -33,7 +33,7 @@ public class ZagBullet : MonoBehaviour
         {
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, (target.transform.position - transform.position).normalized * speed, Time.deltaTime * 10f);
         }
-        
+
         if (Physics.Raycast(transform.position, rb.linearVelocity, out RaycastHit hit, rb.linearVelocity.magnitude * Time.deltaTime * 10.0f))
         {
             if (hit.collider.CompareTag("Enemy"))
