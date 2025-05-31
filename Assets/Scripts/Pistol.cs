@@ -21,6 +21,7 @@ public class Pistol : MonoBehaviour
     private float recoil = 0.0f;
     private float lastFireTime = 0f;
     private float nextFireTime = 0f;
+    [SerializeField] GameObject fireSound;
 
 
     void Start()
@@ -82,6 +83,8 @@ public class Pistol : MonoBehaviour
         muzzleFlash.transform.SetParent(this.transform.parent);
         lastFireTime = 0f;
         targetRecoil += 3f;
+        GameObject sound = Instantiate(fireSound, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        
     }
 
     void FireSecondary()
