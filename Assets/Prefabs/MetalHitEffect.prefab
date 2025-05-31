@@ -4903,6 +4903,7 @@ GameObject:
   - component: {fileID: 7659512237533595582}
   - component: {fileID: 5837717789031766068}
   - component: {fileID: 7698903455243696304}
+  - component: {fileID: 4415446525860197603}
   m_Layer: 0
   m_Name: MetalHitEffect
   m_TagString: Untagged
@@ -9797,7 +9798,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f2a97374f5c044a3498740ad603a2647, type: 3}
   m_Resource: {fileID: 8300000, guid: f2a97374f5c044a3498740ad603a2647, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
@@ -9882,6 +9883,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4415446525860197603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407962136549516718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 976f81611db114d6a807b1569a62fd3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 7698903455243696304}
 --- !u!1 &7967818523835834243
 GameObject:
   m_ObjectHideFlags: 0

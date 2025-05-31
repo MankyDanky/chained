@@ -33,7 +33,6 @@ public class Water : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player entered water");
         if (other.CompareTag("Player"))
         {
             playerInWater = true;

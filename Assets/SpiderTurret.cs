@@ -18,6 +18,7 @@ public class SpiderTurret : Enemy
     [SerializeField] float laserCooldown = 1f;
     [SerializeField] float laserSpeed = 10f;
     [SerializeField] Transform headBone;
+    [SerializeField] GameObject laserSound;
 
 
     protected override void Start()
@@ -121,6 +122,7 @@ public class SpiderTurret : Enemy
         GameObject laser = Instantiate(laserPrefab, laserSpawnPoint.position, Quaternion.identity);
         laser.transform.LookAt(player.position);
         canShoot = false;
+        Instantiate(laserSound, laserSpawnPoint.position, Quaternion.identity);
         Rigidbody laserRb = laser.GetComponent<Rigidbody>();
         float distance = Vector3.Distance(laserSpawnPoint.position, player.position);
         laserRb.linearVelocity = (player.position + Vector3.up * distance/20 - laserSpawnPoint.position).normalized * laserSpeed;

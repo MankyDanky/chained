@@ -41,12 +41,16 @@ public class FirstPersonController : MonoBehaviour
 
     // For CharacterController
     [SerializeField] private Vector3 playerVelocity;
-    private bool isGrounded;
+    public bool isGrounded;
     [SerializeField] private float gravity = -9.81f;
     public float jumpForce = 2f;
 
     public bool isWalking;
     public static Transform Instance;
+
+    // Sounds
+    [SerializeField] GameObject dashSound;
+    [SerializeField] GameObject landSound;
 
     void Awake()
     {
@@ -75,6 +79,10 @@ public class FirstPersonController : MonoBehaviour
         isGrounded = controller.isGrounded;
         if (isGrounded && playerVelocity.y < 0)
         {
+            if (playerVelocity.y < -2.2f)
+            {
+                Instantiate(landSound, transform.position, Quaternion.identity);
+            }
             playerVelocity.y = -2f;
         }
 
@@ -123,10 +131,12 @@ public class FirstPersonController : MonoBehaviour
             targetFOV = 70f;
             currentSpeed = Mathf.Min(speed + sprintMulti, 12f);
             isSprinting = true;
+            animator.SetFloat("WalkSpeed", 2);
         }
         else
         {
             isSprinting = false;
+            animator.SetFloat("WalkSpeed", 1);
             if (!isDashing) { targetFOV = 60f; }
         }
 
@@ -146,7 +156,7 @@ public class FirstPersonController : MonoBehaviour
             float progress = animator.GetCurrentAnimatorStateInfo(0).normalizedTime % 1;
             targetGunPosition = new Vector3(
                 gunPivot.localPosition.x,
-                gunPivotY + Mathf.Sin(progress * Mathf.PI * 4 * (isSprinting ? 2f : 1f)) * bobAmplitude * (isSprinting ? 2f : 1f),
+                gunPivotY + Mathf.Sin(progress * Mathf.PI * 4) * bobAmplitude * (isSprinting ? 2f : 1f),
                 gunPivot.localPosition.z
             );
         }
@@ -158,7 +168,10 @@ public class FirstPersonController : MonoBehaviour
         }
 
         // Apply gravity
-        playerVelocity.y += gravity * Time.deltaTime;
+        if (!isGrounded)
+        {
+            playerVelocity.y += gravity * Time.deltaTime;
+        }
         controller.Move(playerVelocity * Time.deltaTime);
 
         // Apply gun movement on jump/fall
@@ -233,6 +246,7 @@ public class FirstPersonController : MonoBehaviour
         canDash = false;
         isDashing = true;
         targetFOV = 80f;
+        Instantiate(dashSound, transform.position, Quaternion.identity);
         Vector3 dashDirection = (transform.forward * Input.GetAxisRaw("Vertical") + transform.right * Input.GetAxisRaw("Horizontal")).normalized;
 
         if (dashDirection == Vector3.zero)

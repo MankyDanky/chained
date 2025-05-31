@@ -22,6 +22,7 @@ public class Pistol : MonoBehaviour
     private float lastFireTime = 0f;
     private float nextFireTime = 0f;
     [SerializeField] GameObject fireSound;
+    [SerializeField] GameObject secondaryFireSound;
 
 
     void Start()
@@ -84,7 +85,7 @@ public class Pistol : MonoBehaviour
         lastFireTime = 0f;
         targetRecoil += 3f;
         GameObject sound = Instantiate(fireSound, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-        
+
     }
 
     void FireSecondary()
@@ -92,6 +93,7 @@ public class Pistol : MonoBehaviour
         GameObject bullet = Instantiate(secondaryBulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
+        Instantiate(secondaryFireSound, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         
         // Find closest enemy to center of screen and set as target
         ZagBullet zagBullet = bullet.GetComponent<ZagBullet>();
