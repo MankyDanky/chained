@@ -1,3 +1,4 @@
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Pistol : MonoBehaviour
@@ -9,7 +10,8 @@ public class Pistol : MonoBehaviour
     [SerializeField] private GameObject secondaryBulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private float bulletSpeed = 20f;
-    [SerializeField] private float fireRate = 0.5f;
+    [SerializeField] private float fireCooldown = 0.5f;
+    [SerializeField] private float secondaryFireCooldown = 1.0f;
     [SerializeField] private GameObject muzzleFlashPrefab;
     [SerializeField] private GameObject secondaryMuzzleFlashPrefab;
     [SerializeField] private GameObject gunPivot;
@@ -20,9 +22,12 @@ public class Pistol : MonoBehaviour
     private float targetRecoil = 0.0f;
     private float recoil = 0.0f;
     private float lastFireTime = 0f;
-    private float nextFireTime = 0f;
+    private float lastSecondaryFireTime = 0f;
     [SerializeField] GameObject fireSound;
     [SerializeField] GameObject secondaryFireSound;
+    [SerializeField] Image fireCooldownImage;
+    [SerializeField] Image secondaryFireCooldownImage;
+    [SerializeField] Image grenadeCooldownImage;
 
 
     void Start()
@@ -32,7 +37,26 @@ public class Pistol : MonoBehaviour
 
     void Update()
     {
-        lastFireTime += Time.deltaTime;
+        if (lastFireTime < fireCooldown)
+        {
+            lastFireTime += Time.deltaTime;
+            fireCooldownImage.fillAmount = lastFireTime / fireCooldown;
+        }
+        else
+        {
+            fireCooldownImage.fillAmount = 1f;
+        }
+
+        if (lastSecondaryFireTime < secondaryFireCooldown)
+        {
+            lastSecondaryFireTime += Time.deltaTime;
+            secondaryFireCooldownImage.fillAmount = lastSecondaryFireTime / secondaryFireCooldown;
+        }
+        else
+        {
+            secondaryFireCooldownImage.fillAmount = 1f;
+        }
+        
         recoil = Mathf.Lerp(recoil, targetRecoil, lastFireTime * 20f);
         gunPivot.transform.localRotation = Quaternion.Euler(-recoil, 0f, 0f);
 
@@ -45,11 +69,11 @@ public class Pistol : MonoBehaviour
             targetRecoil = 0f;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && lastFireTime >= fireCooldown)
         {
             Fire();
         }
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && lastSecondaryFireTime >= secondaryFireCooldown)
         {
             FireSecondary();
         }
@@ -65,10 +89,12 @@ public class Pistol : MonoBehaviour
         if (grenadeTimer < grenadeCooldown)
         {
             grenadeTimer += Time.deltaTime;
+            grenadeCooldownImage.fillAmount = grenadeTimer / grenadeCooldown;
         }
         else
         {
             canThrowGrenade = true;
+            grenadeCooldownImage.fillAmount = 1f;
         }
     }
 
@@ -111,7 +137,7 @@ public class Pistol : MonoBehaviour
         GameObject muzzleFlash = Instantiate(secondaryMuzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation * Quaternion.Euler(rotation, -90f, 0f));
         muzzleFlash.transform.localScale = new Vector3(scale, scale, scale);
         muzzleFlash.transform.SetParent(this.transform.parent);
-        lastFireTime = 0f;
+        lastSecondaryFireTime = 0f;
         targetRecoil += 5f;
     }
 

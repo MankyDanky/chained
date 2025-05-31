@@ -15,7 +15,6 @@ public abstract class Enemy : MonoBehaviour
     protected float healthBarIndicatorTimer = 0f;
     protected bool isDead = false;
     [SerializeField] protected GameObject destroyEffect;
-    [SerializeField] protected GameObject armature;
     [SerializeField] protected GameObject remains;
     [SerializeField] protected GameObject hitEffect;
     [SerializeField] float deathDelay = 1.5f;
