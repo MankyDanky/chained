@@ -853,11 +853,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de348ee777fef47d58ba85819484770b, type: 3}
---- !u!1 &163640206 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
-  m_PrefabInstance: {fileID: 359265690046444622}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &179179422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1239,7 +1234,7 @@ Rigidbody:
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 2
-  m_AngularDrag: 0.05
+  m_AngularDrag: 2
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1270,13 +1265,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyEffect: {fileID: 9104511306309097508, guid: 87b5f27b0f9d848229e5c533bea8230b, type: 3}
   remains: {fileID: 2582456919668013052, guid: e2cc38541dd7b4e53b2f502d68d5be8c, type: 3}
-  hitEffect: {fileID: 163640206}
+  hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 0
   maxHealth: 100
   health: 100
   moveSpeed: 5
   attackDamage: 5
-  attackRange: 7
+  attackRange: 8
   laserPrefab: {fileID: 4577154718944495536, guid: 94182b61056124b98a4259f71dda0395, type: 3}
   laserSpawnPoint: {fileID: 1009472922}
   laserCooldown: 1

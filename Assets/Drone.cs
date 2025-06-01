@@ -42,11 +42,9 @@ public class Drone : Enemy
         }
         else
         {
-            Debug.Log("Drone is within attack range, stopping agent.");
 
             if (canShoot)
             {
-                Debug.Log("Drone is shooting laser at player!");
                 StartCoroutine(ShootLaser());
             }
         }
