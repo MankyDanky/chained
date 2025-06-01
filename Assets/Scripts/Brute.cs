@@ -24,12 +24,11 @@ public class Brute : Enemy
 
     public override void Attack()
     {
-        Debug.Log("Grunt attacks with " + attackDamage + " damage!");
+        return;
     }
 
     public override void TakeDamage(float amount, Vector3 hitPoint)
     {
-
         base.TakeDamage(amount, hitPoint);
     }
 
