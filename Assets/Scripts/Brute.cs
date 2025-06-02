@@ -12,6 +12,7 @@ public class Brute : Enemy
     bool stepping = false;
     bool attacking = false;
     [SerializeField] GameObject spike;
+    [SerializeField] GameObject punchSound;
     
 
     protected override void Update()
@@ -114,6 +115,7 @@ public class Brute : Enemy
         {
             playerController.TakeDamage(attackDamage);
             playerController.ApplyImpulse(transform.forward * 10f + Vector3.up * 5f);
+            Instantiate(punchSound, transform.position, Quaternion.identity);
         }
     }
 }

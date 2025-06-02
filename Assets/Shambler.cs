@@ -5,6 +5,7 @@ public class Shambler : Enemy
 
     [SerializeField] private float attackRange = 2f;
     [SerializeField] private float attackDamage = 10f;
+    [SerializeField] GameObject kickSound;
 
     protected override void Start()
     {
@@ -41,6 +42,7 @@ public class Shambler : Enemy
         if ((player.position - transform.position).magnitude < attackRange)
         {
             playerController.TakeDamage(attackDamage);
+            Instantiate(kickSound, transform.position, Quaternion.identity);
         }
     }
 }
