@@ -496,7 +496,7 @@ MonoBehaviour:
   deathDelay: 0
   maxHealth: 100
   health: 40
-  moveSpeed: 4
+  moveSpeed: 3
   attackRange: 2
 --- !u!95 &14138850
 Animator:
