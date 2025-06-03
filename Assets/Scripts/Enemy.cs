@@ -46,7 +46,7 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-    void OnDestroy()
+    protected virtual void OnDestroy()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Instantiate(remains, transform.position, Quaternion.identity);
