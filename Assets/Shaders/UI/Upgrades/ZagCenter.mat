@@ -50,7 +50,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0.5
-    - _BobAmplitude: 0
+    - _BobAmplitude: 0.02
     - _BobSpeed: 1
     - _ColorMask: 15
     - _HologramCutoff: 0.2
@@ -66,7 +66,7 @@ Material:
     m_Colors:
     - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0, g: 7.068238, b: 11.984313, a: 0}
-    - _HologramTiling: {r: 1, g: 32, b: 0, a: 0}
+    - _HologramTiling: {r: 1, g: 10, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &8985297061380467091

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d65ba06b31a554ab5b52005b37de12fa
+guid: 92f5226aaf00246abbc2038d4536b666
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,23 +110,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HealthBarOuter_0
+      name: BuyBorder_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 958
-        height: 77
+        width: 299
+        height: 299
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 10, z: 10, w: 10}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e088a192326bb4959a64cdde4d2c5e4c
-      internalID: 684134284
+      spriteID: 9aa359a76f2aa43af85d6b1a3b1cff3d
+      internalID: -1736471461
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 65e2d788b58634086a566cd99210d1a7
+    spriteID: b71ab96bf7df94f848f6da5e76cb2994
     internalID: 0
     vertices: []
     indices: 
@@ -145,7 +145,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HealthBarOuter_0: 684134284
+      BuyBorder_0: -1736471461
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
