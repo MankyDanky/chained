@@ -22,11 +22,8 @@ public class Shambler : Enemy
         base.Update();
         if ((player.position - transform.position).magnitude > attackRange)
         {
-            if (animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Run")
-            {
-                agent.SetDestination(player.position);
-                agent.speed = moveSpeed;
-            }
+            agent.SetDestination(player.position);
+            agent.speed = moveSpeed;
             animator.SetBool("isAttacking", false);
         }
         else
