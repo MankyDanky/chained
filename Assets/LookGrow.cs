@@ -16,7 +16,6 @@ public class LookGrow : MonoBehaviour
 
         float distanceToMouse = Vector2.Distance(screenPos, mousePos);
         float visibilityThreshold = 50f;
-        Debug.Log(distanceToMouse);
         isBeingAimedAt = distanceToMouse < visibilityThreshold;
         foreach (RectTransform rectTransform in rectTransforms)
         {
