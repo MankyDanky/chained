@@ -1350,7 +1350,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 07687729952b94f26a4bf87a42a1a7de, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9f1686a3973e84c558d9d417b9ee4a95, type: 2}
+      objectReference: {fileID: 2100000, guid: 505f20f0621b04852987bb1bdff6de32, type: 2}
     - target: {fileID: -7511558181221131132, guid: 07687729952b94f26a4bf87a42a1a7de, type: 3}
       propertyPath: 'm_Materials.Array.data[2]'
       value: 
@@ -1361,7 +1361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 07687729952b94f26a4bf87a42a1a7de, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11320,7 +11320,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830545145}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855db4b6d419043b2b40d6e0a8dd9db5, type: 3}
   m_Name: 
@@ -14061,6 +14061,11 @@ MonoBehaviour:
   - {fileID: 2127186916}
   - {fileID: 1975420536}
   - {fileID: 214832299}
+  selectedHologramIndex: -1
+  keyIndicatorObjects:
+  - {fileID: 1389664946}
+  - {fileID: 741601254}
+  - {fileID: 226075204}
 --- !u!65 &1277560709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28066,7 +28071,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975420534}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855db4b6d419043b2b40d6e0a8dd9db5, type: 3}
   m_Name: 
@@ -29080,7 +29085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135359355}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855db4b6d419043b2b40d6e0a8dd9db5, type: 3}
   m_Name: 
