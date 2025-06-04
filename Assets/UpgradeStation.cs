@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,12 @@ public class UpgradeStation : MonoBehaviour
     Transform playerTransform;
     bool doneAppearing = false;
     [SerializeField] GameObject[] keyIndicatorObjects;
+    [SerializeField] GameObject upgradeOrbPrefab;
+    [SerializeField] GameObject upgradeAppearEffectPrefab;
+    [SerializeField] Transform[] upgradeOrbSpawnPoints;
+    [SerializeField] GameObject descriptionPanel;
+    [SerializeField] TMP_Text descriptionText;
+    [SerializeField] TMP_Text nameText;
 
     void Start()
     {
@@ -45,27 +52,30 @@ public class UpgradeStation : MonoBehaviour
                 {
                     minDistance = distance;
                     selectedHologramIndex = i;
-                    foreach (GameObject keyIndicator in keyIndicatorObjects)
-                    {
-                        keyIndicator.SetActive(false);
-                    }
-                    keyIndicatorObjects[i / 2].SetActive(true);
                 }
+            }
+            foreach (GameObject keyIndicator in keyIndicatorObjects)
+            {
+                keyIndicator.SetActive(false);
             }
             if (selectedHologramIndex != -1)
             {
+                descriptionPanel.SetActive(true);
                 holograms[selectedHologramIndex].rectTransform.localScale = Vector3.Lerp(holograms[selectedHologramIndex].rectTransform.localScale, new Vector3(0.0006f, 0.0006f, 0.0006f), Time.deltaTime * 5f);
                 holograms[selectedHologramIndex + 1].rectTransform.localScale = Vector3.Lerp(holograms[selectedHologramIndex].rectTransform.localScale, new Vector3(0.0006f, 0.0006f, 0.0006f), Time.deltaTime * 5f);
+                keyIndicatorObjects[selectedHologramIndex / 2].SetActive(true);
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     doneAppearing = false;
-                    foreach (GameObject keyIndicator in keyIndicatorObjects)
-                    {
-                        keyIndicator.SetActive(false);
-                    }
+                    keyIndicatorObjects[selectedHologramIndex / 2].SetActive(false);
+                    descriptionPanel.SetActive(false);
                     StartCoroutine(Disappear());
                     return;
                 }
+            }
+            else
+            {
+                descriptionPanel.SetActive(false);
             }
             for (int i = 0; i < holograms.Length; i++)
             {
@@ -78,6 +88,7 @@ public class UpgradeStation : MonoBehaviour
         else
         {
             selectedHologramIndex = -1;
+            descriptionPanel.SetActive(false);
             foreach (Image hologram in holograms)
             {
                 hologram.rectTransform.localScale = Vector3.Lerp(hologram.rectTransform.localScale, new Vector3(0.0004f, 0.0004f, 0.0004f), Time.deltaTime * 5f);
@@ -135,6 +146,8 @@ public class UpgradeStation : MonoBehaviour
         materials[1] = oldMaterial;
         meshRenderer.materials = materials;
         elapsedTime = 0f;
+        Instantiate(upgradeOrbPrefab, upgradeOrbSpawnPoints[selectedHologramIndex/2].position, Quaternion.identity);
+        Instantiate(upgradeAppearEffectPrefab, upgradeOrbSpawnPoints[selectedHologramIndex/2].position, Quaternion.identity);
         while (elapsedTime < dissolveDuration)
         {
             float t = elapsedTime / dissolveDuration;
