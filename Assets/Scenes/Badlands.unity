@@ -13679,13 +13679,14 @@ MonoBehaviour:
   - {fileID: 741601254}
   - {fileID: 226075204}
   upgradeOrbPrefab: {fileID: 1997643969241644568, guid: 72f5dd0e8d65441139e6f466364cdcdc, type: 3}
+  upgradeAppearEffectPrefab: {fileID: 6780983173972918071, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
   upgradeOrbSpawnPoints:
   - {fileID: 1712074269}
   - {fileID: 1523692507}
   - {fileID: 1150274506}
-  descriptionPanel: {fileID: 0}
-  descriptionText: {fileID: 0}
-  nameText: {fileID: 0}
+  descriptionPanel: {fileID: 1333511964}
+  descriptionText: {fileID: 1934018872}
+  nameText: {fileID: 1477772368}
 --- !u!65 &1277560709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13958,7 +13959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1333511965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28262,6 +28263,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04097b882f2b34099963635bb0015d83, type: 3}
+--- !u!1001 &698958308974695908
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 53.945
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 39.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205392347289374642, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780983173972918071, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_Name
+      value: UpgradeAppearEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780983173972918071, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5618ec6fc79e8442a8ff646e501d7169, type: 3}
 --- !u!1001 &1738046973104669925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29667,67 +29729,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afd02e6f5c0e141378d414a71857b569, type: 3}
---- !u!1001 &6749915353965466788
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 53.945
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.553
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 39.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 274351201993830431, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6964185677126282605, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_Name
-      value: UpgradeEffect
-      objectReference: {fileID: 0}
-    - target: {fileID: 6964185677126282605, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 26cd93b9c4c5e41ceb58244294c72dfe, type: 3}
 --- !u!1001 &6833375226339262528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30382,4 +30383,4 @@ SceneRoots:
   - {fileID: 7220384008896442348}
   - {fileID: 145085750}
   - {fileID: 1815677051671936106}
-  - {fileID: 6749915353965466788}
+  - {fileID: 698958308974695908}
