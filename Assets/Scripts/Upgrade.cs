@@ -6,4 +6,5 @@ public class Upgrade : ScriptableObject
     public string upgradeName;
     public string description;
     public GameObject upgradeHologramPrefab; 
+    public UpgradeEffect upgradeEffect;
 }

@@ -28,6 +28,7 @@ public class Pistol : MonoBehaviour
     [SerializeField] Image fireCooldownImage;
     [SerializeField] Image secondaryFireCooldownImage;
     [SerializeField] Image grenadeCooldownImage;
+    public float damageBoost = 0f;
 
 
     void Start()
