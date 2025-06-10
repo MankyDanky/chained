@@ -79,6 +79,8 @@ public class UpgradeStation : MonoBehaviour
             if (selectedHologramIndex != -1)
             {
                 descriptionPanel.SetActive(true);
+                descriptionText.text = upgrades[selectedHologramIndex / 2].description;
+                nameText.text = upgrades[selectedHologramIndex / 2].upgradeName;
                 holograms[selectedHologramIndex].rectTransform.localScale = Vector3.Lerp(holograms[selectedHologramIndex].rectTransform.localScale, new Vector3(0.0006f, 0.0006f, 0.0006f), Time.deltaTime * 5f);
                 holograms[selectedHologramIndex + 1].rectTransform.localScale = Vector3.Lerp(holograms[selectedHologramIndex].rectTransform.localScale, new Vector3(0.0006f, 0.0006f, 0.0006f), Time.deltaTime * 5f);
                 keyIndicatorObjects[selectedHologramIndex / 2].SetActive(true);
