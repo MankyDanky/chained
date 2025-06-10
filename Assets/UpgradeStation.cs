@@ -22,9 +22,27 @@ public class UpgradeStation : MonoBehaviour
     [SerializeField] GameObject descriptionPanel;
     [SerializeField] TMP_Text descriptionText;
     [SerializeField] TMP_Text nameText;
+    [SerializeField] Upgrade[] upgrades = new Upgrade[3];
 
     void Start()
     {
+        for (int i = 0; i < 3; i++)
+        {
+            GameObject hologramObject = Instantiate(upgrades[i].upgradeHologramPrefab);
+            hologramObject.transform.SetParent(this.transform);
+            var xPos = i switch
+            {
+                0 => 0.005f,
+                1 => -0.00145f,
+                2 => -0.00799f,
+                _ => 0.005f,
+            };
+            hologramObject.transform.localPosition = new Vector3(xPos, 0.0f, 0.0108f);
+            hologramObject.transform.localRotation = Quaternion.Euler(90, 0, 0);
+            hologramObject.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+            holograms[i*2] = hologramObject.transform.GetChild(0).Find("Fill").GetComponent<Image>();
+            holograms[i*2 + 1] = hologramObject.transform.GetChild(0).Find("Border").GetComponent<Image>();
+        }
         meshRenderer = GetComponent<MeshRenderer>();
         materials = meshRenderer.materials;
         foreach (Image hologram in holograms)
