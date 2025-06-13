@@ -15,3 +15,4 @@ MonoBehaviour:
   upgradeName: Health Increase
   description: Increases your health by 20 points.
   upgradeHologramPrefab: {fileID: 5785361382184603846, guid: c5132cf82fa8447eb83c539d08e7a9a4, type: 3}
+  upgradeEffect: {fileID: 11400000, guid: 76f32fde87b0d428883525ad31dd5489, type: 2}

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23b9c7a288b149d4987a2488fb8740b, type: 3}
   m_Name: DamageBoostEffect
   m_EditorClassIdentifier: 
-  damageIncrease: 0
+  damageIncrease: 10

@@ -15,3 +15,4 @@ MonoBehaviour:
   upgradeName: Damage Increase
   description: Increases the damage of your standar bullets by 10 points.
   upgradeHologramPrefab: {fileID: 4140631433918873246, guid: 333737ff99ba54bf09c283f6a1b768e3, type: 3}
+  upgradeEffect: {fileID: 11400000, guid: 76f32fde87b0d428883525ad31dd5489, type: 2}

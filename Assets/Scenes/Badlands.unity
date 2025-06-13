@@ -12684,6 +12684,10 @@ MonoBehaviour:
   descriptionPanel: {fileID: 1333511964}
   descriptionText: {fileID: 1934018872}
   nameText: {fileID: 1477772368}
+  upgrades:
+  - {fileID: 11400000, guid: 41cb346686be9447c94931871023d8ab, type: 2}
+  - {fileID: 11400000, guid: 31c1f9a3195724d1ead41bec08a530ea, type: 2}
+  - {fileID: 11400000, guid: 89d102c97b2cc43fb93c90aed9d7e786, type: 2}
 --- !u!65 &1277560709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27179,9 +27183,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4905393301830508960, guid: c5132cf82fa8447eb83c539d08e7a9a4, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5785361382184603846, guid: c5132cf82fa8447eb83c539d08e7a9a4, type: 3}
       propertyPath: m_Name
       value: Item1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5785361382184603846, guid: c5132cf82fa8447eb83c539d08e7a9a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7108868919237438712, guid: c5132cf82fa8447eb83c539d08e7a9a4, type: 3}
       propertyPath: display
@@ -27912,9 +27924,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3892258876763898812, guid: 333737ff99ba54bf09c283f6a1b768e3, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4140631433918873246, guid: 333737ff99ba54bf09c283f6a1b768e3, type: 3}
       propertyPath: m_Name
       value: Item2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4140631433918873246, guid: 333737ff99ba54bf09c283f6a1b768e3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28442,6 +28462,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1878210641553496994, guid: f375a4bfcd553459c9a6fb57f849c833, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3894626815585494386, guid: f375a4bfcd553459c9a6fb57f849c833, type: 3}
       propertyPath: display
       value: 
@@ -28449,6 +28473,10 @@ PrefabInstance:
     - target: {fileID: 4237603897132393216, guid: f375a4bfcd553459c9a6fb57f849c833, type: 3}
       propertyPath: m_Name
       value: Item3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237603897132393216, guid: f375a4bfcd553459c9a6fb57f849c833, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
