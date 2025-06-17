@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mushroom-1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 8789890018851736935, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.0816655
@@ -390,6 +394,10 @@ PrefabInstance:
     - target: {fileID: 331437828477525761, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
       propertyPath: m_Name
       value: mushroom-2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 331437828477525761, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1140062022301894075, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1087,6 +1095,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1414,6 +1426,10 @@ PrefabInstance:
     - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_Name
       value: dead-tree-2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7793,6 +7809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dead-tree-1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5608259567134675187, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_LocalScale.x
       value: 45.621853
@@ -7861,6 +7881,10 @@ PrefabInstance:
     - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_Name
       value: mushroom-1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 8789890018851736935, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_LocalScale.x
@@ -8093,6 +8117,10 @@ PrefabInstance:
     - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_Name
       value: dead-tree-2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_LocalScale.x
@@ -8640,6 +8668,10 @@ PrefabInstance:
     - target: {fileID: 4654560103898563698, guid: 2b0d036a6279d4787951f9fd8ab9d919, type: 3}
       propertyPath: m_Name
       value: rock-2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4654560103898563698, guid: 2b0d036a6279d4787951f9fd8ab9d919, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5463853075668410056, guid: 2b0d036a6279d4787951f9fd8ab9d919, type: 3}
       propertyPath: m_LocalScale.x
@@ -9559,6 +9591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 888245168256698043, guid: ad969af6bf28f40c19021cf9b50dd292, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9716,6 +9752,10 @@ PrefabInstance:
     - target: {fileID: 331437828477525761, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
       propertyPath: m_Name
       value: mushroom-2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 331437828477525761, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1140062022301894075, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
       propertyPath: m_LocalScale.x
@@ -9982,6 +10022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4654560103898563698, guid: 2b0d036a6279d4787951f9fd8ab9d919, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5463853075668410056, guid: 2b0d036a6279d4787951f9fd8ab9d919, type: 3}
       propertyPath: m_LocalScale.x
       value: 22.157154
@@ -10232,6 +10276,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 888245168256698043, guid: ad969af6bf28f40c19021cf9b50dd292, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10318,6 +10366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dead-tree-1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5608259567134675187, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_LocalScale.x
       value: 45.621845
@@ -10386,6 +10438,10 @@ PrefabInstance:
     - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_Name
       value: mushroom-1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 8789890018851736935, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_LocalScale.x
@@ -10826,6 +10882,10 @@ PrefabInstance:
     - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_Name
       value: dead-tree-1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5608259567134675187, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_LocalScale.x
@@ -11663,6 +11723,10 @@ PrefabInstance:
     - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_Name
       value: dead-tree-2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_LocalScale.x
@@ -12661,6 +12725,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
       propertyPath: m_Name
       value: rock-3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18124,6 +18192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mushroom-1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 8789890018851736935, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.03587249
@@ -18192,6 +18264,10 @@ PrefabInstance:
     - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_Name
       value: mushroom-1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 8789890018851736935, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_LocalScale.x
@@ -18881,6 +18957,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19281,6 +19361,10 @@ PrefabInstance:
     - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_Name
       value: dead-tree-2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_LocalScale.x
@@ -25140,6 +25224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25326,6 +25414,10 @@ PrefabInstance:
     - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_Name
       value: dead-tree-2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_LocalScale.x
@@ -25520,6 +25612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 888245168256698043, guid: ad969af6bf28f40c19021cf9b50dd292, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25592,6 +25688,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
       propertyPath: m_Name
       value: rock-3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26030,6 +26130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dead-tree-1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5608259567134675187, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_LocalScale.x
       value: 37.44879
@@ -26235,6 +26339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: dead-tree-1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5608259567134675187, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_LocalScale.y
       value: 25.212387
@@ -26438,6 +26546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-3 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca5fa522f892e45ed923509f0b6fd7ed, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26563,6 +26675,10 @@ PrefabInstance:
     - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_Name
       value: dead-tree-2 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_LocalScale.x
@@ -27773,6 +27889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-1
       objectReference: {fileID: 0}
+    - target: {fileID: 888245168256698043, guid: ad969af6bf28f40c19021cf9b50dd292, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27929,6 +28049,10 @@ PrefabInstance:
     - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_Name
       value: mushroom-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264147965901838301, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 8789890018851736935, guid: 907604e2c74e946cab0450ac4d396038, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28229,6 +28353,10 @@ PrefabInstance:
     - target: {fileID: 331437828477525761, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
       propertyPath: m_Name
       value: mushroom-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 331437828477525761, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 1140062022301894075, guid: b9f30e40469b3496680e9c9f3d83fc6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29006,6 +29134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: rock-2
       objectReference: {fileID: 0}
+    - target: {fileID: 4654560103898563698, guid: 2b0d036a6279d4787951f9fd8ab9d919, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5463853075668410056, guid: 2b0d036a6279d4787951f9fd8ab9d919, type: 3}
       propertyPath: m_LocalScale.y
       value: 19.38
@@ -29257,6 +29389,10 @@ PrefabInstance:
     - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_Name
       value: dead-tree-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5608259567134675187, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29761,6 +29897,10 @@ PrefabInstance:
     - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_Name
       value: dead-tree-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 495564339845969183, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
       propertyPath: m_LocalPosition.x

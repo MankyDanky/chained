@@ -97,7 +97,14 @@ public class Treadnaught : Enemy
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
-            rb.AddForce((player.position - transform.position).normalized * chargeSpeed);
+            rb.AddForce(transform.forward * chargeSpeed);
+            Vector3 directionToPlayer = (player.position - transform.position).normalized;
+            directionToPlayer.y = 0f;
+            if (directionToPlayer.sqrMagnitude > 0.001f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime);
+            }
             yield return null;
         }
         yield return new WaitForSeconds(0.5f);
@@ -121,6 +128,21 @@ public class Treadnaught : Enemy
         {
             playerController.TakeDamage(stompDamage);
             playerController.ApplyImpulse((player.position - stompRightSpawn.position) * 10f);
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (charging)
+        {
+            if (collision.gameObject.CompareTag("Obstacle"))
+            {
+                Destroy(collision.gameObject);
+            } else if (collision.gameObject.CompareTag("Player"))
+            {
+                playerController.TakeDamage(50f);
+                playerController.ApplyImpulse(transform.forward * 20f + Vector3.up * 5f);
+            }
         }
     }
 }
