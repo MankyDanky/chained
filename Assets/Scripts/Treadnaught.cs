@@ -10,6 +10,7 @@ public class Treadnaught : Enemy
     [SerializeField] float stompDamage = 30f;
     [SerializeField] float chargeAttackRange = 10f;
     [SerializeField] float chargeSpeed = 20f;
+    [SerializeField] ParticleSystem[] trailParticleEmitters; // 0 for front left, 1 for front right, 2 for back left, 3 for back right
     Rigidbody rb;
     public bool spinning = false;
     bool charging = false;
@@ -40,6 +41,13 @@ public class Treadnaught : Enemy
             spinning = false;
             animator.SetBool("SpinningRight", false);
             animator.SetBool("SpinningLeft", false);
+            for (int i = 0; i < trailParticleEmitters.Length; i++)
+            {
+                if (trailParticleEmitters[i] != null)
+                {
+                    trailParticleEmitters[i].Stop();
+                }
+            }
         }
         else if (distance < chargeAttackRange)
         {
@@ -51,6 +59,13 @@ public class Treadnaught : Enemy
                 spinning = false;
                 animator.SetBool("SpinningRight", false);
                 animator.SetBool("SpinningLeft", false);
+                for (int i = 0; i < trailParticleEmitters.Length; i++)
+                {
+                    if (trailParticleEmitters[i] != null)
+                    {
+                        trailParticleEmitters[i].Stop();
+                    }
+                }
                 StartCoroutine(Charge());
                 return;
             }
@@ -59,12 +74,22 @@ public class Treadnaught : Enemy
             {
                 animator.SetBool("SpinningRight", true);
                 spinning = true;
+                if (!trailParticleEmitters[0].isPlaying || !trailParticleEmitters[3].isPlaying)
+                {
+                    trailParticleEmitters[0].Play();
+                    trailParticleEmitters[3].Play();
+                }
                 spinDirection = true;
                 transform.Rotate(Vector3.up, 100f * Time.deltaTime);
             }
             else
             {
                 animator.SetBool("SpinningLeft", true);
+                if (!trailParticleEmitters[1].isPlaying || !trailParticleEmitters[2].isPlaying)
+                {
+                    trailParticleEmitters[1].Play();
+                    trailParticleEmitters[2].Play();
+                }
                 spinning = true;
                 spinDirection = false;
                 transform.Rotate(Vector3.up, -100f * Time.deltaTime);
@@ -76,16 +101,15 @@ public class Treadnaught : Enemy
             spinning = false;
             animator.SetBool("SpinningRight", false);
             animator.SetBool("SpinningLeft", false);
+            for (int i = 0; i < trailParticleEmitters.Length; i++)
+            {
+                if (trailParticleEmitters[i] != null)
+                {
+                    trailParticleEmitters[i].Stop();
+                }
+            }
         }
         base.Update();
-    }
-
-    void StopSpinning()
-    {
-        Debug.Log("Stop Spinning");
-        spinning = false;
-        animator.SetBool("SpinningRight", false);
-        animator.SetBool("SpinningLeft", false);
     }
 
     IEnumerator Charge()
@@ -95,6 +119,8 @@ public class Treadnaught : Enemy
         yield return new WaitForSeconds(1.4f);
         float elapsedTime = 0f;
         float s = 0f;
+        trailParticleEmitters[3].Play();
+        trailParticleEmitters[2].Play();
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
@@ -108,6 +134,13 @@ public class Treadnaught : Enemy
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime);
             }
             yield return null;
+        }
+        for (int i = 0; i < trailParticleEmitters.Length; i++)
+        {
+            if (trailParticleEmitters[i] != null)
+            {
+                trailParticleEmitters[i].Stop();
+            }
         }
         yield return new WaitForSeconds(1.5f);
         charging = false;
