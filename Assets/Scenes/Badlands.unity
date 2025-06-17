@@ -1173,7 +1173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 07687729952b94f26a4bf87a42a1a7de, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26056,7 +26056,7 @@ Rigidbody:
   m_GameObject: {fileID: 1904148721}
   serializedVersion: 4
   m_Mass: 5
-  m_Drag: 1
+  m_Drag: 5
   m_AngularDrag: 4
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -28642,9 +28642,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4017404480837920932, guid: 0ed45801f3df7495790fd3de1cb95763, type: 3}
     - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
+      propertyPath: spinning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
+    - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
+      propertyPath: chargeSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: destroyEffect
       value: 
@@ -28659,7 +28667,7 @@ PrefabInstance:
       objectReference: {fileID: 136329968}
     - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: chargeAttackRange
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: stompEffectPrefab

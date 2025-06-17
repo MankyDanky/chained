@@ -35,11 +35,11 @@ public class Treadnaught : Enemy
             {
                 if (spinDirection)
                 {
-                    transform.Rotate(Vector3.up, 25f * Time.deltaTime);
+                    transform.Rotate(Vector3.up, 50f * Time.deltaTime);
                 }
                 else
                 {
-                    transform.Rotate(Vector3.up, -25f * Time.deltaTime);
+                    transform.Rotate(Vector3.up, -50f * Time.deltaTime);
                 }
             }
             return;
@@ -92,12 +92,14 @@ public class Treadnaught : Enemy
     {
         charging = true;
         animator.SetTrigger("Charge");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.4f);
         float elapsedTime = 0f;
+        float s = 0f;
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
-            rb.AddForce(transform.forward * chargeSpeed);
+            s = Mathf.Lerp(0f, chargeSpeed, Mathf.Min(1, elapsedTime / 0.2f));
+            rb.linearVelocity = transform.forward * s;
             Vector3 directionToPlayer = (player.position - transform.position).normalized;
             directionToPlayer.y = 0f;
             if (directionToPlayer.sqrMagnitude > 0.001f)
@@ -107,7 +109,7 @@ public class Treadnaught : Enemy
             }
             yield return null;
         }
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         charging = false;
     }
 
