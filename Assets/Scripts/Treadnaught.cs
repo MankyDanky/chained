@@ -28,34 +28,29 @@ public class Treadnaught : Enemy
     protected override void Update()
     {
         if (isDead) return;
-        if (charging || spinning)
+        if (charging)
         {
             base.Update();
-            if (spinning)
-            {
-                if (spinDirection)
-                {
-                    transform.Rotate(Vector3.up, 50f * Time.deltaTime);
-                }
-                else
-                {
-                    transform.Rotate(Vector3.up, -50f * Time.deltaTime);
-                }
-            }
             return;
         }
         float distance = Vector3.Distance(transform.position, player.position);
         if (distance < stompAttackRange)
         {
             animator.SetBool("Stomping", true);
+            spinning = false;
+            animator.SetBool("SpinningRight", false);
+            animator.SetBool("SpinningLeft", false);
         }
         else if (distance < chargeAttackRange)
         {
             animator.SetBool("Stomping", false);
             Vector3 toPlayer = (player.position - transform.position).normalized;
             float angleToPlayer = Vector3.Angle(transform.forward, toPlayer);
-            if (angleToPlayer < 30f)
+            if (angleToPlayer < 15f)
             {
+                spinning = false;
+                animator.SetBool("SpinningRight", false);
+                animator.SetBool("SpinningLeft", false);
                 StartCoroutine(Charge());
                 return;
             }
@@ -65,17 +60,22 @@ public class Treadnaught : Enemy
                 animator.SetBool("SpinningRight", true);
                 spinning = true;
                 spinDirection = true;
+                transform.Rotate(Vector3.up, 100f * Time.deltaTime);
             }
             else
             {
                 animator.SetBool("SpinningLeft", true);
                 spinning = true;
                 spinDirection = false;
+                transform.Rotate(Vector3.up, -100f * Time.deltaTime);
             }
         }
         else
         {
             animator.SetBool("Stomping", false);
+            spinning = false;
+            animator.SetBool("SpinningRight", false);
+            animator.SetBool("SpinningLeft", false);
         }
         base.Update();
     }
@@ -98,7 +98,7 @@ public class Treadnaught : Enemy
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
-            s = Mathf.Lerp(0f, chargeSpeed, Mathf.Min(1, elapsedTime / 0.2f));
+            s = Mathf.Lerp(0f, chargeSpeed, Mathf.Min(1, elapsedTime / 0.3f));
             rb.linearVelocity = transform.forward * s;
             Vector3 directionToPlayer = (player.position - transform.position).normalized;
             directionToPlayer.y = 0f;

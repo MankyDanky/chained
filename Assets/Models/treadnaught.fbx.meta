@@ -32,7 +32,7 @@ ModelImporter:
     clipAnimations:
     - serializedVersion: 16
       name: Charge
-      takeName: Armature|Charge
+      takeName: Charge.001
       internalID: 5607727450279090002
       firstFrame: 0
       lastFrame: 110
