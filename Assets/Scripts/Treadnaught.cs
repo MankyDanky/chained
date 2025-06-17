@@ -6,6 +6,7 @@ public class Treadnaught : Enemy
     [SerializeField] Transform stompRightSpawn;
     [SerializeField] Transform stompLeftSpawn;
     [SerializeField] GameObject stompEffectPrefab;
+    [SerializeField] float stompDamage = 30f;
 
     public override void Attack()
     {
@@ -31,7 +32,7 @@ public class Treadnaught : Enemy
         Instantiate(stompEffectPrefab, stompRightSpawn.position, stompRightSpawn.rotation);
         if ((stompRightSpawn.position - player.position).magnitude < 5f)
         {
-            playerController.TakeDamage(10f);
+            playerController.TakeDamage(stompDamage);
             playerController.ApplyImpulse((player.position - stompRightSpawn.position) * 10f);
         }
     }
@@ -41,7 +42,7 @@ public class Treadnaught : Enemy
         Instantiate(stompEffectPrefab, stompLeftSpawn.position, stompLeftSpawn.rotation);
         if ((stompLeftSpawn.position - player.position).magnitude < 5f)
         {
-            playerController.TakeDamage(10f);
+            playerController.TakeDamage(stompDamage);
             playerController.ApplyImpulse((player.position - stompRightSpawn.position) * 10f);
         }
     }
