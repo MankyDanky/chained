@@ -51,7 +51,14 @@ public class Treadnaught : Enemy
         }
         else if (distance < chargeAttackRange)
         {
+            animator.SetBool("Stomping", false);
             Vector3 toPlayer = (player.position - transform.position).normalized;
+            float angleToPlayer = Vector3.Angle(transform.forward, toPlayer);
+            if (angleToPlayer < 30f)
+            {
+                StartCoroutine(Charge());
+                return;
+            }
             float direction = Vector3.Cross(transform.forward, toPlayer).y;
             if (direction > 0)
             {
@@ -90,10 +97,10 @@ public class Treadnaught : Enemy
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
-            rb.AddForce(transform.forward * chargeSpeed);
+            rb.AddForce((player.position - transform.position).normalized * chargeSpeed);
             yield return null;
         }
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         charging = false;
     }
 
