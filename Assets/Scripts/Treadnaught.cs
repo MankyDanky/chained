@@ -11,8 +11,9 @@ public class Treadnaught : Enemy
     [SerializeField] float chargeAttackRange = 10f;
     [SerializeField] float chargeSpeed = 20f;
     Rigidbody rb;
-    bool spinning = false;
+    public bool spinning = false;
     bool charging = false;
+    bool spinDirection = true;
 
     protected override void Start()
     {
@@ -30,6 +31,17 @@ public class Treadnaught : Enemy
         if (charging || spinning)
         {
             base.Update();
+            if (spinning)
+            {
+                if (spinDirection)
+                {
+                    transform.Rotate(Vector3.up, 25f * Time.deltaTime);
+                }
+                else
+                {
+                    transform.Rotate(Vector3.up, -25f * Time.deltaTime);
+                }
+            }
             return;
         }
         float distance = Vector3.Distance(transform.position, player.position);
@@ -43,13 +55,15 @@ public class Treadnaught : Enemy
             float direction = Vector3.Cross(transform.forward, toPlayer).y;
             if (direction > 0)
             {
-
-                StartCoroutine(SpinRight());
+                animator.SetBool("SpinningRight", true);
+                spinning = true;
+                spinDirection = true;
             }
             else
             {
-
-                StartCoroutine(SpinLeft());
+                animator.SetBool("SpinningLeft", true);
+                spinning = true;
+                spinDirection = false;
             }
         }
         else
@@ -59,38 +73,12 @@ public class Treadnaught : Enemy
         base.Update();
     }
 
-    IEnumerator SpinRight()
+    void StopSpinning()
     {
-        spinning = true;
-        animator.SetBool("SpinningRight", true);
-        float elapsedTime = 0f;
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        float spinDuration = stateInfo.length;
-        while (elapsedTime < spinDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            transform.Rotate(Vector3.up * 20f * Time.deltaTime);
-            yield return null;
-        }
+        Debug.Log("Stop Spinning");
+        spinning = false;
         animator.SetBool("SpinningRight", false);
-        spinning = false;
-    }
-
-    IEnumerator SpinLeft()
-    {
-        spinning = true;
-        animator.SetBool("SpinningLeft", true);
-        float elapsedTime = 0f;
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        float spinDuration = stateInfo.length;
-        while (elapsedTime < spinDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            transform.Rotate(Vector3.up * -20f * Time.deltaTime);
-            yield return null;
-        }
         animator.SetBool("SpinningLeft", false);
-        spinning = false;
     }
 
     IEnumerator Charge()
