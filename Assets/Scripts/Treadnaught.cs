@@ -20,6 +20,8 @@ public class Treadnaught : Enemy
     [SerializeField] Transform rightRocketSpawnPoint;
     [SerializeField] float rocketCooldown = 5f;
     float rocketCooldownTimer = 0f;
+    [SerializeField] ParticleSystem leftShootEffect;
+    [SerializeField] ParticleSystem rightShootEffect;
 
     protected override void Start()
     {
@@ -156,6 +158,8 @@ public class Treadnaught : Enemy
             }
             if (rocketCooldownTimer >= rocketCooldown)
             {
+                leftShootEffect.Play();
+                rightShootEffect.Play();
                 Instantiate(rocketPrefab, leftRocketSpawnPoint.position, leftRocketSpawnPoint.rotation);
                 Instantiate(rocketPrefab, rightRocketSpawnPoint.position, rightRocketSpawnPoint.rotation);
                 rocketCooldownTimer = 0f;
