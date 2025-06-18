@@ -15,6 +15,11 @@ public class Treadnaught : Enemy
     public bool spinning = false;
     bool charging = false;
     bool spinDirection = true;
+    [SerializeField] GameObject rocketPrefab;
+    [SerializeField] Transform leftRocketSpawnPoint;
+    [SerializeField] Transform rightRocketSpawnPoint;
+    [SerializeField] float rocketCooldown = 5f;
+    float rocketCooldownTimer = 0f;
 
     protected override void Start()
     {
@@ -99,14 +104,65 @@ public class Treadnaught : Enemy
         {
             animator.SetBool("Stomping", false);
             spinning = false;
-            animator.SetBool("SpinningRight", false);
-            animator.SetBool("SpinningLeft", false);
             for (int i = 0; i < trailParticleEmitters.Length; i++)
             {
                 if (trailParticleEmitters[i] != null)
                 {
                     trailParticleEmitters[i].Stop();
                 }
+            }
+            Vector3 toPlayer = (player.position - transform.position).normalized;
+            float angleToPlayer = Vector3.Angle(transform.forward, toPlayer);
+            if (angleToPlayer > 25f)
+            {
+                float direction = Vector3.Cross(transform.forward, toPlayer).y;
+                if (direction > 0)
+                {
+                    animator.SetBool("SpinningRight", true);
+                    spinning = true;
+                    if (!trailParticleEmitters[0].isPlaying || !trailParticleEmitters[3].isPlaying)
+                    {
+                        trailParticleEmitters[0].Play();
+                        trailParticleEmitters[3].Play();
+                    }
+                    spinDirection = true;
+                    transform.Rotate(Vector3.up, 100f * Time.deltaTime);
+                }
+                else
+                {
+                    animator.SetBool("SpinningLeft", true);
+                    if (!trailParticleEmitters[1].isPlaying || !trailParticleEmitters[2].isPlaying)
+                    {
+                        trailParticleEmitters[1].Play();
+                        trailParticleEmitters[2].Play();
+                    }
+                    spinning = true;
+                    spinDirection = false;
+                    transform.Rotate(Vector3.up, -100f * Time.deltaTime);
+                }
+            }
+            else
+            {
+                animator.SetBool("SpinningRight", false);
+                animator.SetBool("SpinningLeft", false);
+                spinning = false;
+                for (int i = 0; i < trailParticleEmitters.Length; i++)
+                {
+                    if (trailParticleEmitters[i] != null)
+                    {
+                        trailParticleEmitters[i].Stop();
+                    }
+                }
+            }
+            if (rocketCooldownTimer >= rocketCooldown)
+            {
+                Instantiate(rocketPrefab, leftRocketSpawnPoint.position, leftRocketSpawnPoint.rotation);
+                Instantiate(rocketPrefab, rightRocketSpawnPoint.position, rightRocketSpawnPoint.rotation);
+                rocketCooldownTimer = 0f;
+            }
+            else
+            {
+                rocketCooldownTimer += Time.deltaTime;
             }
         }
         base.Update();

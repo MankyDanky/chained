@@ -14,8 +14,8 @@ public class Rocket : MonoBehaviour
     {
         player = FirstPersonController.Instance.transform;
         rb = GetComponent<Rigidbody>();
-        rb.linearVelocity = (player.position - transform.position).normalized * speed;
-        transform.LookAt(player.position);
+        rb.linearVelocity = transform.forward * speed;
+        transform.LookAt(transform.position + rb.linearVelocity);
     }
 
     // Update is called once per frame
