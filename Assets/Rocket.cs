@@ -28,6 +28,7 @@ public class Rocket : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (transform.childCount == 0) return; 
         Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         if ((player.transform.position - transform.position).magnitude < explosionRadius)
         {
@@ -35,6 +36,11 @@ public class Rocket : MonoBehaviour
             playerScript.TakeDamage(damage);
             playerScript.ApplyImpulse((player.transform.position - transform.position).normalized * 10f + Vector3.up * 5f);
         }
+        Transform child = transform.GetChild(0);
+        child.SetParent(null, true); // Unparent and keep world position/scale
+        Destroy(child.gameObject, 5f);
+        child.GetComponent<ParticleSystem>().Stop();
+        child.localScale = Vector3.one * 0.4f;
         Destroy(gameObject);
     }
 }

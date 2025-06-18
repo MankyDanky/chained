@@ -48,9 +48,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5363737455210480499, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363737455210480499, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363737455210480499, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363737455210480499, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[0].value
+      value: 0.5343914
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363737455210480499, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: CustomDataModule.vector0_1.maxCurve.m_Curve.Array.data[0].value
+      value: 0.21693039
+      objectReference: {fileID: 0}
     - target: {fileID: 6606611809540774942, guid: 28e72755831944365b3025761586fa41, type: 3}
       propertyPath: m_Name
       value: RocketTrailEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089976477182669656, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089976477182669656, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: CustomDataModule.vector0_0.maxCurve.m_Curve.Array.data[0].value
+      value: 0.5343914
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089976477182669656, guid: 28e72755831944365b3025761586fa41, type: 3}
+      propertyPath: CustomDataModule.vector0_1.maxCurve.m_Curve.Array.data[0].value
+      value: 0.23809433
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

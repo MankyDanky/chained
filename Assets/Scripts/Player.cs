@@ -189,8 +189,6 @@ public class FirstPersonController : MonoBehaviour
         {
             float localVelocityX = Vector3.Dot(planeVelocity, transform.right);
             float localVelocityZ = Vector3.Dot(planeVelocity, transform.forward);
-            Debug.Log(playerVelocity);
-            Debug.Log($"Local Velocity X: {localVelocityX}, Local Velocity Z: {localVelocityZ}");
             targetGunPosition = new Vector3(
                 gunPivotX - localVelocityX * 0.01f,
                 targetGunPosition.y,
