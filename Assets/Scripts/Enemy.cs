@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -23,6 +24,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] float deathDelay = 1.5f;
     protected NavMeshAgent agent;
     [SerializeField] bool isBoss = false;
+    TMP_Text bossHealthText;
+    TMP_Text bossNameText;
 
     public float maxHealth = 100f;
     public float health;
@@ -53,7 +56,7 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void OnDestroy()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        Instantiate(remains, transform.position, Quaternion.identity);
+        Instantiate(remains, transform.position, transform.rotation);
     }
 
     protected virtual void Start()
@@ -72,6 +75,9 @@ public abstract class Enemy : MonoBehaviour
         {
             GameObject bossHealthBar = GameObject.Find("Canvas").transform.Find("BossHealthBar")?.gameObject;
             bossHealthBar.SetActive(true);
+            bossHealthText = bossHealthBar.transform.Find("HealthText")?.GetComponent<TMP_Text>();
+            bossNameText = bossHealthBar.transform.Find("NameText")?.GetComponent<TMP_Text>();
+            bossNameText.text = gameObject.name;
             healthBarFill = bossHealthBar.transform.Find("Health")?.GetComponent<RectTransform>();
             healthBarIndicatorFill = bossHealthBar.transform.Find("Indicator")?.GetComponent<RectTransform>();
             healthBarFillImage = healthBarFill.GetComponent<Image>();
@@ -105,6 +111,7 @@ public abstract class Enemy : MonoBehaviour
         }
         else
         {
+            bossHealthText.text = $"{Mathf.CeilToInt(health)} / {Mathf.CeilToInt(maxHealth)}";
             healthBarIndicatorTimer += Time.deltaTime;
             healthBarIndicatorTimer = Mathf.Clamp01(healthBarIndicatorTimer);
             healthBarIndicatorFillImage.fillAmount = Mathf.Lerp(healthBarIndicatorWidth, healthBarFillImage.fillAmount, healthBarIndicatorTimer);

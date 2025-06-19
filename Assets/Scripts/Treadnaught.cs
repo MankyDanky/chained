@@ -36,6 +36,7 @@ public class Treadnaught : Enemy
     }
     protected override void Update()
     {
+        base.Update();
         if (isDead) return;
         if (charging)
         {
@@ -170,7 +171,7 @@ public class Treadnaught : Enemy
                 rocketCooldownTimer += Time.deltaTime;
             }
         }
-        base.Update();
+       
     }
 
     IEnumerator Charge()
@@ -209,6 +210,28 @@ public class Treadnaught : Enemy
         charging = false;
     }
 
+    public override void Die()
+    {
+        isDead = true;
+        if (charging)
+        {
+            StartCoroutine(DieAfterCharge());
+        }
+        else
+        {
+            base.Die();
+        }
+    }
+
+    IEnumerator DieAfterCharge()
+    {
+        while (charging)
+        {
+            yield return null;
+        }
+        base.Die();
+    }
+
     void StompRight()
     {
         Instantiate(stompEffectPrefab, stompRightSpawn.position, stompRightSpawn.rotation);
@@ -217,6 +240,7 @@ public class Treadnaught : Enemy
             playerController.TakeDamage(stompDamage);
             playerController.ApplyImpulse((player.position - stompRightSpawn.position) * 10f);
         }
+        
     }
 
     void StompLeft()
