@@ -41131,7 +41131,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
+      scalar: 0.2
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -51695,7 +51695,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904148721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 1479372276
   m_Radius: 0.5
   m_Speed: 3.5
@@ -52902,7 +52902,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0.237}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1692431560}
