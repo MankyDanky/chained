@@ -5638,7 +5638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -53.3}
+  m_AnchoredPosition: {x: 0, y: -53.300003}
   m_SizeDelta: {x: 500, y: 37.2}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &103469597
@@ -7171,6 +7171,7 @@ MonoBehaviour:
   remains: {fileID: 2582456919668013052, guid: e2cc38541dd7b4e53b2f502d68d5be8c, type: 3}
   hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 0
+  isBoss: 0
   maxHealth: 100
   health: 100
   moveSpeed: 5
@@ -33755,6 +33756,7 @@ MonoBehaviour:
   remains: {fileID: 8462413328292954301, guid: eb11b546f76c34f20871e43bd2f9c28d, type: 3}
   hitEffect: {fileID: 156311329}
   deathDelay: 0
+  isBoss: 0
   maxHealth: 100
   health: 50
   moveSpeed: 3
@@ -49414,6 +49416,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
+      propertyPath: isBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: remains
       value: 
       objectReference: {fileID: 4017404480837920932, guid: 0ed45801f3df7495790fd3de1cb95763, type: 3}
@@ -49590,7 +49596,8 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5999478133039012006, guid: 0f4193875c3cf465a86976da64321379, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2035073985044756324, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       insertIndex: -1

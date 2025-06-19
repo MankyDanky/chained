@@ -9,6 +9,7 @@ public class Rocket : MonoBehaviour
     [SerializeField] float damage = 50f;
     [SerializeField] float explosionRadius = 5f;
     [SerializeField] GameObject explosionEffectPrefab;
+    [SerializeField] GameObject destroyEffectPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,6 +42,7 @@ public class Rocket : MonoBehaviour
         Destroy(child.gameObject, 5f);
         child.GetComponent<ParticleSystem>().Stop();
         child.localScale = Vector3.one * 0.4f;
+        Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
