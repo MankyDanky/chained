@@ -22,6 +22,7 @@ public class Treadnaught : Enemy
     float rocketCooldownTimer = 0f;
     [SerializeField] ParticleSystem leftShootEffect;
     [SerializeField] ParticleSystem rightShootEffect;
+    [SerializeField] ParticleSystem chargeEffect;
 
     protected override void Start()
     {
@@ -181,6 +182,7 @@ public class Treadnaught : Enemy
         float s = 0f;
         trailParticleEmitters[3].Play();
         trailParticleEmitters[2].Play();
+        chargeEffect.Play();
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
@@ -195,6 +197,7 @@ public class Treadnaught : Enemy
             }
             yield return null;
         }
+        chargeEffect.Stop();
         for (int i = 0; i < trailParticleEmitters.Length; i++)
         {
             if (trailParticleEmitters[i] != null)
