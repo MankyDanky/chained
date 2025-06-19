@@ -6702,68 +6702,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200760457}
   m_CullTransparentMesh: 1
---- !u!1001 &206574002
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1904148724}
-    m_Modifications:
-    - target: {fileID: 2169505092314543729, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_Name
-      value: SplashEffect
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 77.83528
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.948
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 49.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
---- !u!4 &206574003 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4225491640415743546, guid: 975147e3bd6f44dd0abf0ce6485af810, type: 3}
-  m_PrefabInstance: {fileID: 206574002}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &213939395
 GameObject:
   m_ObjectHideFlags: 0
@@ -27250,6 +27188,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5074a0e2b7abe45e7bdb7d80e006e08c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27257,6 +27199,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5074a0e2b7abe45e7bdb7d80e006e08c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1099603507}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5074a0e2b7abe45e7bdb7d80e006e08c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1099603511}
   m_SourcePrefab: {fileID: 100100000, guid: 5074a0e2b7abe45e7bdb7d80e006e08c, type: 3}
 --- !u!1 &1099603506 stripped
 GameObject:
@@ -27284,6 +27229,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.029456161, y: 0.035235614, z: 0.21655999}
   m_Center: {x: 0.00017653842, y: 0.0036531386, z: 0.09828012}
+--- !u!114 &1099603511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099603506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca6a01e474ab4bc19c09bee6c627692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyEffectPrefab: {fileID: 275852493576285158, guid: c5a0fb91a9cc341d2ba22e6a00f04f17, type: 3}
 --- !u!1001 &1109816161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40936,7 +40894,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -53036,14 +52994,14 @@ ParticleSystem:
   serializedVersion: 8
   lengthInSec: 5
   simulationSpeed: 1
-  stopAction: 2
+  stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -60336,6 +60294,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
+      propertyPath: chargeEffect
+      value: 
+      objectReference: {fileID: 1692431562}
+    - target: {fileID: 7892955436215496001, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: rocketPrefab
       value: 
       objectReference: {fileID: 7067543401947564478, guid: bef9d400dcd5f4facb12be1e1fea25ce, type: 3}
@@ -60529,9 +60491,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2035073985044756324, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2142076572}
-    - targetCorrespondingSourceObject: {fileID: 2035073985044756324, guid: 0f4193875c3cf465a86976da64321379, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 206574003}
     - targetCorrespondingSourceObject: {fileID: 2035073985044756324, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1692431560}
