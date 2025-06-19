@@ -178,26 +178,25 @@ public class Treadnaught : Enemy
         charging = true;
         animator.SetTrigger("Charge");
         yield return new WaitForSeconds(1.4f);
-        
-        // Set NavMeshAgent for charging
-        agent.speed = chargeSpeed;
-        agent.acceleration = 25f; // Fast acceleration for charge
-        
         float elapsedTime = 0f;
+        float s = 0f;
         trailParticleEmitters[3].Play();
         trailParticleEmitters[2].Play();
         chargeEffect.Play();
-        
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
-            
-            // Update destination to player's current position
-            agent.SetDestination(player.position);
-            
+            s = Mathf.Lerp(0f, chargeSpeed, Mathf.Min(1, elapsedTime / 0.3f));
+            rb.linearVelocity = transform.forward * s;
+            Vector3 directionToPlayer = (player.position - transform.position).normalized;
+            directionToPlayer.y = 0f;
+            if (directionToPlayer.sqrMagnitude > 0.001f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime);
+            }
             yield return null;
         }
-        
         chargeEffect.Stop();
         for (int i = 0; i < trailParticleEmitters.Length; i++)
         {
@@ -206,10 +205,6 @@ public class Treadnaught : Enemy
                 trailParticleEmitters[i].Stop();
             }
         }
-        
-        agent.speed = 0; // Assuming moveSpeed is inherited from Enemy
-        agent.acceleration = 8f; // Normal acceleration
-        
         yield return new WaitForSeconds(1.5f);
         charging = false;
     }
