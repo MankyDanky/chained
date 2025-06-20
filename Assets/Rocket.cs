@@ -22,7 +22,7 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.AddForce((player.position - transform.position).normalized * speed, ForceMode.Force);
+        rb.AddForce((player.position - transform.position).normalized * speed * Time.deltaTime * 200, ForceMode.Force);
         transform.LookAt(transform.position + rb.linearVelocity);
         transform.Rotate(-90, 180, 0);
     }
