@@ -12,6 +12,8 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject Brute;
+    [SerializeField] private GameObject SpawnPoint;
     private float playerHeight = 1f;
     private float xRotation = 0f;
     private float yRotation = 0f;
@@ -20,10 +22,11 @@ public class FirstPersonController : MonoBehaviour
     private float dashPower = 96f;
     private float dashTime = 0.2f;
     private float dashCD = 2.5f;
+    public float jumpForce = 5f;
     private Transform gunPivot;
     private float gunPivotY;
     [SerializeField] float bobAmplitude;
-    [SerializeField] private float bobSmoothing = 10f; // Add this line
+    [SerializeField] private float bobSmoothing = 1f; // Add this line
     private Vector3 targetGunPosition; // Add this line
 
     public bool isWalking;
@@ -36,10 +39,7 @@ public class FirstPersonController : MonoBehaviour
     {
         Instance = transform;
     }
-
-
-
-    public float jumpForce = 5f;
+    
 
 
     void Start()
@@ -62,34 +62,17 @@ public class FirstPersonController : MonoBehaviour
         // Get mouse input
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
+        //Inputs for wasd
+        float xaxis = Input.GetAxisRaw("Horizontal");
+        float yaxis = Input.GetAxisRaw("Vertical");
         // Adjust camera and player rotation
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
         playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
 
-        float forwardVelocity = 0;
-        float rightVelocity = 0;
-
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            forwardVelocity = 1;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            forwardVelocity = -1;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            rightVelocity = -1;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            rightVelocity = 1;
-        }
+        float forwardVelocity = yaxis;
+        float rightVelocity = xaxis;
 
         //Sprint 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
@@ -104,9 +87,10 @@ public class FirstPersonController : MonoBehaviour
         {
             speed = 5;
         }
-
+        //Check if the player is moving
         if (forwardVelocity != 0 || rightVelocity != 0)
         {
+            //Animates
             animator.SetBool("isWalking", true);
             isWalking = true;
             Vector3 moveDirection = (transform.forward * forwardVelocity + transform.right * rightVelocity).normalized;
@@ -132,19 +116,23 @@ public class FirstPersonController : MonoBehaviour
 
         // Jumping
         RaycastHit hit;
-        if (Physics.Raycast(playerCamera.transform.position - new Vector3(0, playerHeight / 2, 0), Vector3.down, out hit, 0.5f))
+        if (Physics.Raycast(playerCamera.transform.position + new Vector3(0, playerHeight + 100, 0), Vector3.down, out hit, 100f))
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             }
         }
-
+        Debug.DrawRay(playerCamera.transform.position + new Vector3(0, playerHeight + 100, 0), Vector3.down, Color.red);
 
         //Dash
         if (Input.GetKey(KeyCode.Q) && canDash == true)
         {
             StartCoroutine(Dash());
+        }
+        if(Input.GetKey(KeyCode.C))
+        {
+            Instantiate(Brute, SpawnPoint.transform.position, Quaternion.identity);
         }
     }
     //Dash mechanic

@@ -1,8 +1,11 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    
     [SerializeField] GameObject destroyEffect;
+    [SerializeField] float Damage = 10f;
     Rigidbody rb;
 
     void Start()

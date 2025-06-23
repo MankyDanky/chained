@@ -1242,6 +1242,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5745786318018672296, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d691a8402735fe4cbb0aafca3ddef96, type: 2}
     - target: {fileID: 7946830120252843281, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -1507,10 +1511,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 716662704257568462, guid: 616ed8cf4f27e4c60a9a63d6ce27a154, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
     - target: {fileID: 1695480539076702430, guid: 616ed8cf4f27e4c60a9a63d6ce27a154, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.3273956

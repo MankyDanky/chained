@@ -238,8 +238,10 @@ MonoBehaviour:
   playerCamera: {fileID: 8591709164317553436}
   rb: {fileID: 3055757160921638350}
   animator: {fileID: 0}
-  isWalking: 0
   jumpForce: 5
+  bobAmplitude: 0
+  bobSmoothing: 1
+  isWalking: 0
 --- !u!1 &1479122919889645832
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +738,10 @@ MonoBehaviour:
   bulletSpeed: 50
   fireRate: 0.5
   muzzleFlashPrefab: {fileID: 5923055871544199489, guid: ddb9282fa2ec647a99ecf7b8a2407e0a, type: 3}
+  ChargeParti: {fileID: 5048330782067877251, guid: 3c97294a29a57b143874a61438b23f2e, type: 3}
   gunPivot: {fileID: 2206155093615653542}
+  LazerBullet: {fileID: 4158563446501144788, guid: 8330dad8106c9c5469fdc48b2812c4a5, type: 3}
+  LazerSpeed: 20
 --- !u!4 &2219462556099015725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c8c269eb266324aa7850f52ee7966b15, type: 3}

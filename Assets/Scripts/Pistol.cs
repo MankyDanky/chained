@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Pistol : MonoBehaviour
 {
@@ -7,8 +9,11 @@ public class Pistol : MonoBehaviour
     [SerializeField] private float bulletSpeed = 20f;
     [SerializeField] private float fireRate = 0.5f;
     [SerializeField] private GameObject muzzleFlashPrefab;
+    [SerializeField] private GameObject ChargeParti;
     [SerializeField] private GameObject gunPivot;
-    private float targetRecoil = 0.0f;
+    [SerializeField] private GameObject LazerBulletPrefab;
+    [SerializeField] private float LazerSpeed = 300f;
+    private float targetRecoil = Mathf.Clamp(0, 0, 25);
     private float recoil = 0.0f;
     private float lastFireTime = 0f;
     private float nextFireTime = 0f;
@@ -38,8 +43,11 @@ public class Pistol : MonoBehaviour
         {
             Fire();
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            StartCoroutine(Lazer());
+        }
     }
-
     void Fire()
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
@@ -52,5 +60,19 @@ public class Pistol : MonoBehaviour
         muzzleFlash.transform.SetParent(this.transform);
         lastFireTime = 0f;
         targetRecoil += 3f;
+    }
+    private IEnumerator Lazer()
+    {
+        Debug.Log("Started Charge");
+        GameObject Charge = Instantiate(ChargeParti, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        Charge.transform.SetParent(this.transform);
+        yield return new WaitForSeconds(5f);
+        Debug.Log("Fired");
+        GameObject bullet = Instantiate(LazerBulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+        bulletRb.linearVelocity = bulletSpawnPoint.forward * LazerSpeed;
+        Destroy(Charge);
+        yield return new WaitForSeconds(2);
+        Destroy(bullet);
     }
 }
