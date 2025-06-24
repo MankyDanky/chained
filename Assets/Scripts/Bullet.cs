@@ -46,7 +46,7 @@ public class Bullet : MonoBehaviour
                 splash.GetComponent<Renderer>().material.SetColor("_Color", new Color(waterColor.r, waterColor.g, waterColor.b, 1f));
                 Destroy(gameObject);
             }
-            else
+            else if (!hit.collider.gameObject.CompareTag("Fence"))
             {
                 GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);
                 Destroy(effect, 2f);

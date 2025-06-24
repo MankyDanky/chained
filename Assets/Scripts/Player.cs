@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.IO;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -302,6 +303,17 @@ public class FirstPersonController : MonoBehaviour
             depthOfField.focalLength.Override(Mathf.Lerp(0.1f, 300f, elapsedTime));
             colorAdjustments.colorFilter.Override(Color.Lerp(Color.white, Color.gray, elapsedTime));
             yield return null;
+        }
+    }
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.CompareTag("Fence"))
+        {
+            ElectricFence electricFence = hit.gameObject.GetComponent<ElectricFence>();
+            ApplyImpulse(Vector3.up * 10f + (transform.position - hit.point).normalized * 20f);
+            TakeDamage(10f);
+            Instantiate(electricFence.electricEffect, electricFence.transform.position + electricFence.transform.forward * 2.2f + Vector3.up * 1.5f, Quaternion.identity);
         }
     }
 }
