@@ -23,6 +23,8 @@ public class Treadnaught : Enemy
     [SerializeField] ParticleSystem leftShootEffect;
     [SerializeField] ParticleSystem rightShootEffect;
     [SerializeField] ParticleSystem chargeEffect;
+    [SerializeField] AudioSource sawSound;
+    [SerializeField] AudioSource moveSound;
 
     protected override void Start()
     {
@@ -50,6 +52,7 @@ public class Treadnaught : Enemy
             spinning = false;
             animator.SetBool("SpinningRight", false);
             animator.SetBool("SpinningLeft", false);
+            moveSound.Stop();
             for (int i = 0; i < trailParticleEmitters.Length; i++)
             {
                 if (trailParticleEmitters[i] != null)
@@ -68,6 +71,7 @@ public class Treadnaught : Enemy
                 spinning = false;
                 animator.SetBool("SpinningRight", false);
                 animator.SetBool("SpinningLeft", false);
+                moveSound.Stop();
                 for (int i = 0; i < trailParticleEmitters.Length; i++)
                 {
                     if (trailParticleEmitters[i] != null)
@@ -85,6 +89,7 @@ public class Treadnaught : Enemy
                 spinning = true;
                 if (!trailParticleEmitters[0].isPlaying || !trailParticleEmitters[3].isPlaying)
                 {
+                    moveSound.Play();
                     trailParticleEmitters[0].Play();
                     trailParticleEmitters[3].Play();
                 }
@@ -96,6 +101,7 @@ public class Treadnaught : Enemy
                 animator.SetBool("SpinningLeft", true);
                 if (!trailParticleEmitters[1].isPlaying || !trailParticleEmitters[2].isPlaying)
                 {
+                    moveSound.Play();
                     trailParticleEmitters[1].Play();
                     trailParticleEmitters[2].Play();
                 }
@@ -150,6 +156,7 @@ public class Treadnaught : Enemy
                 animator.SetBool("SpinningRight", false);
                 animator.SetBool("SpinningLeft", false);
                 spinning = false;
+                moveSound.Stop();
                 for (int i = 0; i < trailParticleEmitters.Length; i++)
                 {
                     if (trailParticleEmitters[i] != null)
@@ -178,12 +185,15 @@ public class Treadnaught : Enemy
     {
         charging = true;
         animator.SetTrigger("Charge");
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(0.8f);
+        sawSound.Play();
+        yield return new WaitForSeconds(0.6f);
         float elapsedTime = 0f;
         float s = 0f;
         trailParticleEmitters[3].Play();
         trailParticleEmitters[2].Play();
         chargeEffect.Play();
+        moveSound.Play();
         while (elapsedTime < 2f)
         {
             elapsedTime += Time.deltaTime;
@@ -198,6 +208,7 @@ public class Treadnaught : Enemy
             }
             yield return null;
         }
+        moveSound.Stop();
         chargeEffect.Stop();
         for (int i = 0; i < trailParticleEmitters.Length; i++)
         {
