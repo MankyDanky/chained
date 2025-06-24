@@ -25,6 +25,7 @@ public class Treadnaught : Enemy
     [SerializeField] ParticleSystem chargeEffect;
     [SerializeField] AudioSource sawSound;
     [SerializeField] AudioSource moveSound;
+    [SerializeField] AudioSource slamSound;
 
     protected override void Start()
     {
@@ -271,8 +272,11 @@ public class Treadnaught : Enemy
             if (collision.gameObject.CompareTag("Obstacle"))
             {
                 Destroy(collision.gameObject);
-            } else if (collision.gameObject.CompareTag("Player"))
+                slamSound.Play();
+            }
+            else if (collision.gameObject.CompareTag("Player"))
             {
+                slamSound.Play();
                 playerController.TakeDamage(50f);
                 playerController.ApplyImpulse(transform.forward * 20f + Vector3.up * 5f);
             }
