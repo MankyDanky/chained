@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 10562634}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,6 +286,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -297,6 +309,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -318,6 +334,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -524,7 +548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47935855}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6529,7 +6553,7 @@ GameObject:
   - component: {fileID: 143535647}
   - component: {fileID: 143535649}
   - component: {fileID: 143535648}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6779,6 +6803,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -6790,6 +6826,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -6811,6 +6851,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -6945,7 +6993,7 @@ GameObject:
   - component: {fileID: 146246264}
   - component: {fileID: 146246266}
   - component: {fileID: 146246265}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7636,7 +7684,7 @@ GameObject:
   - component: {fileID: 223346367}
   - component: {fileID: 223346369}
   - component: {fileID: 223346368}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7914,6 +7962,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7925,6 +7985,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -7946,6 +8010,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -8105,7 +8177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 247989945}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8214,7 +8286,7 @@ GameObject:
   - component: {fileID: 280859581}
   - component: {fileID: 280859583}
   - component: {fileID: 280859582}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9113,7 +9185,7 @@ GameObject:
   - component: {fileID: 324255186}
   - component: {fileID: 324255188}
   - component: {fileID: 324255187}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9368,7 +9440,7 @@ GameObject:
   - component: {fileID: 349414458}
   - component: {fileID: 349414460}
   - component: {fileID: 349414459}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9482,7 +9554,7 @@ GameObject:
   - component: {fileID: 361566692}
   - component: {fileID: 361566694}
   - component: {fileID: 361566693}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9671,7 +9743,7 @@ GameObject:
   - component: {fileID: 370166539}
   - component: {fileID: 370166541}
   - component: {fileID: 370166540}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14917,6 +14989,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -14928,6 +15012,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -14949,6 +15037,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -15026,6 +15122,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -15037,6 +15145,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -15058,6 +15170,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -25684,7 +25804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440370922}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25842,6 +25962,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -25853,6 +25985,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -25874,6 +26010,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -26062,7 +26206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 498621910}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26451,6 +26595,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -26462,6 +26618,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -26483,6 +26643,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -26672,7 +26840,7 @@ GameObject:
   - component: {fileID: 519206519}
   - component: {fileID: 519206521}
   - component: {fileID: 519206520}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26786,7 +26954,7 @@ GameObject:
   - component: {fileID: 524096667}
   - component: {fileID: 524096669}
   - component: {fileID: 524096668}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27053,7 +27221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 578436190}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27087,7 +27255,7 @@ GameObject:
   - component: {fileID: 579927716}
   - component: {fileID: 579927718}
   - component: {fileID: 579927717}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27434,6 +27602,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -27445,6 +27625,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -27466,6 +27650,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -27803,7 +27995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 669610528}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27837,7 +28029,7 @@ GameObject:
   - component: {fileID: 675311019}
   - component: {fileID: 675311021}
   - component: {fileID: 675311020}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28022,7 +28214,7 @@ GameObject:
   - component: {fileID: 699762436}
   - component: {fileID: 699762438}
   - component: {fileID: 699762437}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28634,7 +28826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 746666854}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28742,7 +28934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 761293579}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29347,7 +29539,7 @@ GameObject:
   - component: {fileID: 825560759}
   - component: {fileID: 825560761}
   - component: {fileID: 825560760}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29774,6 +29966,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -29785,6 +29989,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -29806,6 +30014,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -30680,7 +30896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 970165802}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30838,6 +31054,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -30849,6 +31077,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -30870,6 +31102,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -30947,6 +31187,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -30958,6 +31210,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -30979,6 +31235,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -31724,7 +31988,7 @@ GameObject:
   - component: {fileID: 1052120644}
   - component: {fileID: 1052120646}
   - component: {fileID: 1052120645}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31838,7 +32102,7 @@ GameObject:
   - component: {fileID: 1066110611}
   - component: {fileID: 1066110613}
   - component: {fileID: 1066110612}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32389,7 +32653,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1140348039}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32439,7 +32703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1142322866}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32473,7 +32737,7 @@ GameObject:
   - component: {fileID: 1146427993}
   - component: {fileID: 1146427995}
   - component: {fileID: 1146427994}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32993,7 +33257,7 @@ GameObject:
   - component: {fileID: 1165382257}
   - component: {fileID: 1165382259}
   - component: {fileID: 1165382258}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33245,7 +33509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185909492}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33279,7 +33543,7 @@ GameObject:
   - component: {fileID: 1192275092}
   - component: {fileID: 1192275094}
   - component: {fileID: 1192275093}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33393,7 +33657,7 @@ GameObject:
   - component: {fileID: 1201209655}
   - component: {fileID: 1201209657}
   - component: {fileID: 1201209656}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33702,6 +33966,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -33713,6 +33989,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -33734,6 +34014,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -33785,7 +34073,7 @@ GameObject:
   - component: {fileID: 1227218419}
   - component: {fileID: 1227218421}
   - component: {fileID: 1227218420}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34205,7 +34493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1282113019}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34237,7 +34525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1297767119}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39781,6 +40069,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -39792,6 +40092,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -39813,6 +40117,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -39841,7 +40153,7 @@ GameObject:
   - component: {fileID: 1398522139}
   - component: {fileID: 1398522141}
   - component: {fileID: 1398522140}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40004,6 +40316,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -40015,6 +40339,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -40036,6 +40364,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -40617,7 +40953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1436166189}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41050,6 +41386,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -41061,6 +41409,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -41082,6 +41434,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -46895,7 +47255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1554265823}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46929,7 +47289,7 @@ GameObject:
   - component: {fileID: 1556204981}
   - component: {fileID: 1556204983}
   - component: {fileID: 1556204982}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47342,7 +47702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1579944607}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47374,7 +47734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1582377794}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47406,7 +47766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587891622}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47597,7 +47957,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631869084}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47629,7 +47989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1635155614}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52725,6 +53085,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -52736,6 +53108,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -52757,6 +53133,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -57677,7 +58061,7 @@ GameObject:
   - component: {fileID: 1758854907}
   - component: {fileID: 1758854909}
   - component: {fileID: 1758854908}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57789,7 +58173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760520295}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57890,6 +58274,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -57901,6 +58297,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -57922,6 +58322,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -58295,7 +58703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787369709}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58527,7 +58935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1838125974}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58678,6 +59086,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -58689,6 +59109,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -58710,6 +59134,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -59096,6 +59528,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -59107,6 +59551,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -59128,6 +59576,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -59403,6 +59859,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -59414,6 +59882,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -59435,6 +59907,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -59913,7 +60393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1922312529}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60312,7 +60792,7 @@ GameObject:
   - component: {fileID: 1943648601}
   - component: {fileID: 1943648603}
   - component: {fileID: 1943648602}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60580,6 +61060,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -60591,6 +61083,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -60612,6 +61108,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -60935,6 +61439,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -60946,6 +61462,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -60967,6 +61487,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -61080,6 +61608,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -61091,6 +61631,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -61112,6 +61656,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -61317,7 +61869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046203438}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserBeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61385,7 +61937,7 @@ GameObject:
   - component: {fileID: 2064822637}
   - component: {fileID: 2064822639}
   - component: {fileID: 2064822638}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61548,6 +62100,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -61559,6 +62123,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -61580,6 +62148,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -67044,7 +67620,7 @@ GameObject:
   - component: {fileID: 2117316255}
   - component: {fileID: 2117316257}
   - component: {fileID: 2117316256}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: LaserVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67343,6 +67919,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -67354,6 +67942,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -67375,6 +67967,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -67452,6 +68052,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -67463,6 +68075,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -67484,6 +68100,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -67583,6 +68207,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -6733177361254619370, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -67594,6 +68230,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_Name
       value: ElectricFence (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: m_TagString
@@ -67615,6 +68255,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 8513859187771203891, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
