@@ -298,6 +298,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -324,6 +328,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1971549743}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1971549745}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1971549744}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &19450330 stripped
 GameObject:
@@ -741,6 +751,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1884083605}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &71082751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71082748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &71082752
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71082748}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &72608262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5787,6 +5837,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 2068125551}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &85183354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85183351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &85183355
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85183351}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!4 &91446741 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 511298103976238081, guid: ad969af6bf28f40c19021cf9b50dd292, type: 3}
@@ -6701,6 +6791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -6727,6 +6821,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 699455418}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699455421}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699455420}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &145085750
 PrefabInstance:
@@ -7399,6 +7499,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 981524455}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &204580333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204580330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &204580334
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204580330}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &213939395
 GameObject:
   m_ObjectHideFlags: 0
@@ -7786,6 +7926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -7812,6 +7956,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1253525771}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1253525774}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1253525773}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &232173507
 PrefabInstance:
@@ -8837,6 +8987,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 513312482}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &318871272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318871269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &318871273
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318871269}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &321198158
 GameObject:
   m_ObjectHideFlags: 0
@@ -14739,6 +14929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -14765,6 +14959,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1021505486}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1021505489}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1021505488}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &405155376
 PrefabInstance:
@@ -14838,6 +15038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -14864,6 +15068,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1868125261}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1868125264}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1868125263}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &405276499
 GameObject:
@@ -20256,6 +20466,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1982263253}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &427687543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427687540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &427687544
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427687540}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &433897675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25604,6 +25854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -25630,6 +25884,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2045706724}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2045706727}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2045706726}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &454806959
 GameObject:
@@ -26091,6 +26351,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 2126498286}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &507504235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507504232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &507504236
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507504232}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &513312482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26163,6 +26463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -26189,6 +26493,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 318871270}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 318871273}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 318871272}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &514588100
 GameObject:
@@ -27136,6 +27446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -27162,6 +27476,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 935707391}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 935707394}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 935707393}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!4 &612497338 stripped
 Transform:
@@ -27429,6 +27749,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 2004520712}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &628730003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628730000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &628730004
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628730000}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!4 &640677838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 984961794884693925, guid: 7f52353596a614fb1a505cbb326f2edc, type: 3}
@@ -27611,6 +27971,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 144941899}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &699455420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699455417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &699455421
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699455417}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &699762435
 GameObject:
   m_ObjectHideFlags: 0
@@ -28396,6 +28796,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1742161573}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &775470569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775470566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &775470570
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775470566}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &777489923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
@@ -28427,6 +28867,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1463888536}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &777489926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777489923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &777489927
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777489923}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!4 &777593633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5608259567134675187, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
@@ -28672,6 +29152,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 2123401420}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &817081822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817081819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &817081823
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817081819}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &817711289
 GameObject:
   m_ObjectHideFlags: 0
@@ -29266,6 +29786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -29292,6 +29816,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1975050616}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975050619}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1975050618}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &881023322
 GameObject:
@@ -29788,6 +30318,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 610641204}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &935707393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935707390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &935707394
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935707390}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &948735590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
@@ -29819,6 +30389,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1852398263}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &948735593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948735590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &948735594
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948735590}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &949717032
 GameObject:
   m_ObjectHideFlags: 0
@@ -30240,6 +30850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -30266,6 +30880,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1635434344}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1635434347}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1635434346}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &981524455
 PrefabInstance:
@@ -30339,6 +30959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -30365,6 +30989,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 204580331}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 204580334}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 204580333}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &990173455 stripped
 GameObject:
@@ -30495,6 +31125,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1399652927}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &995577022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995577019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &995577023
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995577019}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &997110719
 GameObject:
   m_ObjectHideFlags: 0
@@ -30637,6 +31307,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 399070186}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1021505488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021505485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1021505489
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021505485}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!4 &1026117732 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5666261585234168772, guid: cf1d11fbc56704100b2bea8b587581ea, type: 3}
@@ -30691,6 +31401,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1965246229}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1028973694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028973691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1028973695
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028973691}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1030047893
 GameObject:
   m_ObjectHideFlags: 0
@@ -32852,6 +33602,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1764574146}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1213657979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213657976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1213657980
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213657976}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1222431976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32924,6 +33714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -32950,6 +33744,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1457680119}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1457680122}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1457680121}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!4 &1226058945 stripped
 Transform:
@@ -33281,6 +34081,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 227381350}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1253525773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253525770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1253525774
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253525770}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!4 &1272411529 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4292154010595695564, guid: cf1d11fbc56704100b2bea8b587581ea, type: 3}
@@ -38953,6 +39793,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -38979,6 +39823,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1569597177}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1569597180}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1569597179}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &1398522138
 GameObject:
@@ -39166,6 +40016,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -39192,6 +40046,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 995577020}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 995577023}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 995577022}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &1403894834
 GameObject:
@@ -40090,6 +40950,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1222431976}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1457680121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457680118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1457680122
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457680118}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1463888536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40162,6 +41062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -40188,6 +41092,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 777489924}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777489927}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 777489926}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &1466366734
 PrefabInstance:
@@ -46228,6 +47138,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1394426123}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1569597179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569597176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1569597180
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569597176}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1575901786
 GameObject:
   m_ObjectHideFlags: 0
@@ -46733,6 +47683,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 979111862}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1635434346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635434343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1635434347
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635434343}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!4 &1692068743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 511298103976238081, guid: ad969af6bf28f40c19021cf9b50dd292, type: 3}
@@ -51747,6 +52737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -51773,6 +52767,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 775470567}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 775470570}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 775470569}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &1746832836
 GameObject:
@@ -56902,6 +57902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -56928,6 +57932,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1213657977}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1213657980}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1213657979}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &1765209923
 GameObject:
@@ -57680,6 +58690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -57706,6 +58720,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 948735591}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 948735594}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 948735593}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &1859106243
 PrefabInstance:
@@ -57869,6 +58889,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 405155376}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1868125263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868125260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1868125264
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868125260}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1001 &1882574890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58048,6 +59108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -58074,6 +59138,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 71082749}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 71082752}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 71082751}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &1892928523
 PrefabInstance:
@@ -58345,6 +59415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -58371,6 +59445,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1939501485}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1939501488}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1939501487}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &1904148721 stripped
 GameObject:
@@ -59176,6 +60256,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 1903215073}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1939501487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939501484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1939501488
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939501484}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!4 &1940217220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2577548232221058511, guid: cf1d11fbc56704100b2bea8b587581ea, type: 3}
@@ -59472,6 +60592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -59498,6 +60622,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1028973692}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1028973695}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1028973694}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &1970228291
 GameObject:
@@ -59605,6 +60735,46 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.023484, y: 58.456814, z: 20.066587}
   m_Center: {x: 0, y: 29.04708, z: 9.533295}
+--- !u!114 &1971549744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971549741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1971549745
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971549741}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &1975050615 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
@@ -59636,6 +60806,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 869714865}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1975050618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975050615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &1975050619
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975050615}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!114 &1975420536 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1863218112008195685, guid: f375a4bfcd553459c9a6fb57f849c833, type: 3}
@@ -59737,6 +60947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -59763,6 +60977,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 427687541}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 427687544}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 427687543}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &1992901129 stripped
 GameObject:
@@ -59872,6 +61092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -59898,6 +61122,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 628730001}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 628730004}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 628730003}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &2005832105 stripped
 GameObject:
@@ -60038,6 +61268,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 454450627}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045706726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045706723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &2045706727
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045706723}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &2046203437
 GameObject:
   m_ObjectHideFlags: 0
@@ -60290,6 +61560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -60316,6 +61590,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 85183352}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 85183355}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 85183354}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1 &2069207837 stripped
 GameObject:
@@ -60348,6 +61628,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
   m_PrefabInstance: {fileID: 2138055011}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2069207840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069207837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd747a2018124325a791549639aa80b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricEffect: {fileID: 4876227450418831128, guid: 90add9cc884a74710ac53e0c523c4a02, type: 3}
+--- !u!54 &2069207841
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069207837}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!1 &2078135842
 GameObject:
   m_ObjectHideFlags: 0
@@ -66035,6 +67355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -66061,6 +67385,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 817081820}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 817081823}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 817081822}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &2126498286
 PrefabInstance:
@@ -66134,6 +67464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -66160,6 +67494,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 507504233}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507504236}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 507504235}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!114 &2127186916 stripped
 MonoBehaviour:
@@ -66255,6 +67595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectricFence (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      propertyPath: m_TagString
+      value: Fence
+      objectReference: {fileID: 0}
     - target: {fileID: 1129496810705857465, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -66281,6 +67625,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2069207838}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2069207841}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2069207840}
   m_SourcePrefab: {fileID: 100100000, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
 --- !u!1001 &2142076571
 PrefabInstance:
@@ -67812,7 +69162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1690496573417156062, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1690496573417156062, guid: 0f4193875c3cf465a86976da64321379, type: 3}
       propertyPath: m_TagString
