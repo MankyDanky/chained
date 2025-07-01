@@ -7,7 +7,6 @@ public class ElectricFence : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("ElectricFence: Collision with " + collision.gameObject.name);
         if (collision.gameObject.CompareTag("Player"))
         {
             FirstPersonController playerController = collision.gameObject.GetComponent<FirstPersonController>();

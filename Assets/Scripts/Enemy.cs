@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -30,6 +33,74 @@ public abstract class Enemy : MonoBehaviour
     public float maxHealth = 100f;
     public float health;
     public float moveSpeed;
+
+
+    // Spawning
+    [SerializeField] List<Material> spawningMaterials;
+    [SerializeField] List<Material> spawnedMaterials;
+
+    IEnumerator FadeIn()
+    {
+        Dictionary<Material, Material> preMap = new Dictionary<Material, Material>();
+        Dictionary<Material, Material> postMap = new Dictionary<Material, Material>();
+        for (int i = 0; i < spawningMaterials.Count; i++)
+        {
+            Material spawnedMaterial = spawnedMaterials[i];
+            Material spawningMaterial = spawningMaterials[i];
+            preMap.Add(spawnedMaterial, spawningMaterial);
+            postMap.Add(spawningMaterial, spawnedMaterial);
+        }
+        foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+        {
+            Material[] materials = renderer.materials;
+            for (int i = 0; i < materials.Length; i++)
+            {
+                for (int j = 0; j < spawnedMaterials.Count; j++)
+                {
+                    Debug.Log($" {materials[i].name} and {spawningMaterials[j].name}");
+                    if (materials[i].name.Split(' ')[0] == spawnedMaterials[j].name)
+                    {
+                        materials[i] = spawningMaterials[j];
+                    }
+                }
+            }
+            renderer.materials = materials;
+        }
+        float elapsedTime = 0f;
+        while (elapsedTime < 0.5f)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / 0.5f);
+            foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+            {
+                Material[] materials = renderer.materials;
+                for (int i = 0; i < materials.Length; i++)
+                {
+                    materials[i].SetFloat("_CutoffHeight", Mathf.Lerp(renderer.transform.position.y - 2, renderer.transform.position.y + 2, t));
+                }
+                renderer.materials = materials;
+            }
+            yield return null;
+        }
+        foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+        {
+            Material[] materials = renderer.materials;
+            for (int i = 0; i < materials.Length; i++)
+            {
+                for (int j = 0; j < spawnedMaterials.Count; j++)
+                {
+                    Debug.Log($" {materials[i].name} and {spawningMaterials[j].name}");
+                    if (materials[i].name.Split(' ')[0] == spawningMaterials[j].name)
+                    {
+                        materials[i] = spawnedMaterials[j];
+                    }
+                }
+            }
+            renderer.materials = materials;
+        }
+        this.GetComponent<Outline>().enabled = true;
+    }
+    
 
     public abstract void Attack();
     public virtual void TakeDamage(float amount, Vector3 hitPoint)
@@ -70,6 +141,7 @@ public abstract class Enemy : MonoBehaviour
             healthBarIndicatorFill = transform.Find("HealthBar/Indicator")?.GetComponent<RectTransform>();
             healthBarCanvas = transform.Find("HealthBar")?.GetComponent<Canvas>();
             healthBarWidth = healthBarFill.sizeDelta.x;
+            StartCoroutine(FadeIn());
         }
         else
         {

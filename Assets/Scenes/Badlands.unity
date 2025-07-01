@@ -8656,6 +8656,8 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   moveSpeed: 5
+  spawningMaterials: []
+  spawnedMaterials: []
   attackDamage: 5
   attackRange: 8
   laserPrefab: {fileID: 4577154718944495536, guid: 94182b61056124b98a4259f71dda0395, type: 3}
@@ -32344,6 +32346,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 365005550956886571, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283688224131892835, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
     - target: {fileID: 1510104955986560498, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48.7
@@ -32390,8 +32400,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287592045945200456, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: spawnedMaterials.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: spawningMaterials.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawnedMaterials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c7e7dfb4e229e4a34a6b4b87be4636bf, type: 2}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawnedMaterials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawnedMaterials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 70a5c7ac751f04fc1874461c6a872c4d, type: 2}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawnedMaterials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawningMaterials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 07ea8952a202641d58c6b96c72b45bba, type: 2}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawningMaterials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9d7175e716aaf4d638877bdd1b4dea71, type: 2}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawningMaterials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 505f20f0621b04852987bb1bdff6de32, type: 2}
+    - target: {fileID: 4262305923965230883, guid: 4fd139898a96a40cbb2d9add0fbed1a6, type: 3}
+      propertyPath: 'spawningMaterials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 28c4302cdb5bb47929d129e12f367448, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34410,7 +34460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -45, y: -20.001}
+  m_AnchoredPosition: {x: -45, y: -20.001007}
   m_SizeDelta: {x: 390.59, y: 107.33}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1302740222
@@ -40875,6 +40925,8 @@ MonoBehaviour:
   maxHealth: 100
   health: 50
   moveSpeed: 3
+  spawningMaterials: []
+  spawnedMaterials: []
   toxicDestroyEffect: {fileID: 1331252284002780404, guid: 79eb041e72497433aa475b912b1b9509, type: 3}
   attackRange: 1
   toxicGasPrefab: {fileID: 7029389855579425949, guid: abd220115b9d94e70aef10c4ca5f8495, type: 3}
