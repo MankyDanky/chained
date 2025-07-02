@@ -694,6 +694,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
+    - target: {fileID: 193323465437373562, guid: aff8a41a92fa54c14ba73a4faca98acb, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
     - target: {fileID: 365611205695357475, guid: aff8a41a92fa54c14ba73a4faca98acb, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -732,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aff8a41a92fa54c14ba73a4faca98acb, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aff8a41a92fa54c14ba73a4faca98acb, type: 3}
       propertyPath: m_TagString
@@ -1081,7 +1085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2287592045945200456}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
@@ -1108,9 +1112,20 @@ MonoBehaviour:
   remains: {fileID: 7097971339920341743, guid: ccadcbf3d31854155a4270d6d68311f2, type: 3}
   hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 1.5
+  isBoss: 0
   maxHealth: 100
   health: 100
   moveSpeed: 1.5
+  spawningMaterials:
+  - {fileID: 2100000, guid: 07ea8952a202641d58c6b96c72b45bba, type: 2}
+  - {fileID: 2100000, guid: 9d7175e716aaf4d638877bdd1b4dea71, type: 2}
+  - {fileID: 2100000, guid: 505f20f0621b04852987bb1bdff6de32, type: 2}
+  - {fileID: 2100000, guid: 28c4302cdb5bb47929d129e12f367448, type: 2}
+  spawnedMaterials:
+  - {fileID: 2100000, guid: c7e7dfb4e229e4a34a6b4b87be4636bf, type: 2}
+  - {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+  - {fileID: 2100000, guid: 70a5c7ac751f04fc1874461c6a872c4d, type: 2}
+  - {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
   attackDamage: 5
   attackRange: 2
   specialAttackRange: 15

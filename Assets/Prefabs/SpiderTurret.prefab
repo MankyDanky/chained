@@ -1534,6 +1534,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4733261078471696694}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7617200869379549583}
   m_SourcePrefab: {fileID: 100100000, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
 --- !u!1 &1368099185793111100 stripped
 GameObject:
@@ -1639,15 +1642,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyEffect: {fileID: 9104511306309097508, guid: 87b5f27b0f9d848229e5c533bea8230b, type: 3}
-  armature: {fileID: 9194302439096833106}
   remains: {fileID: 6094053365462635011, guid: 0ba111deacb264322b7d95e4e3aa813a, type: 3}
   hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 0
+  isBoss: 0
   maxHealth: 100
   health: 100
   moveSpeed: 1
+  spawningMaterials:
+  - {fileID: 2100000, guid: 28c4302cdb5bb47929d129e12f367448, type: 2}
+  - {fileID: 2100000, guid: 07ea8952a202641d58c6b96c72b45bba, type: 2}
+  - {fileID: 2100000, guid: 9d7175e716aaf4d638877bdd1b4dea71, type: 2}
+  - {fileID: 2100000, guid: 505f20f0621b04852987bb1bdff6de32, type: 2}
+  spawnedMaterials:
+  - {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
+  - {fileID: 2100000, guid: c7e7dfb4e229e4a34a6b4b87be4636bf, type: 2}
+  - {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+  - {fileID: 2100000, guid: 70a5c7ac751f04fc1874461c6a872c4d, type: 2}
   attackDamage: 2
-  attackRange: 5
+  attackRange: 15
   groundLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -1664,6 +1677,9 @@ MonoBehaviour:
   laserPrefab: {fileID: 4577154718944495536, guid: 94182b61056124b98a4259f71dda0395, type: 3}
   laserSpawnPoint: {fileID: 392273797033441366}
   laserCooldown: 1
+  laserSpeed: 35
+  headBone: {fileID: 4152439426905838079}
+  laserSound: {fileID: 8349727456735415868, guid: 4f0948e1fb81b414aa3636b6c89c0f20, type: 3}
 --- !u!195 &4733261078471696694
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1686,6 +1702,24 @@ NavMeshAgent:
   m_BaseOffset: 0.8
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7617200869379549583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368099185793111100}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &1372787050284349904 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 950261356983636157, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
@@ -1721,6 +1755,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3469503123963567039, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
   m_PrefabInstance: {fileID: 2178932050952595821}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4152439426905838079 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2854563699051640978, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
+  m_PrefabInstance: {fileID: 2178932050952595821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4361512643423725233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6721011648160903204, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
@@ -1754,10 +1793,5 @@ Transform:
 --- !u!4 &8107690012738776766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -1244873405128718381, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
-  m_PrefabInstance: {fileID: 2178932050952595821}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &9194302439096833106 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7036213049465896255, guid: 8fab7b6e44c6f4e50a85d1824b15fcb6, type: 3}
   m_PrefabInstance: {fileID: 2178932050952595821}
   m_PrefabAsset: {fileID: 0}

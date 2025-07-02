@@ -466,6 +466,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c7e7dfb4e229e4a34a6b4b87be4636bf, type: 2}
+    - target: {fileID: -3685092766192992204, guid: 039914a786dae4859a765f6f21347ecc, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
     - target: {fileID: -3411440906883550397, guid: 039914a786dae4859a765f6f21347ecc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -630,6 +634,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 039914a786dae4859a765f6f21347ecc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 53270691009354281}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 039914a786dae4859a765f6f21347ecc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5606572453958116396}
   m_SourcePrefab: {fileID: 100100000, guid: 039914a786dae4859a765f6f21347ecc, type: 3}
 --- !u!4 &258933771662184095 stripped
 Transform:
@@ -657,9 +664,20 @@ MonoBehaviour:
   remains: {fileID: 2803300539452773796, guid: 40445074a90704550ba5f27ff2f5bc20, type: 3}
   hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 0
+  isBoss: 0
   maxHealth: 100
   health: 40
   moveSpeed: 3
+  spawningMaterials:
+  - {fileID: 2100000, guid: 28c4302cdb5bb47929d129e12f367448, type: 2}
+  - {fileID: 2100000, guid: 07ea8952a202641d58c6b96c72b45bba, type: 2}
+  - {fileID: 2100000, guid: 9d7175e716aaf4d638877bdd1b4dea71, type: 2}
+  - {fileID: 2100000, guid: 505f20f0621b04852987bb1bdff6de32, type: 2}
+  spawnedMaterials:
+  - {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
+  - {fileID: 2100000, guid: c7e7dfb4e229e4a34a6b4b87be4636bf, type: 2}
+  - {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+  - {fileID: 2100000, guid: 70a5c7ac751f04fc1874461c6a872c4d, type: 2}
   attackRange: 2
   attackDamage: 10
   kickSound: {fileID: 7043872476060710079, guid: a8affbfcb32bb452f93a7757936343b0, type: 3}
@@ -728,3 +746,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5606572453958116396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638449328678409253}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
