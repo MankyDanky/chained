@@ -57,7 +57,6 @@ public abstract class Enemy : MonoBehaviour
             {
                 for (int j = 0; j < spawnedMaterials.Count; j++)
                 {
-                    Debug.Log($" {materials[i].name} and {spawningMaterials[j].name}");
                     if (materials[i].name.Split(' ')[0] == spawnedMaterials[j].name)
                     {
                         materials[i] = spawningMaterials[j];
@@ -89,7 +88,6 @@ public abstract class Enemy : MonoBehaviour
             {
                 for (int j = 0; j < spawnedMaterials.Count; j++)
                 {
-                    Debug.Log($" {materials[i].name} and {spawningMaterials[j].name}");
                     if (materials[i].name.Split(' ')[0] == spawningMaterials[j].name)
                     {
                         materials[i] = spawnedMaterials[j];

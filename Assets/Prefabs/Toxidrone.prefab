@@ -614,7 +614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyEffect: {fileID: 9104511306309097508, guid: 87b5f27b0f9d848229e5c533bea8230b, type: 3}
   remains: {fileID: 8462413328292954301, guid: eb11b546f76c34f20871e43bd2f9c28d, type: 3}
-  hitEffect: {fileID: 0}
+  hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 0
   isBoss: 0
   maxHealth: 100
