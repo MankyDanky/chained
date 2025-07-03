@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                if (Random.Range(0f, 1f) < 0.5f)
+                if (Random.Range(0f, 1f) < 0.3f)
                 {
                     GameObject prefab = enemies[Random.Range(0, enemies.Length)];
                     Vector3 randomPos = new Vector3(

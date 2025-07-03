@@ -19,14 +19,14 @@ public class UpgradeStation : MonoBehaviour
     [SerializeField] GameObject upgradeOrbPrefab;
     [SerializeField] GameObject upgradeAppearEffectPrefab;
     [SerializeField] Transform[] upgradeOrbSpawnPoints;
-    [SerializeField] GameObject descriptionPanel;
-    [SerializeField] TMP_Text descriptionText;
-    [SerializeField] TMP_Text nameText;
+    GameObject descriptionPanel;
+    TMP_Text descriptionText;
+    TMP_Text nameText;
     [SerializeField] Upgrade[] upgrades = new Upgrade[3];
 
     void Start()
     {
-        descriptionPanel = GameObject.Find("Canvas/Upgrade");
+        descriptionPanel = GameObject.Find("Canvas").transform.Find("Upgrade").gameObject;
         descriptionText = descriptionPanel.transform.Find("Description").GetComponent<TMP_Text>();
         nameText = descriptionPanel.transform.Find("Name").GetComponent<TMP_Text>();
         for (int i = 0; i < 3; i++)

@@ -665,9 +665,9 @@ MonoBehaviour:
   hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 0
   isBoss: 0
-  maxHealth: 100
-  health: 40
-  moveSpeed: 3
+  maxHealth: 70
+  health: 70
+  moveSpeed: 4
   spawningMaterials:
   - {fileID: 2100000, guid: 28c4302cdb5bb47929d129e12f367448, type: 2}
   - {fileID: 2100000, guid: 07ea8952a202641d58c6b96c72b45bba, type: 2}

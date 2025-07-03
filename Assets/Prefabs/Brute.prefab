@@ -1113,8 +1113,8 @@ MonoBehaviour:
   hitEffect: {fileID: 6407962136549516718, guid: 04097b882f2b34099963635bb0015d83, type: 3}
   deathDelay: 1.5
   isBoss: 0
-  maxHealth: 100
-  health: 100
+  maxHealth: 150
+  health: 150
   moveSpeed: 1.5
   spawningMaterials:
   - {fileID: 2100000, guid: 07ea8952a202641d58c6b96c72b45bba, type: 2}
@@ -1126,10 +1126,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
   - {fileID: 2100000, guid: 70a5c7ac751f04fc1874461c6a872c4d, type: 2}
   - {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
-  attackDamage: 5
+  attackDamage: 20
   attackRange: 2
   specialAttackRange: 15
-  specialAttackCooldown: 10
+  specialAttackCooldown: 7
   specialAttackEffect: {fileID: 1906282802322684411, guid: f68f651e638eb42f89e989077586e40d, type: 3}
   specialAttackTimer: 0
   spike: {fileID: 6031544174803259558, guid: 90b09932d0ea1461281914bea53337da, type: 3}
