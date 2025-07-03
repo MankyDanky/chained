@@ -26,6 +26,9 @@ public class UpgradeStation : MonoBehaviour
 
     void Start()
     {
+        descriptionPanel = GameObject.Find("Canvas/Upgrade");
+        descriptionText = descriptionPanel.transform.Find("Description").GetComponent<TMP_Text>();
+        nameText = descriptionPanel.transform.Find("Name").GetComponent<TMP_Text>();
         for (int i = 0; i < 3; i++)
         {
             GameObject hologramObject = Instantiate(upgrades[i].upgradeHologramPrefab);
@@ -40,8 +43,8 @@ public class UpgradeStation : MonoBehaviour
             hologramObject.transform.localPosition = new Vector3(xPos, 0.0f, 0.0108f);
             hologramObject.transform.localRotation = Quaternion.Euler(90, 0, 0);
             hologramObject.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
-            holograms[i*2] = hologramObject.transform.GetChild(0).Find("Fill").GetComponent<Image>();
-            holograms[i*2 + 1] = hologramObject.transform.GetChild(0).Find("Border").GetComponent<Image>();
+            holograms[i * 2] = hologramObject.transform.GetChild(0).Find("Fill").GetComponent<Image>();
+            holograms[i * 2 + 1] = hologramObject.transform.GetChild(0).Find("Border").GetComponent<Image>();
         }
         meshRenderer = GetComponent<MeshRenderer>();
         materials = meshRenderer.materials;
