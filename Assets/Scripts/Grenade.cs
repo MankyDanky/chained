@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    [SerializeField] private float explosionRadius = 5f;
-    [SerializeField] private float explosionDamage = 50f;
+    [SerializeField] private float explosionRadius = 8f;
+    [SerializeField] private float explosionDamage = 100f;
     [SerializeField] private GameObject explosionEffect;
 
     void Start()
