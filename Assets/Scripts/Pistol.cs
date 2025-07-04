@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Pistol : MonoBehaviour
 {
-    public float grenadeCooldown = 10f;
+    public float grenadeCooldown = 5f;
     public float grenadeTimer = 0f;
     public bool canThrowGrenade = true;
     [SerializeField] private GameObject bulletPrefab;
