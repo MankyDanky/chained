@@ -169,8 +169,8 @@ public class UpgradeStation : MonoBehaviour
         materials[1] = oldMaterial;
         meshRenderer.materials = materials;
         elapsedTime = 0f;
-        Instantiate(upgradeOrbPrefab, upgradeOrbSpawnPoints[selectedHologramIndex/2].position, Quaternion.identity);
-        Instantiate(upgradeAppearEffectPrefab, upgradeOrbSpawnPoints[selectedHologramIndex/2].position, Quaternion.identity);
+        Instantiate(upgradeOrbPrefab, upgradeOrbSpawnPoints[selectedHologramIndex / 2].position, Quaternion.identity);
+        Instantiate(upgradeAppearEffectPrefab, upgradeOrbSpawnPoints[selectedHologramIndex / 2].position, Quaternion.identity);
         upgrades[selectedHologramIndex / 2].upgradeEffect.ApplyEffect(this);
         while (elapsedTime < dissolveDuration)
         {
@@ -182,6 +182,7 @@ public class UpgradeStation : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        GameManager.Instance.StopUpgrading();
         Destroy(gameObject);
     }
 }

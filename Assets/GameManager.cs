@@ -5,6 +5,8 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     [SerializeField] GameObject[] enemies;
     [SerializeField] GameObject[] miniBosses;
     [SerializeField] Bounds spawnArea;
@@ -24,6 +26,10 @@ public class GameManager : MonoBehaviour
             secondsPassed++;
             if (secondsPassed % 60 == 0)
             {
+                while (GameObject.FindGameObjectsWithTag("Enemy").Length > 0)
+                {
+                    yield return new WaitForSeconds(1f);
+                }
                 wave++;
                 waveText.text = $"WAVE: {wave}";
                 upgrading = true;
@@ -79,6 +85,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Debug.LogWarning("Multiple instances of GameManager detected. Destroying the new instance.");
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         StartCoroutine(SpawnEnemy());
@@ -86,6 +106,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        
+
+    }
+    
+    public void StopUpgrading()
+    {
+        upgrading = false;
     }
 }
