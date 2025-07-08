@@ -22,7 +22,7 @@ public class UpgradeStation : MonoBehaviour
     GameObject descriptionPanel;
     TMP_Text descriptionText;
     TMP_Text nameText;
-    [SerializeField] Upgrade[] upgrades = new Upgrade[3];
+    public Upgrade[] upgrades = new Upgrade[3];
 
     void Start()
     {

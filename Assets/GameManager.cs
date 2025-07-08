@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text waveText;
     [SerializeField] GameObject upgradeStationPrefab;
     [SerializeField] Transform upgradeStationSpawnPoint;
+    [SerializeField] Upgrade[] upgrades;
     int secondsPassed = 0;
     int wave = 1;
     bool upgrading = false;
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1f);
             if (upgrading) continue;
             secondsPassed++;
-            if (secondsPassed % 60 == 0)
+            if (secondsPassed % 20 == 0)
             {
                 while (GameObject.FindGameObjectsWithTag("Enemy").Length > 0)
                 {
@@ -34,7 +35,10 @@ public class GameManager : MonoBehaviour
                 waveText.text = $"WAVE: {wave}";
                 upgrading = true;
                 secondsPassed = 0;
-                Instantiate(upgradeStationPrefab, upgradeStationSpawnPoint.position, upgradeStationSpawnPoint.rotation);
+                UpgradeStation upgradeStation = Instantiate(upgradeStationPrefab, upgradeStationSpawnPoint.position, upgradeStationSpawnPoint.rotation).GetComponent<UpgradeStation>();
+                upgradeStation.upgrades[0] = upgrades[Random.Range(0, upgrades.Length)];
+                upgradeStation.upgrades[1] = upgrades[Random.Range(0, upgrades.Length)];
+                upgradeStation.upgrades[2] = upgrades[Random.Range(0, upgrades.Length)];
             }
             else if (secondsPassed % 10 == 0)
             {

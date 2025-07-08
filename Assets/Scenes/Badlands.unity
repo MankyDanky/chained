@@ -58053,6 +58053,11 @@ MonoBehaviour:
   waveText: {fileID: 1302740222}
   upgradeStationPrefab: {fileID: 3202391162898042850, guid: 1a8e8fc3a7f804829a52b684868a428a, type: 3}
   upgradeStationSpawnPoint: {fileID: 1252579032}
+  upgrades:
+  - {fileID: 11400000, guid: 41cb346686be9447c94931871023d8ab, type: 2}
+  - {fileID: 11400000, guid: 31c1f9a3195724d1ead41bec08a530ea, type: 2}
+  - {fileID: 11400000, guid: 89d102c97b2cc43fb93c90aed9d7e786, type: 2}
+  - {fileID: 11400000, guid: 562b57ab416104ce08ed6391cda65a08, type: 2}
 --- !u!4 &1959765976
 Transform:
   m_ObjectHideFlags: 0
