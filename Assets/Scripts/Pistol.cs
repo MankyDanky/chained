@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class Pistol : MonoBehaviour
 {
+    public enum AttackType { None, Bullet, Zag, Grenade }
+
+
+    public AttackType chainedAttack = AttackType.None;
     public float grenadeCooldown = 5f;
     public float grenadeTimer = 0f;
     public bool canThrowGrenade = true;
@@ -28,6 +32,7 @@ public class Pistol : MonoBehaviour
     [SerializeField] Image fireCooldownImage;
     [SerializeField] Image secondaryFireCooldownImage;
     [SerializeField] Image grenadeCooldownImage;
+    [SerializeField] GameObject chainedIcon;
     public float damageBoost = 0f;
 
 
@@ -38,26 +43,33 @@ public class Pistol : MonoBehaviour
 
     void Update()
     {
-        if (lastFireTime < fireCooldown)
+        if (chainedAttack != AttackType.Bullet)
         {
-            lastFireTime += Time.deltaTime;
-            fireCooldownImage.fillAmount = lastFireTime / fireCooldown;
-        }
-        else
-        {
-            fireCooldownImage.fillAmount = 1f;
+            if (lastFireTime < fireCooldown)
+            {
+                lastFireTime += Time.deltaTime;
+                fireCooldownImage.fillAmount = lastFireTime / fireCooldown;
+            }
+            else
+            {
+                fireCooldownImage.fillAmount = 1f;
+            }
         }
 
-        if (lastSecondaryFireTime < secondaryFireCooldown)
+
+        if (chainedAttack != AttackType.Zag)
         {
-            lastSecondaryFireTime += Time.deltaTime;
-            secondaryFireCooldownImage.fillAmount = lastSecondaryFireTime / secondaryFireCooldown;
+            if (lastSecondaryFireTime < secondaryFireCooldown)
+            {
+                lastSecondaryFireTime += Time.deltaTime;
+                secondaryFireCooldownImage.fillAmount = lastSecondaryFireTime / secondaryFireCooldown;
+            }
+            else
+            {
+                secondaryFireCooldownImage.fillAmount = 1f;
+            }
         }
-        else
-        {
-            secondaryFireCooldownImage.fillAmount = 1f;
-        }
-        
+
         recoil = Mathf.Lerp(recoil, targetRecoil, lastFireTime * 20f);
         gunPivot.transform.localRotation = Quaternion.Euler(-recoil, 0f, 0f);
 
@@ -70,16 +82,16 @@ public class Pistol : MonoBehaviour
             targetRecoil = 0f;
         }
 
-        if (Input.GetMouseButtonDown(0) && lastFireTime >= fireCooldown)
+        if (Input.GetMouseButtonDown(0) && lastFireTime >= fireCooldown && chainedAttack != AttackType.Bullet)
         {
             Fire();
         }
-        if (Input.GetMouseButtonDown(1) && lastSecondaryFireTime >= secondaryFireCooldown)
+        if (Input.GetMouseButtonDown(1) && lastSecondaryFireTime >= secondaryFireCooldown && chainedAttack != AttackType.Zag)
         {
             FireSecondary();
         }
 
-        if (Input.GetKeyDown(KeyCode.G) && canThrowGrenade)
+        if (Input.GetKeyDown(KeyCode.G) && canThrowGrenade && chainedAttack != AttackType.Grenade)
         {
             grenadeInstance = null;
             animator.SetTrigger("grenade");
@@ -87,15 +99,30 @@ public class Pistol : MonoBehaviour
             canThrowGrenade = false;
         }
 
-        if (grenadeTimer < grenadeCooldown)
+        if (chainedAttack != AttackType.Grenade)
         {
-            grenadeTimer += Time.deltaTime;
-            grenadeCooldownImage.fillAmount = grenadeTimer / grenadeCooldown;
+            if (grenadeTimer < grenadeCooldown)
+            {
+                grenadeTimer += Time.deltaTime;
+                grenadeCooldownImage.fillAmount = grenadeTimer / grenadeCooldown;
+            }
+            else
+            {
+                canThrowGrenade = true;
+                grenadeCooldownImage.fillAmount = 1f;
+            }
         }
-        else
+
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            canThrowGrenade = true;
-            grenadeCooldownImage.fillAmount = 1f;
+            if (chainedAttack == AttackType.Bullet)
+            {
+                SetChainedAttack(AttackType.None);
+            }
+            else
+            {
+                SetChainedAttack(AttackType.Bullet);
+            }
         }
     }
 
@@ -121,7 +148,7 @@ public class Pistol : MonoBehaviour
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
         bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
         Instantiate(secondaryFireSound, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
-        
+
         // Find closest enemy to center of screen and set as target
         ZagBullet zagBullet = bullet.GetComponent<ZagBullet>();
         if (zagBullet != null)
@@ -132,7 +159,7 @@ public class Pistol : MonoBehaviour
                 zagBullet.target = closestEnemy.gameObject;
             }
         }
-        
+
         float scale = Random.Range(0.015f, 0.03f);
         float rotation = Random.Range(0f, 360f);
         GameObject muzzleFlash = Instantiate(secondaryMuzzleFlashPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation * Quaternion.Euler(rotation, -90f, 0f));
@@ -146,22 +173,22 @@ public class Pistol : MonoBehaviour
     {
         Camera playerCamera = Camera.main; // Or get reference to player camera
         Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-        
+
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         Transform closestEnemy = null;
         float closestDistance = float.MaxValue;
-        
+
         foreach (GameObject enemy in enemies)
         {
             // Convert enemy world position to screen position
             Vector3 screenPos = playerCamera.WorldToScreenPoint(enemy.transform.position);
-            
+
             // Check if enemy is in front of camera
             if (screenPos.z > 0)
             {
                 // Calculate distance from screen center
                 float screenDistance = Vector2.Distance(new Vector2(screenPos.x, screenPos.y), new Vector2(screenCenter.x, screenCenter.y));
-                
+
                 if (screenDistance < closestDistance)
                 {
                     closestDistance = screenDistance;
@@ -169,7 +196,7 @@ public class Pistol : MonoBehaviour
                 }
             }
         }
-        
+
         return closestEnemy;
     }
 
@@ -196,5 +223,51 @@ public class Pistol : MonoBehaviour
         grenadeInstance.transform.SetParent(null);
         grenadeInstance.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.transform.forward * 10f + bulletSpawnPoint.transform.right * 5f, ForceMode.Impulse);
         grenadeInstance.GetComponent<Rigidbody>().AddTorque(new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), Random.Range(-1f, 1f)) * 10f, ForceMode.Impulse);
+    }
+
+    public void SetChainedAttack(AttackType attackType)
+    {
+        chainedIcon.SetActive(false);
+        switch (chainedAttack)
+        {
+            case AttackType.Bullet:
+                fireCooldownImage.enabled = true;
+                fireCooldownImage.transform.parent.Find("Border").GetComponent<Image>().color = new Color(0f, 0f, 0f, 1f);
+                break;
+            case AttackType.Zag:
+                secondaryFireCooldownImage.enabled = true;
+                secondaryFireCooldownImage.transform.parent.Find("Border").GetComponent<Image>().color = new Color(0f, 0f, 0f, 1f);
+                break;
+            case AttackType.Grenade:
+                grenadeCooldownImage.enabled = true;
+                grenadeCooldownImage.transform.parent.Find("Border").GetComponent<Image>().color = new Color(0f, 0f, 0f, 1f);
+                break;
+            default:
+                break;
+        }
+
+        
+        chainedAttack = attackType;
+        if (chainedAttack == AttackType.Bullet)
+        {
+            chainedIcon.SetActive(true);
+            chainedIcon.transform.position = fireCooldownImage.transform.position;
+            fireCooldownImage.enabled = false;
+            fireCooldownImage.transform.parent.Find("Border").GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.6f);
+        }
+        else if (chainedAttack == AttackType.Zag)
+        {
+            chainedIcon.SetActive(true);
+            chainedIcon.transform.position = secondaryFireCooldownImage.transform.position;
+            secondaryFireCooldownImage.enabled = false;
+            secondaryFireCooldownImage.transform.parent.Find("Border").GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.6f);
+        }
+        else if (chainedAttack == AttackType.Grenade)
+        {
+            chainedIcon.SetActive(true);
+            chainedIcon.transform.position = grenadeCooldownImage.transform.position;
+            grenadeCooldownImage.enabled = false;
+            grenadeCooldownImage.transform.parent.Find("Border").GetComponent<Image>().color = new Color(0f, 0f, 0f, 0.6f);
+        }
     }
 }
