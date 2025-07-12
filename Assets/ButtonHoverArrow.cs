@@ -9,6 +9,7 @@ public class ButtonHoverArrow : MonoBehaviour
     public GameObject arrow;
     Image arrowImage;
     public RectTransform[] buttons;
+    public Animator canvasAnimator;
 
     [Header("Scaling Settings")]
     public float hoverScale = 1.2f;
@@ -87,6 +88,13 @@ public class ButtonHoverArrow : MonoBehaviour
 
     public void PlayGame()
     {
+        StartCoroutine(LoadGame());
+    }
+
+    IEnumerator LoadGame()
+    {
+        canvasAnimator.SetTrigger("Disappear");
+        yield return new WaitForSeconds(1f);
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }

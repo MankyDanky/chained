@@ -14205,7 +14205,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -41674,7 +41674,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -41885,7 +41885,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -56189,11 +56189,11 @@ RectTransform:
   m_Children:
   - {fileID: 333513316}
   - {fileID: 1541812060}
-  - {fileID: 280705617}
   - {fileID: 812671586}
   - {fileID: 1585579664}
   - {fileID: 1026707069}
   - {fileID: 1820925702}
+  - {fileID: 280705617}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -88673,7 +88673,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -100030,6 +100030,7 @@ MonoBehaviour:
   - {fileID: 812671586}
   - {fileID: 1026707069}
   - {fileID: 1585579664}
+  canvasAnimator: {fileID: 951479404}
   hoverScale: 1.05
   scaleSpeed: 5
 --- !u!1 &1823749157 stripped
