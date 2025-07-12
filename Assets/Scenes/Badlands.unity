@@ -68025,18 +68025,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8327047002760357459, guid: 1a8e8fc3a7f804829a52b684868a428a, type: 3}
-      propertyPath: nameText
-      value: 
-      objectReference: {fileID: 1477772368}
-    - target: {fileID: 8327047002760357459, guid: 1a8e8fc3a7f804829a52b684868a428a, type: 3}
-      propertyPath: descriptionText
-      value: 
-      objectReference: {fileID: 1934018872}
-    - target: {fileID: 8327047002760357459, guid: 1a8e8fc3a7f804829a52b684868a428a, type: 3}
-      propertyPath: descriptionPanel
-      value: 
-      objectReference: {fileID: 1333511964}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
