@@ -87,6 +87,6 @@ public class ButtonHoverArrow : MonoBehaviour
 
     public void PlayGame()
     {
-        
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
 }
