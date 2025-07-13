@@ -6,10 +6,13 @@ public class Bullet : MonoBehaviour
     [SerializeField] GameObject splashEffect;
     Rigidbody rb;
     public bool isEnemyBullet = false;
+    public float damage = 10f;
+    Pistol pistol;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        pistol = FindAnyObjectByType<Pistol>();
     }
 
     void Update()
@@ -23,7 +26,9 @@ public class Bullet : MonoBehaviour
                     Enemy enemy = hit.collider.GetComponent<Enemy>();
                     if (enemy != null)
                     {
-                        enemy.TakeDamage(10f, hit.point);
+                        enemy.TakeDamage(damage, hit.point);
+                        pistol.bulletDamageDone += damage;
+                        pistol.bulletWaveDamageDone += damage;
                     }
                 }
                 else
@@ -31,7 +36,7 @@ public class Bullet : MonoBehaviour
                     FirstPersonController player = hit.collider.GetComponent<FirstPersonController>();
                     if (player != null)
                     {
-                        player.TakeDamage(10f);
+                        player.TakeDamage(damage);
                     }
                 }
                 GameObject effect = Instantiate(destroyEffect, hit.point, Quaternion.identity);

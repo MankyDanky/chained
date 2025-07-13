@@ -112,9 +112,25 @@ public class GameManager : MonoBehaviour
     {
 
     }
-    
+
     public void StopUpgrading()
     {
         upgrading = false;
+        Pistol pistol = FindAnyObjectByType<Pistol>();
+        if (pistol.grenadeWaveDamageDone > pistol.bulletWaveDamageDone && pistol.grenadeWaveDamageDone > pistol.zagWaveDamageDone)
+        {
+            pistol.SetChainedAttack(Pistol.AttackType.Grenade);
+        }
+        else if (pistol.bulletWaveDamageDone > pistol.grenadeWaveDamageDone && pistol.bulletWaveDamageDone > pistol.zagWaveDamageDone)
+        {
+            pistol.SetChainedAttack(Pistol.AttackType.Bullet);
+        }
+        else
+        {
+            pistol.SetChainedAttack(Pistol.AttackType.Zag);
+        }
+        pistol.grenadeWaveDamageDone = 0;
+        pistol.bulletWaveDamageDone = 0;
+        pistol.zagWaveDamageDone = 0;
     }
 }

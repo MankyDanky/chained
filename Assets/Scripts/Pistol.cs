@@ -4,8 +4,12 @@ using UnityEngine;
 public class Pistol : MonoBehaviour
 {
     public enum AttackType { None, Bullet, Zag, Grenade }
-
-
+    public float bulletDamageDone = 0;
+    public float zagDamageDone = 0;
+    public float grenadeDamageDone = 0;
+    public float bulletWaveDamageDone = 0;
+    public float zagWaveDamageDone = 0;
+    public float grenadeWaveDamageDone = 0;
     public AttackType chainedAttack = AttackType.None;
     public float grenadeCooldown = 5f;
     public float grenadeTimer = 0f;
@@ -130,6 +134,8 @@ public class Pistol : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        bulletScript.damage = 10 + damageBoost;
         bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
         float scale = Random.Range(0.015f, 0.03f);
         float rotation = Random.Range(0f, 360f);

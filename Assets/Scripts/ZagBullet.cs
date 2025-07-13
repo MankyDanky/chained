@@ -13,9 +13,11 @@ public class ZagBullet : MonoBehaviour
     private HashSet<GameObject> hitEnemies = new HashSet<GameObject>();
     [SerializeField] float lifespan = 5f;
     float timeLived = 0.0f;
+    Pistol pistol;
 
     void Start()
     {
+        pistol = FindAnyObjectByType<Pistol>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -41,7 +43,9 @@ public class ZagBullet : MonoBehaviour
                 Enemy enemy = hit.collider.GetComponent<Enemy>();
                 if (enemy != null && !hitEnemies.Contains(hit.collider.gameObject))
                 {
-                    enemy.TakeDamage(damage, hit.point);
+                    enemy.TakeDamage(damage, hit.point); 
+                    pistol.zagDamageDone += damage;
+                    pistol.zagWaveDamageDone += damage;
                     GameObject effect = Instantiate(hitEffect, hit.point, Quaternion.identity);
                     Destroy(effect, 2f);
                     hitEnemies.Add(hit.collider.gameObject);

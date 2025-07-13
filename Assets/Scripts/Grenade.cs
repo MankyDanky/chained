@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-    [SerializeField] private float explosionRadius = 8f;
-    [SerializeField] private float explosionDamage = 100f;
+    [SerializeField] public float explosionRadius = 8f;
+    [SerializeField] public float explosionDamage = 100f;
     [SerializeField] private GameObject explosionEffect;
+    Pistol pistol;
 
     void Start()
     {
         Destroy(gameObject, 2f);
+        pistol = FindAnyObjectByType<Pistol>();
     }
 
     void OnDestroy()
@@ -24,6 +26,8 @@ public class Grenade : MonoBehaviour
                 Enemy enemyScript = enemy.GetComponent<Enemy>();
                 if (enemyScript != null)
                 {
+                    pistol.grenadeDamageDone += explosionDamage;
+                    pistol.grenadeWaveDamageDone += explosionDamage;
                     enemyScript.TakeDamage(explosionDamage, enemy.transform.position);
                 }
             }
