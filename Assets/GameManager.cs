@@ -14,6 +14,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject upgradeStationPrefab;
     [SerializeField] Transform upgradeStationSpawnPoint;
     [SerializeField] Upgrade[] upgrades;
+    [SerializeField] GameObject weaponCamera;
+    [SerializeField] GameObject bossPrefab;
+    [SerializeField] Vector3 bossSpawnPosition;
+    GameObject canvas;
     int secondsPassed = 0;
     public int wave = 1;
     bool upgrading = false;
@@ -38,8 +42,14 @@ public class GameManager : MonoBehaviour
                 {
                     bossing = true;
                     secondsPassed = 0;
-                    GameObject.Find("Canvas").SetActive(false);
+                    canvas.SetActive(false);
                     FirstPersonController.Instance.GetComponent<FirstPersonController>().inCutscene = true;
+                    weaponCamera.SetActive(false);
+                    yield return new WaitForSeconds(2f);
+                    weaponCamera.SetActive(true);
+                    FirstPersonController.Instance.GetComponent<FirstPersonController>().inCutscene = false;
+                    canvas.SetActive(true);
+
                 }
                 else
                 {
@@ -116,6 +126,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        canvas = GameObject.Find("Canvas");
         StartCoroutine(SpawnEnemy());
     }
 

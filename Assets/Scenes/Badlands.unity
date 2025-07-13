@@ -7672,6 +7672,11 @@ Transform:
   - {fileID: 1192275092}
   m_Father: {fileID: 948735592}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &271544479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4635872355406413332, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+  m_PrefabInstance: {fileID: 4038017385692834520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &272468253
 GameObject:
   m_ObjectHideFlags: 0
@@ -58172,6 +58177,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ad513714ed274b1091fb3064745c067, type: 2}
   - {fileID: 11400000, guid: 48f689b8375f74e57b21447b8fa32b19, type: 2}
   - {fileID: 11400000, guid: e5b51ac8e57b547ada3fefd52d7f401d, type: 2}
+  weaponCamera: {fileID: 271544479}
+  wave: 1
 --- !u!4 &1959765976
 Transform:
   m_ObjectHideFlags: 0
