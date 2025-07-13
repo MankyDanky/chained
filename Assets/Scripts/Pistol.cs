@@ -18,8 +18,8 @@ public class Pistol : MonoBehaviour
     [SerializeField] private GameObject secondaryBulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
     [SerializeField] private float bulletSpeed = 20f;
-    [SerializeField] private float fireCooldown = 0.5f;
-    [SerializeField] private float secondaryFireCooldown = 1.0f;
+    public float fireCooldown = 0.5f;
+    public float secondaryFireCooldown = 1.0f;
     [SerializeField] private GameObject muzzleFlashPrefab;
     [SerializeField] private GameObject secondaryMuzzleFlashPrefab;
     [SerializeField] private GameObject gunPivot;
@@ -38,6 +38,8 @@ public class Pistol : MonoBehaviour
     [SerializeField] Image grenadeCooldownImage;
     [SerializeField] GameObject chainedIcon;
     public float damageBoost = 0f;
+    public float zagDamageBoost = 0f;
+    public float grenadeDamageBoost = 0f;
 
 
     void Start()
@@ -152,6 +154,8 @@ public class Pistol : MonoBehaviour
     {
         GameObject bullet = Instantiate(secondaryBulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+        ZagBullet zagBulletScript = bullet.GetComponent<ZagBullet>();
+        zagBulletScript.damage = 20 + zagDamageBoost;
         bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
         Instantiate(secondaryFireSound, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
@@ -217,7 +221,8 @@ public class Pistol : MonoBehaviour
         grenadeInstance.transform.SetParent(grenadeSpawnPoint.transform);
         grenadeInstance.transform.localPosition = Vector3.zero;
         grenadeInstance.transform.localRotation = Quaternion.identity;
-
+        Grenade grenadeScript = grenadeInstance.GetComponent<Grenade>();
+        grenadeScript.explosionDamage = 100 + grenadeDamageBoost;
         grenadeInstance.GetComponent<Rigidbody>().isKinematic = true;
         grenadeInstance.GetComponent<Collider>().enabled = false;
     }

@@ -8,6 +8,6 @@ public class HealthBoostEffect : UpgradeEffect
     public override void ApplyEffect(UpgradeStation station)
     {
         FirstPersonController player = FirstPersonController.Instance.GetComponent<FirstPersonController>();
-        player.maxHealth += healthIncrease;
+        player.IncreaseHealth(healthIncrease);
     }
 }

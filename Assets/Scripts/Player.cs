@@ -317,4 +317,11 @@ public class FirstPersonController : MonoBehaviour
             Instantiate(electricFence.electricEffect, electricFence.transform.position + electricFence.transform.forward * 2.2f + Vector3.up * 1.5f, Quaternion.identity);
         }
     }
+
+    public void IncreaseHealth(float amount)
+    {
+        maxHealth += amount;
+        health += amount;
+        healthBar.UpdateHealthBar();
+    }
 }
