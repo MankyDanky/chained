@@ -6,12 +6,12 @@ public class RandomizeEmission : MonoBehaviour
 
     [SerializeField] float lowerBound = 3f;
     [SerializeField] float upperBound = 6f;
-    ParticleSystem particleSystem;
+    ParticleSystem ps;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        particleSystem = GetComponent<ParticleSystem>();
+        ps = GetComponent<ParticleSystem>();
         StartCoroutine(RandomizeEmissionCoroutine());
     }
     
@@ -21,7 +21,7 @@ public class RandomizeEmission : MonoBehaviour
         {
             float randomTime = Random.Range(lowerBound, upperBound);
             yield return new WaitForSeconds(randomTime);
-            particleSystem.Play();
+            ps.Play();
         }
     }
 }

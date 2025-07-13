@@ -15,15 +15,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform upgradeStationSpawnPoint;
     [SerializeField] Upgrade[] upgrades;
     int secondsPassed = 0;
-    int wave = 1;
+    public int wave = 1;
     bool upgrading = false;
+    bool bossing = false;
 
     IEnumerator SpawnEnemy()
     {
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            if (upgrading) continue;
+            if (upgrading || bossing) continue;
             secondsPassed++;
             if (secondsPassed % 20 == 0)
             {
@@ -33,12 +34,22 @@ public class GameManager : MonoBehaviour
                 }
                 wave++;
                 waveText.text = $"WAVE: {wave}";
-                upgrading = true;
-                secondsPassed = 0;
-                UpgradeStation upgradeStation = Instantiate(upgradeStationPrefab, upgradeStationSpawnPoint.position, upgradeStationSpawnPoint.rotation).GetComponent<UpgradeStation>();
-                upgradeStation.upgrades[0] = upgrades[Random.Range(0, upgrades.Length)];
-                upgradeStation.upgrades[1] = upgrades[Random.Range(0, upgrades.Length)];
-                upgradeStation.upgrades[2] = upgrades[Random.Range(0, upgrades.Length)];
+                if (wave == 3)
+                {
+                    bossing = true;
+                    secondsPassed = 0;
+                    GameObject.Find("Canvas").SetActive(false);
+                    FirstPersonController.Instance.GetComponent<FirstPersonController>().inCutscene = true;
+                }
+                else
+                {
+                    upgrading = true;
+                    secondsPassed = 0;
+                    UpgradeStation upgradeStation = Instantiate(upgradeStationPrefab, upgradeStationSpawnPoint.position, upgradeStationSpawnPoint.rotation).GetComponent<UpgradeStation>();
+                    upgradeStation.upgrades[0] = upgrades[Random.Range(0, upgrades.Length)];
+                    upgradeStation.upgrades[1] = upgrades[Random.Range(0, upgrades.Length)];
+                    upgradeStation.upgrades[2] = upgrades[Random.Range(0, upgrades.Length)];
+                }
             }
             else if (secondsPassed % 10 == 0)
             {

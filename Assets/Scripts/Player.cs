@@ -40,6 +40,7 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 targetGunPosition;
     Shake shake;
     public bool isDead = false;
+    public bool inCutscene = false;
 
     // For CharacterController
     [SerializeField] private Vector3 playerVelocity;
@@ -76,7 +77,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return;
+        if (isDead || inCutscene) return;
         // Check if grounded
         isGrounded = controller.isGrounded;
         if (isGrounded && playerVelocity.y < 0)
