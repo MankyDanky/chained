@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef6a477a661ee4b7a935d2418a397cc4, type: 3}
-  m_Name: BulletDamageIncrease
+  m_Name: SpeedIncrease
   m_EditorClassIdentifier: 
-  upgradeName: Damage Increase
-  description: Increases the damage of your standard bullets by 10 points.
-  upgradeHologramPrefab: {fileID: 4140631433918873246, guid: 333737ff99ba54bf09c283f6a1b768e3, type: 3}
-  upgradeEffect: {fileID: 11400000, guid: 76f32fde87b0d428883525ad31dd5489, type: 2}
+  upgradeName: Speed Boost
+  description: Increases your speed by 1 point.
+  upgradeHologramPrefab: {fileID: 5785361382184603846, guid: c5132cf82fa8447eb83c539d08e7a9a4, type: 3}
+  upgradeEffect: {fileID: 11400000, guid: 92373952462344eb0b1c71d441009ef7, type: 2}

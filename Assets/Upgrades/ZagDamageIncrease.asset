@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ZagDamageIncrease
   m_EditorClassIdentifier: 
   upgradeName: Damage Increase
-  description: Increases the damage of your Zag Shot by 10 points.
+  description: Increases the damage of your Zag Shot by 15 points.
   upgradeHologramPrefab: {fileID: 4237603897132393216, guid: f375a4bfcd553459c9a6fb57f849c833, type: 3}
-  upgradeEffect: {fileID: 11400000, guid: 76f32fde87b0d428883525ad31dd5489, type: 2}
+  upgradeEffect: {fileID: 11400000, guid: 50ce3f399d90343238d1455fc2145480, type: 2}

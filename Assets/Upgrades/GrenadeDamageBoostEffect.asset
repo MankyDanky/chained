@@ -10,6 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f23b9c7a288b149d4987a2488fb8740b, type: 3}
-  m_Name: DamageBoostEffect
+  m_Name: GrenadeDamageBoostEffect
   m_EditorClassIdentifier: 
-  damageIncrease: 10
+  damageIncrease: 25
+  attackType: 3

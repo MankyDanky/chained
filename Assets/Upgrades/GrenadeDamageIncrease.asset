@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GrenadeDamageIncrease
   m_EditorClassIdentifier: 
   upgradeName: Damage Increase
-  description: Increases the damage of your Grenade by 10 points.
+  description: Increases the damage of your Grenade by 25 points.
   upgradeHologramPrefab: {fileID: 3641994501429298794, guid: cfc8fd8ee075e443e8a04ff0199df032, type: 3}
-  upgradeEffect: {fileID: 11400000, guid: 76f32fde87b0d428883525ad31dd5489, type: 2}
+  upgradeEffect: {fileID: 11400000, guid: 73045ff1a3fa345388b3fb550ae67014, type: 2}

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef6a477a661ee4b7a935d2418a397cc4, type: 3}
-  m_Name: BulletDamageIncrease
+  m_Name: BulletCooldownReduction
   m_EditorClassIdentifier: 
-  upgradeName: Damage Increase
-  description: Increases the damage of your standard bullets by 10 points.
+  upgradeName: Cooldown Reduction
+  description: Reduces the cooldown for your standard bullets by 10%.
   upgradeHologramPrefab: {fileID: 4140631433918873246, guid: 333737ff99ba54bf09c283f6a1b768e3, type: 3}
-  upgradeEffect: {fileID: 11400000, guid: 76f32fde87b0d428883525ad31dd5489, type: 2}
+  upgradeEffect: {fileID: 11400000, guid: d929589a93162454bbb9fafac6dc2b7f, type: 2}
