@@ -15,13 +15,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform upgradeStationSpawnPoint;
     [SerializeField] Upgrade[] upgrades;
     [SerializeField] GameObject weaponCamera;
-    [SerializeField] GameObject bossPrefab;
-    [SerializeField] Vector3 bossSpawnPosition;
-    GameObject canvas;
+    [SerializeField] GameObject boss;
+    [SerializeField] GameObject[] HUDs;
+    Animator canvasAnimator;
     int secondsPassed = 0;
     public int wave = 1;
     bool upgrading = false;
     bool bossing = false;
+    [SerializeField] Transform cameraCutsceneTransform;
+    [SerializeField] GameObject electricFences;
+    [SerializeField] Transform playerCutsceneTransform;
 
     IEnumerator SpawnEnemy()
     {
@@ -40,15 +43,35 @@ public class GameManager : MonoBehaviour
                 waveText.text = $"WAVE: {wave}";
                 if (wave == 3)
                 {
+                    canvasAnimator.SetTrigger("Load");
+                    yield return new WaitForSeconds(1f);
                     bossing = true;
                     secondsPassed = 0;
-                    canvas.SetActive(false);
+                    foreach (GameObject HUD in HUDs)
+                    {
+                        HUD.SetActive(false);
+                    }
+                    FirstPersonController.Instance.position = playerCutsceneTransform.position;
+                    FirstPersonController.Instance.rotation = playerCutsceneTransform.rotation;
                     FirstPersonController.Instance.GetComponent<FirstPersonController>().inCutscene = true;
                     weaponCamera.SetActive(false);
-                    yield return new WaitForSeconds(2f);
+                    boss.SetActive(true);
+                    Vector3 originalPosition = Camera.main.transform.position;
+                    Quaternion originalRotation = Camera.main.transform.rotation;
+                    Camera.main.transform.position = cameraCutsceneTransform.position;
+                    Camera.main.transform.rotation = cameraCutsceneTransform.rotation;
+                    yield return new WaitForSeconds(3f);
+                    canvasAnimator.SetTrigger("Load");
+                    yield return new WaitForSeconds(1f);
+                    electricFences.SetActive(true);
                     weaponCamera.SetActive(true);
+                    Camera.main.transform.position = originalPosition;
+                    Camera.main.transform.rotation = originalRotation;
                     FirstPersonController.Instance.GetComponent<FirstPersonController>().inCutscene = false;
-                    canvas.SetActive(true);
+                    foreach (GameObject HUD in HUDs)
+                    {
+                        HUD.SetActive(true);
+                    }
 
                 }
                 else
@@ -126,7 +149,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        canvas = GameObject.Find("Canvas");
+        canvasAnimator = GameObject.Find("Canvas").GetComponent<Animator>();
         StartCoroutine(SpawnEnemy());
     }
 

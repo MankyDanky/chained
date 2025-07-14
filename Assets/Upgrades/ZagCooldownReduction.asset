@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Cooldown Reduction
   description: Reduces the cooldown for your Zag Shot by 10%.
-  upgradeHologramPrefab: {fileID: 4140631433918873246, guid: 333737ff99ba54bf09c283f6a1b768e3, type: 3}
+  upgradeHologramPrefab: {fileID: 4237603897132393216, guid: f375a4bfcd553459c9a6fb57f849c833, type: 3}
   upgradeEffect: {fileID: 11400000, guid: 898b21c26f87b4b6381874baf326ab55, type: 2}

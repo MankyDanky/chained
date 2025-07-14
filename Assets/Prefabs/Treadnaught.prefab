@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 8286777580089695157}
   - component: {fileID: 3253408941946134259}
   m_Layer: 8
-  m_Name: RightForward
+  m_Name: RightForwardDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3425396802326443161
 Transform:
   m_ObjectHideFlags: 0
@@ -4848,7 +4848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3888981822458574495
 Transform:
   m_ObjectHideFlags: 0
@@ -4910,7 +4910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6228936733597980779
 Transform:
   m_ObjectHideFlags: 0
@@ -4943,7 +4943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1888952018476835758
 Transform:
   m_ObjectHideFlags: 0
@@ -9776,7 +9776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4896229890456568113
 Transform:
   m_ObjectHideFlags: 0
@@ -14610,7 +14610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6468442604227757902
 Transform:
   m_ObjectHideFlags: 0
@@ -24365,7 +24365,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8301020447596400206
 Transform:
   m_ObjectHideFlags: 0
@@ -30328,6 +30328,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c7d6d74f70604f079a5cd3f307ad3f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1877396670397258591}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c7d6d74f70604f079a5cd3f307ad3f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4255535404872047906}
   m_SourcePrefab: {fileID: 100100000, guid: 1c7d6d74f70604f079a5cd3f307ad3f9, type: 3}
 --- !u!1 &1690496573417156062 stripped
 GameObject:
@@ -30375,8 +30378,17 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   moveSpeed: 0
-  spawningMaterials: []
-  spawnedMaterials: []
+  spawningMaterials:
+  - {fileID: 2100000, guid: 07ea8952a202641d58c6b96c72b45bba, type: 2}
+  - {fileID: 2100000, guid: 9d7175e716aaf4d638877bdd1b4dea71, type: 2}
+  - {fileID: 2100000, guid: 505f20f0621b04852987bb1bdff6de32, type: 2}
+  - {fileID: 2100000, guid: 28c4302cdb5bb47929d129e12f367448, type: 2}
+  spawnedMaterials:
+  - {fileID: 2100000, guid: c7e7dfb4e229e4a34a6b4b87be4636bf, type: 2}
+  - {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
+  - {fileID: 2100000, guid: 70a5c7ac751f04fc1874461c6a872c4d, type: 2}
+  - {fileID: 2100000, guid: f81cfa7e18a0d4f9791822a00f7a579b, type: 2}
+  fadeInDuration: 0.5
   stompAttackRange: 5
   stompRightSpawn: {fileID: 5228927625333713155}
   stompLeftSpawn: {fileID: 1348206881641723758}
@@ -30397,6 +30409,16 @@ MonoBehaviour:
   leftShootEffect: {fileID: 2899946139181094189}
   rightShootEffect: {fileID: 1617318685649660511}
   chargeEffect: {fileID: 5099885846210508001}
+  effects:
+  - {fileID: 3355404321241318319}
+  - {fileID: 6709916482215045919}
+  - {fileID: 623571623091143057}
+  - {fileID: 8273913934591464062}
+  - {fileID: 1281896812370573872}
+  - {fileID: 2423143415639002663}
+  - {fileID: 6038329591312077646}
+  - {fileID: 7891159381125540924}
+  - {fileID: 5951914592725598923}
   sawSound: {fileID: 6857351154530274230}
   moveSound: {fileID: 1735385567112014389}
   slamSound: {fileID: 1877396670397258591}
@@ -30762,6 +30784,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4255535404872047906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690496573417156062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &2035073985044756324 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1c7d6d74f70604f079a5cd3f307ad3f9, type: 3}
@@ -30786,6 +30826,10 @@ PrefabInstance:
     - target: {fileID: 445810950700909049, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
       propertyPath: m_Name
       value: LeftRocketShootEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 445810950700909049, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3372951551426713486, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
       propertyPath: stopAction
@@ -30850,6 +30894,11 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 9069422618855376794, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
   m_PrefabInstance: {fileID: 6188968948401377975}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6038329591312077646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 445810950700909049, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
+  m_PrefabInstance: {fileID: 6188968948401377975}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7758806156788329925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30869,6 +30918,10 @@ PrefabInstance:
     - target: {fileID: 445810950700909049, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
       propertyPath: m_Name
       value: RightRocketShootEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 445810950700909049, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3372951551426713486, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
       propertyPath: stopAction
@@ -30951,5 +31004,10 @@ ParticleSystem:
 --- !u!4 &4025031302943387223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6662822432551715730, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
+  m_PrefabInstance: {fileID: 7758806156788329925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7891159381125540924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 445810950700909049, guid: 2ba0c1eeda48046308e532855e614713, type: 3}
   m_PrefabInstance: {fileID: 7758806156788329925}
   m_PrefabAsset: {fileID: 0}

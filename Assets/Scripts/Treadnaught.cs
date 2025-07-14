@@ -23,6 +23,7 @@ public class Treadnaught : Enemy
     [SerializeField] ParticleSystem leftShootEffect;
     [SerializeField] ParticleSystem rightShootEffect;
     [SerializeField] ParticleSystem chargeEffect;
+    [SerializeField] GameObject[] effects;
     [SerializeField] AudioSource sawSound;
     [SerializeField] AudioSource moveSound;
     [SerializeField] AudioSource slamSound;
@@ -31,6 +32,10 @@ public class Treadnaught : Enemy
     {
         base.Start();
         rb = GetComponent<Rigidbody>();
+        foreach (GameObject effect in effects)
+        {
+            effect.SetActive(true);
+        }
     }
 
     public override void Attack()
@@ -40,7 +45,7 @@ public class Treadnaught : Enemy
     protected override void Update()
     {
         base.Update();
-        if (isDead) return;
+        if (isDead || fadingIn) return;
         if (charging)
         {
             base.Update();

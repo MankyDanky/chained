@@ -33,11 +33,14 @@ public abstract class Enemy : MonoBehaviour
     public float maxHealth = 100f;
     public float health;
     public float moveSpeed;
+    
 
 
     // Spawning
     [SerializeField] List<Material> spawningMaterials;
     [SerializeField] List<Material> spawnedMaterials;
+    [SerializeField] float fadeInDuration = 0.5f;
+    protected bool fadingIn = true;
 
     IEnumerator FadeIn()
     {
@@ -66,10 +69,10 @@ public abstract class Enemy : MonoBehaviour
             renderer.materials = materials;
         }
         float elapsedTime = 0f;
-        while (elapsedTime < 0.5f)
+        while (elapsedTime < fadeInDuration)
         {
             elapsedTime += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsedTime / 0.5f);
+            float t = Mathf.Clamp01(elapsedTime / fadeInDuration);
             foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
             {
                 Material[] materials = renderer.materials;
@@ -97,6 +100,7 @@ public abstract class Enemy : MonoBehaviour
             renderer.materials = materials;
         }
         this.GetComponent<Outline>().enabled = true;
+        fadingIn = false;
     }
     
 
@@ -139,7 +143,6 @@ public abstract class Enemy : MonoBehaviour
             healthBarIndicatorFill = transform.Find("HealthBar/Indicator")?.GetComponent<RectTransform>();
             healthBarCanvas = transform.Find("HealthBar")?.GetComponent<Canvas>();
             healthBarWidth = healthBarFill.sizeDelta.x;
-            StartCoroutine(FadeIn());
         }
         else
         {
@@ -153,6 +156,7 @@ public abstract class Enemy : MonoBehaviour
             healthBarFillImage = healthBarFill.GetComponent<Image>();
             healthBarIndicatorFillImage = healthBarIndicatorFill.GetComponent<Image>();
         }
+        StartCoroutine(FadeIn());
         agent = GetComponent<NavMeshAgent>();
     }
 
