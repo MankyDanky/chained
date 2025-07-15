@@ -121,7 +121,10 @@ public abstract class Enemy : MonoBehaviour
     {
         isDead = true;
         animator.SetBool("isDead", true);
-
+        if (isBoss)
+        {
+            GameObject.Find("Canvas").transform.Find("BossHealthBar")?.gameObject.SetActive(false);
+        }
         Destroy(this.gameObject, deathDelay);
 
     }

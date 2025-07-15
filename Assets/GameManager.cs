@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] Transform cameraCutsceneTransform;
     [SerializeField] GameObject electricFences;
     [SerializeField] Transform playerCutsceneTransform;
+    [SerializeField] GameObject portal;
 
     IEnumerator SpawnEnemy()
     {
@@ -72,6 +73,11 @@ public class GameManager : MonoBehaviour
                     {
                         HUD.SetActive(true);
                     }
+                    while (boss != null)
+                    {
+                        yield return new WaitForSeconds(1f);
+                    }
+                    portal.SetActive(true);
 
                 }
                 else
