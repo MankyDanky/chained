@@ -4087,6 +4087,11 @@ VisualEffect:
       m_Array: []
     m_Bool:
       m_Array: []
+--- !u!1 &371461266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7659359768124710633, guid: aaa2807cbafc6423ebee3b8563c2fc73, type: 3}
+  m_PrefabInstance: {fileID: 3477773589835596466}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &374299569
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33464,7 +33469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1959765975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33512,7 +33517,7 @@ MonoBehaviour:
   cameraCutsceneTransform: {fileID: 1081182224}
   electricFences: {fileID: 1106793012}
   playerCutsceneTransform: {fileID: 804619358}
-  portal: {fileID: 0}
+  portal: {fileID: 371461266}
 --- !u!4 &1959765976
 Transform:
   m_ObjectHideFlags: 0
@@ -36690,6 +36695,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6566164145225612648, guid: aaa2807cbafc6423ebee3b8563c2fc73, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7302430394888050827, guid: aaa2807cbafc6423ebee3b8563c2fc73, type: 3}
       propertyPath: m_LocalPosition.x
       value: 59.04
@@ -36733,6 +36742,10 @@ PrefabInstance:
     - target: {fileID: 7659359768124710633, guid: aaa2807cbafc6423ebee3b8563c2fc73, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659359768124710633, guid: aaa2807cbafc6423ebee3b8563c2fc73, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
