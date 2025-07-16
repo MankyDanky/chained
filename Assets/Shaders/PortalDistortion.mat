@@ -37,9 +37,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Amplitude: 5
+    - _Amplitude: 1
     - _Speed: 4
-    - _Strength: 30
+    - _Strength: 0
     m_Colors:
     - _Color: {r: 0, g: 0.9564199, b: 2, a: 0}
   m_BuildTextureStacks: []
