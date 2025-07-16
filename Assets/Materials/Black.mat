@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RobotTertiary
+  m_Name: Black
   m_Shader: {fileID: -6465566751694194690, guid: cd63ad8ab35dd45c7841075312f197c5, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -20,7 +20,7 @@ Material:
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: _ParallaxMap
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -129,11 +129,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
-    - _Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
+    - _BaseColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainColor: {r: 0.22885959, g: 0.8679245, b: 0.11053756, a: 0}
-    - _ShadowColor: {r: 0.24528301, g: 0.24528301, b: 0.24528301, a: 0}
+    - _MainColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0}
+    - _ShadowColor: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 0}
     - _ShadowPatternColor: {r: 2, g: 2, b: 2, a: 0}
     - _ShadowTextureTiling: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
