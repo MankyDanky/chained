@@ -10541,7 +10541,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a9b1183fc13b44b66ac66e2a3839446a, type: 2}
     - target: {fileID: 919132149155446097, guid: 8009cc410d19347f59ebfa1bae4aa7d0, type: 3}
       propertyPath: m_Name
-      value: skyburst-sentinel
+      value: SkyburstSentinel
       objectReference: {fileID: 0}
     - target: {fileID: 6745302439343835087, guid: 8009cc410d19347f59ebfa1bae4aa7d0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -10558,8 +10558,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8009cc410d19347f59ebfa1bae4aa7d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 468099425}
   m_SourcePrefab: {fileID: 100100000, guid: 8009cc410d19347f59ebfa1bae4aa7d0, type: 3}
+--- !u!1 &468099424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8009cc410d19347f59ebfa1bae4aa7d0, type: 3}
+  m_PrefabInstance: {fileID: 468099423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &468099425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468099424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56855b6583fd8480b90c5d819e184d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyEffect: {fileID: 0}
+  remains: {fileID: 0}
+  hitEffect: {fileID: 0}
+  deathDelay: 1.5
+  isBoss: 1
+  maxHealth: 100
+  health: 100
+  moveSpeed: 4
+  spawningMaterials: []
+  spawnedMaterials: []
+  fadeInDuration: 0.5
 --- !u!1 &479619302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5088886092158978633, guid: 62cc77b6b83c24fdc9dd5b07dbc507e0, type: 3}
