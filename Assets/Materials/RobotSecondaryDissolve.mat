@@ -63,7 +63,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AmbientEnvironmentMultiplier: 1
-    - _CutoffHeight: 9.52
+    - _CutoffHeight: 12.7
     - _EdgeDiffuse: 0.001
     - _EdgeDistanceAttenuation: 0.001
     - _EdgeRim: 0.001
