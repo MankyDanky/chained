@@ -5,9 +5,10 @@ public class SkyburstSentinel : Enemy
 {
     Rigidbody rb;
     bool flying = true;
-    Transform player;
     [SerializeField] ParticleSystem[] thrusterEffects;
     [SerializeField] AudioSource slamSound;
+    [SerializeField] GameObject sludgeBombPrefab;
+    [SerializeField] Transform emitterSpawnPoint;
 
     protected override void Start()
     {
@@ -32,7 +33,7 @@ public class SkyburstSentinel : Enemy
     {
         base.Update();
         if (isDead || fadingIn) return;
-        
+
         if (flying)
         {
             float distance = Vector3.Distance(new Vector3(player.position.x, transform.position.y, player.position.z), transform.position);
@@ -44,6 +45,10 @@ public class SkyburstSentinel : Enemy
             else
             {
                 rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.zero, Time.deltaTime * 5f);
+            }
+            if (Random.Range(0f, 1f) < 0.25f * Time.deltaTime)
+            {
+                Instantiate(sludgeBombPrefab, emitterSpawnPoint.position, Quaternion.identity);
             }
         }
     }

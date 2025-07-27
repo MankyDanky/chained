@@ -13,11 +13,12 @@ public class SludgeBomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Enemy")) return;
 
         if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 10f))
         {   
