@@ -60628,6 +60628,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 47623613}
     - target: {fileID: 6014056208459395457, guid: 15fec86cde5c446919cc8f8e260b08d4, type: 3}
+      propertyPath: targetYDifference
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6014056208459395457, guid: 15fec86cde5c446919cc8f8e260b08d4, type: 3}
       propertyPath: thrusterEffects.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -62161,7 +62165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8591709164317553436, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 3583
+      value: 7679
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8358060882022119278, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
