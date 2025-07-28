@@ -65,27 +65,26 @@ public class SkyburstSentinel : Enemy
         }
         else if (lasering)
         {
-            if (player.position.y > transform.position.y - 3)
+            float distance = Vector3.Distance(new Vector3(player.position.x, transform.position.y, player.position.z), transform.position);
+            if (player.position.y > transform.position.y - 0.5f)
             {
                 transform.position += Vector3.up * Time.deltaTime;
             }
             laserStartEffectInstance.transform.position = laserSpawnPoint.position;
             laserStartEffectInstance.transform.rotation = laserSpawnPoint.rotation;
-            if (Physics.Raycast(laserSpawnPoint.position, -transform.forward, out RaycastHit hit, 300f))
+            if (Physics.Raycast(laserSpawnPoint.position, laserSpawnPoint.forward * distance - new Vector3(0, laserSpawnPoint.position.y - player.position.y, 0), out RaycastHit hit, 300f))
             {
                 laserEndEffectInstance.transform.position = hit.point;
-                laserBeamEffectInstance.transform.localScale = new Vector3(5, hit.distance * 100, 5);
+                laserBeamEffectInstance.transform.localScale = new Vector3(5, hit.distance * 50, 5);
                 laserBeamEffectInstance.transform.position = laserSpawnPoint.position;
-                laserBeamEffectInstance.transform.LookAt(transform.position + transform.forward * -10f);
-                Debug.DrawLine(laserSpawnPoint.position, hit.point, Color.red, 0.1f);
-                Debug.Log($"Laser hit at {hit.point}, distance: {hit.distance}");
+                laserBeamEffectInstance.transform.rotation = transform.rotation * Quaternion.Euler(0f, 180f, 0f) * Quaternion.Euler(-90f, 0f, 0f) * Quaternion.Euler(Mathf.Atan((laserSpawnPoint.position.y - player.position.y) / distance) * Mathf.Rad2Deg, 0f, 0f);
             }
             else
             {
                 laserEndEffectInstance.transform.position = laserSpawnPoint.position - transform.forward * 300f;
                 laserBeamEffectInstance.transform.localScale = new Vector3(5, 3000, 5);
                 laserBeamEffectInstance.transform.position = laserSpawnPoint.position;
-                laserBeamEffectInstance.transform.LookAt(laserSpawnPoint.position + transform.forward * -10f);
+                laserBeamEffectInstance.transform.rotation = transform.rotation * Quaternion.Euler(0f, 180f, 0f) * Quaternion.Euler(-90f, 0f, 0f) * Quaternion.Euler(Mathf.Atan((laserSpawnPoint.position.y - player.position.y) / distance) * Mathf.Rad2Deg, 0f, 0f);
             }
             Vector3 direction = (transform.position - new Vector3(player.position.x, transform.position.y, player.position.z)).normalized;
             Quaternion targetRotation = Quaternion.LookRotation(direction);
