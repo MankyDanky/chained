@@ -22,12 +22,14 @@ public class SkyburstSentinel : Enemy
     GameObject laserStartEffectInstance;
     GameObject laserEndEffectInstance;
     GameObject laserBeamEffectInstance;
+    [SerializeField] ParticleSystem sludgeBombShootEffect;
 
     protected override void Start()
     {
         base.Start();
         rb = GetComponent<Rigidbody>();
         player = FirstPersonController.Instance;
+        sludgeBombShootEffect.gameObject.SetActive(true);
         StartCoroutine(Fly());
     }
 
@@ -56,6 +58,7 @@ public class SkyburstSentinel : Enemy
             if (lastSludgeBombTime > sludgeBombCooldown && Random.Range(0f, 1f) < 1 * Time.deltaTime)
             {
                 Instantiate(sludgeBombPrefab, emitterSpawnPoint.position, Quaternion.identity);
+                sludgeBombShootEffect.Play();
                 lastSludgeBombTime = 0f;
             }
             if (player.position.y > transform.position.y - targetYDifference)
@@ -78,6 +81,12 @@ public class SkyburstSentinel : Enemy
                 laserBeamEffectInstance.transform.localScale = new Vector3(5, hit.distance * 50, 5);
                 laserBeamEffectInstance.transform.position = laserSpawnPoint.position;
                 laserBeamEffectInstance.transform.rotation = transform.rotation * Quaternion.Euler(0f, 180f, 0f) * Quaternion.Euler(-90f, 0f, 0f) * Quaternion.Euler(Mathf.Atan((laserSpawnPoint.position.y - player.position.y) / distance) * Mathf.Rad2Deg, 0f, 0f);
+                if (hit.collider.gameObject.CompareTag("Player"))
+                {
+                    FirstPersonController playerController = hit.collider.GetComponent<FirstPersonController>();
+                    playerController.TakeDamage(20f);
+                    playerController.ApplyImpulse(transform.forward * 10f + Vector3.up * 10f);
+                }
             }
             else
             {
@@ -165,7 +174,7 @@ public class SkyburstSentinel : Enemy
         rb.useGravity = false;
         lasering = true;
 
-        yield return new WaitForSeconds(50f);
+        yield return new WaitForSeconds(7f);
 
         lasering = false;
         Destroy(laserStartEffectInstance);

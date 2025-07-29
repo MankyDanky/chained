@@ -11,12 +11,12 @@ public class DamageArea : MonoBehaviour
     float totalTimer;
     FirstPersonController playerController;
 
-    void Start()
+    protected virtual void Start()
     {
         playerController = FirstPersonController.Instance.GetComponent<FirstPersonController>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (totalTimer > damageTime) return;
         totalTimer += Time.deltaTime;
