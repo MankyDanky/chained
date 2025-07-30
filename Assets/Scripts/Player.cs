@@ -50,6 +50,7 @@ public class FirstPersonController : MonoBehaviour
 
     public bool isWalking;
     public static Transform Instance;
+    Animator gameOverScreen;
 
     // Sounds
     [SerializeField] GameObject dashSound;
@@ -73,6 +74,7 @@ public class FirstPersonController : MonoBehaviour
         gunPivotX = gunPivot.localPosition.x;
         gunPivotZ = gunPivot.localPosition.z;
         controller = GetComponent<CharacterController>();
+        gameOverScreen = GameObject.Find("/GameOverScreen").GetComponent<Animator>();
     }
 
     void Update()
@@ -298,7 +300,7 @@ public class FirstPersonController : MonoBehaviour
         colorAdjustments.colorFilter.Override(Color.white);
         depthOfField.focalLength.Override(0.1f);
         float elapsedTime = 0f;
-        while (elapsedTime < 1f)
+        while (elapsedTime < 0.8f)
         {
             elapsedTime += Time.deltaTime;
             Time.timeScale = Mathf.Lerp(1f, 0f, elapsedTime);
@@ -306,6 +308,11 @@ public class FirstPersonController : MonoBehaviour
             colorAdjustments.colorFilter.Override(Color.Lerp(Color.white, Color.gray, elapsedTime));
             yield return null;
         }
+        Time.timeScale = 0f;
+        Debug.Log("Player died");
+        yield return new WaitForSecondsRealtime(1f);
+        gameOverScreen.SetTrigger("GameOver");
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
