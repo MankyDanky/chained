@@ -5,6 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public abstract class Enemy : MonoBehaviour
@@ -131,6 +132,10 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void OnDestroy()
     {
+        if (SceneManager.GetActiveScene().isLoaded == false)
+        {
+            return;
+        }
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Instantiate(remains, transform.position, transform.rotation);
     }

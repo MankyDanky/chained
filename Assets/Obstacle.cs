@@ -17,6 +17,11 @@ public class Obstacle : MonoBehaviour
 
     void OnDestroy()
     {
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().isLoaded == false)
+        {
+            return;
+        }
         Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
+
     }
 }
