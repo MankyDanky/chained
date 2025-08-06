@@ -83498,7 +83498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3938993752144177096, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.4
+      value: 50.5
       objectReference: {fileID: 0}
     - target: {fileID: 3938993752144177096, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
       propertyPath: m_LocalPosition.y
@@ -83506,7 +83506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3938993752144177096, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 59.5
+      value: 52.7
       objectReference: {fileID: 0}
     - target: {fileID: 3938993752144177096, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
       propertyPath: m_LocalRotation.w
@@ -83545,8 +83545,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4038017385692834521}
     - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
+      propertyPath: 'HUDs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 726027385}
+    - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
+      propertyPath: 'HUDs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 437307503}
+    - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
+      propertyPath: 'HUDs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 77680531}
+    - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
+      propertyPath: 'HUDs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 424886347}
+    - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
+      propertyPath: 'HUDs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 93585234}
+    - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
+      propertyPath: 'HUDs.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1920536887}
+    - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
       propertyPath: spawnArea.m_Extent.z
-      value: 20
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
       propertyPath: upgradeStationSpawnPoint
