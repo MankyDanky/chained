@@ -6,9 +6,9 @@ A first person shooter rogue-like that allows the user to choose between three a
 ![Home Screen](<Screenshot 2025-07-12 at 11.03.44 AM.png>)
 
 
-[![Portal Video](https://www.youtube.com/watch?v=R8jm9ugP8xA&ab_channel=AadiKulsh/0.jpg)](https://www.youtube.com/watch?v=R8jm9ugP8xA&ab_channel=AadiKulsh "Portal Video")
+[![Portal Video](http://img.youtube.com/vi/R8jm9ugP8xA/0.jpg)](https://www.youtube.com/watch?v=R8jm9ugP8xA&ab_channel=AadiKulsh "Portal Video")
 
-[![Demo Video](https://www.youtube.com/watch?v=rYs39gbdunk&ab_channel=AadiKulsh/0.jpg)](https://www.youtube.com/watch?v=rYs39gbdunk&ab_channel=AadiKulsh "Demo Video")
+[![Demo Video](http://img.youtube.com/vi/rYs39gbdunk/0.jpg)](https://www.youtube.com/watch?v=rYs39gbdunk&ab_channel=AadiKulsh "Demo Video")
 
 
 # Features 
