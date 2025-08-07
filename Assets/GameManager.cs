@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
                 }
                 wave++;
                 waveText.text = $"WAVE: {wave}";
-                if (wave == 2)
+                if (wave == 3)
                 {
                     canvasAnimator.SetTrigger("Load");
                     yield return new WaitForSeconds(1f);
