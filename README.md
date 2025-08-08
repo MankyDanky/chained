@@ -5,12 +5,11 @@ A first person shooter rogue-like that allows the user to choose between three a
 # Gallery
 ![Home Screen](<Screenshot 2025-07-12 at 11.03.44 AM.png>)
 
+https://github.com/user-attachments/assets/f91ef4de-c85f-4bf3-9672-d7632c9c50a2
 
-# Videos
-[![Portal Video](http://img.youtube.com/vi/R8jm9ugP8xA/0.jpg)](https://www.youtube.com/watch?v=R8jm9ugP8xA&ab_channel=AadiKulsh "Portal Video")
+https://github.com/user-attachments/assets/8a82e03e-8e02-4187-bc29-49bf7923519a
 
-[![Demo Video](http://img.youtube.com/vi/rYs39gbdunk/0.jpg)](https://www.youtube.com/watch?v=rYs39gbdunk&ab_channel=AadiKulsh "Demo Video")
-
+https://github.com/user-attachments/assets/fb7c0713-e4ed-4905-bca1-096d9eb43e23
 
 # Features 
 - 7 unique enemies include 2 bosses, and a mini boss
