@@ -85240,6 +85240,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 387095652}
     - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
+      propertyPath: lastMap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221318343952032248, guid: bad31835837aa45c5913fb6f5b816394, type: 3}
       propertyPath: waveText
       value: 
       objectReference: {fileID: 1920536889}

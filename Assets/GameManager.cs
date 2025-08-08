@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject electricFences;
     [SerializeField] Transform playerCutsceneTransform;
     [SerializeField] GameObject portal;
+    [SerializeField] bool lastMap = false;
+    [SerializeField] int finalSceneIndex = 3;
+    public float bulletDamageDone;
+    public float zagDamageDone;
+    public float grenadeDamageDone;
 
     IEnumerator SpawnEnemy()
     {
@@ -77,8 +82,21 @@ public class GameManager : MonoBehaviour
                     {
                         yield return new WaitForSeconds(1f);
                     }
-                    portal.SetActive(true);
-
+                    Pistol pistol = FindAnyObjectByType<Pistol>();
+                    bulletDamageDone += pistol.bulletDamageDone;
+                    zagDamageDone += pistol.zagDamageDone;
+                    grenadeDamageDone += pistol.grenadeDamageDone;
+                    if (lastMap)
+                    {
+                        canvasAnimator.SetTrigger("Disappear");
+                        yield return new WaitForSeconds(1f);
+                        UnityEngine.SceneManagement.SceneManager.LoadScene(finalSceneIndex);
+                        break;
+                    }
+                    else
+                    {
+                        portal.SetActive(true);
+                    }
                 }
                 else
                 {

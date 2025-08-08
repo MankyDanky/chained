@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 63241537}
   - component: {fileID: 63241539}
   - component: {fileID: 63241538}
+  - component: {fileID: 63241540}
   m_Layer: 5
   m_Name: GrenadeDamage
   m_TagString: Untagged
@@ -682,8 +683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -201, y: 60}
-  m_SizeDelta: {x: 372.8726, y: 30}
+  m_AnchoredPosition: {x: -280.93, y: 60}
+  m_SizeDelta: {x: 532.74, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63241538
 MonoBehaviour:
@@ -784,6 +785,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63241536}
   m_CullTransparentMesh: 1
+--- !u!114 &63241540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63241536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0499bc48272404aaaab5090df772111d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageType: 2
 --- !u!1 &71082748 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 219e81da72f284ab9b770620c13aac5d, type: 3}
@@ -28751,6 +28765,7 @@ GameObject:
   - component: {fileID: 1161625100}
   - component: {fileID: 1161625102}
   - component: {fileID: 1161625101}
+  - component: {fileID: 1161625103}
   m_Layer: 5
   m_Name: PistolDamage
   m_TagString: Untagged
@@ -28774,8 +28789,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -201, y: 168}
-  m_SizeDelta: {x: 372.8726, y: 30}
+  m_AnchoredPosition: {x: -280.9323, y: 168.2}
+  m_SizeDelta: {x: 532.7372, y: 29.598}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161625101
 MonoBehaviour:
@@ -28876,6 +28891,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161625099}
   m_CullTransparentMesh: 1
+--- !u!114 &1161625103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161625099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0499bc48272404aaaab5090df772111d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageType: 0
 --- !u!1 &1165382256
 GameObject:
   m_ObjectHideFlags: 0
@@ -37231,6 +37259,7 @@ GameObject:
   - component: {fileID: 1646401624}
   - component: {fileID: 1646401626}
   - component: {fileID: 1646401625}
+  - component: {fileID: 1646401627}
   m_Layer: 5
   m_Name: ZagShotDamage
   m_TagString: Untagged
@@ -37254,8 +37283,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -201, y: 114}
-  m_SizeDelta: {x: 372.8726, y: 30}
+  m_AnchoredPosition: {x: -280.93, y: 114}
+  m_SizeDelta: {x: 532.74, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1646401625
 MonoBehaviour:
@@ -37356,6 +37385,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646401623}
   m_CullTransparentMesh: 1
+--- !u!114 &1646401627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646401623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0499bc48272404aaaab5090df772111d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageType: 1
 --- !u!4 &1692068743 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 511298103976238081, guid: ad969af6bf28f40c19021cf9b50dd292, type: 3}
