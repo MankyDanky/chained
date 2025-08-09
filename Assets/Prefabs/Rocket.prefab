@@ -84,7 +84,13 @@ PrefabInstance:
       propertyPath: CustomDataModule.vector0_1.maxCurve.m_Curve.Array.data[0].value
       value: 0.23809433
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7286055284596681496, guid: 28e72755831944365b3025761586fa41, type: 3}
+    - {fileID: 6854560431842764504, guid: 28e72755831944365b3025761586fa41, type: 3}
+    - {fileID: 6097498980156950161, guid: 28e72755831944365b3025761586fa41, type: 3}
+    - {fileID: 5664188319038851255, guid: 28e72755831944365b3025761586fa41, type: 3}
+    - {fileID: 5055829565421383558, guid: 28e72755831944365b3025761586fa41, type: 3}
+    - {fileID: 6641820387190399392, guid: 28e72755831944365b3025761586fa41, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -235,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  damage: 5
+  damage: 20
   explosionRadius: 3
   explosionEffectPrefab: {fileID: 9104511306309097508, guid: 49f557f90bc9c46dca62b2eea7d60a88, type: 3}
   destroyEffectPrefab: {fileID: 8404418762814861472, guid: 717492e3f4c0649a2b6ece6bb65ced19, type: 3}
