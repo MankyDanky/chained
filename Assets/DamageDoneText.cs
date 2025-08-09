@@ -17,6 +17,7 @@ public class DamageDoneText : MonoBehaviour
     void Start()
     {
         tmpText = GetComponent<TMP_Text>();
+        if (GameManager.Instance == null) return;
         switch (damageType)
         {
             case DamageType.Pistol:
@@ -29,11 +30,5 @@ public class DamageDoneText : MonoBehaviour
                 tmpText.text = $"GRENADE DAMAGE DONE: {GameManager.Instance.grenadeDamageDone}";
                 break;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
