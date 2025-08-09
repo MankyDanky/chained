@@ -66,7 +66,7 @@ Material:
     - _BobAmplitude: 0.02
     - _BobSpeed: 1
     - _ColorMask: 15
-    - _HologramCutoff: 0.99844563
+    - _HologramCutoff: 0.2009779
     - _HologramFlickerSpeed: 5
     - _HologramSpeed: 3
     - _Stencil: 0
