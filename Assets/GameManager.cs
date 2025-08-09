@@ -125,8 +125,6 @@ public class GameManager : MonoBehaviour
                     if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Terrain"))
                     {
                         Instantiate(prefab, hit.point, Quaternion.identity);
-                        Debug.Log($"Spawned {prefab.name} at {hit.point}");
-                        waveText.text = $"Wave: {secondsPassed / 20}";
                     }
                 }
             }
