@@ -48270,7 +48270,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9146880322507478037, guid: ed260e2c767cd496192b80b2050d4f03, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146880322507478037, guid: ed260e2c767cd496192b80b2050d4f03, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146880322507478037, guid: ed260e2c767cd496192b80b2050d4f03, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1579784836}
+    - target: {fileID: 9146880322507478037, guid: ed260e2c767cd496192b80b2050d4f03, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146880322507478037, guid: ed260e2c767cd496192b80b2050d4f03, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonHoverArrow, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9146880322507478037, guid: ed260e2c767cd496192b80b2050d4f03, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

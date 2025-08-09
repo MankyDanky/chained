@@ -91,10 +91,22 @@ public class ButtonHoverArrow : MonoBehaviour
         StartCoroutine(LoadGame());
     }
 
+    public void LoadScene(int sceneIndex)
+    {
+        StartCoroutine(LoadSceneCoroutine(sceneIndex));
+    }
+
     IEnumerator LoadGame()
     {
         canvasAnimator.SetTrigger("Disappear");
         yield return new WaitForSeconds(1f);
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
+    IEnumerator LoadSceneCoroutine(int sceneIndex)
+    {
+        canvasAnimator.SetTrigger("Disappear");
+        yield return new WaitForSeconds(1f);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
     }
 }
