@@ -10,6 +10,7 @@ public class ButtonHoverArrow : MonoBehaviour
     Image arrowImage;
     public RectTransform[] buttons;
     public Animator canvasAnimator;
+    AudioSource audioSource;
 
     [Header("Scaling Settings")]
     public float hoverScale = 1.2f;
@@ -19,6 +20,7 @@ public class ButtonHoverArrow : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         arrowImage = arrow.GetComponent<Image>();
         arrowImage.enabled = false;
 
@@ -83,16 +85,19 @@ public class ButtonHoverArrow : MonoBehaviour
 
     public void QuitGame()
     {
+        audioSource.Play();
         Application.Quit();
     }
 
     public void PlayGame()
     {
+        audioSource.Play();
         StartCoroutine(LoadGame());
     }
 
     public void LoadScene(int sceneIndex)
     {
+        audioSource.Play();
         StartCoroutine(LoadSceneCoroutine(sceneIndex));
     }
 

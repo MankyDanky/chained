@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class GameOverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-
+    AudioSource audioSource;
     float targetScale = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +32,7 @@ public class GameOverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     
     public void LoadScene(int sceneIndex)
     {
+        audioSource.Play();
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
     }
