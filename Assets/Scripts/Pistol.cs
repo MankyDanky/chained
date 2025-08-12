@@ -40,6 +40,7 @@ public class Pistol : MonoBehaviour
     public float damageBoost = 0f;
     public float zagDamageBoost = 0f;
     public float grenadeDamageBoost = 0f;
+    [SerializeField] GameObject errorSoundEffect;
 
 
     void Start()
@@ -92,9 +93,18 @@ public class Pistol : MonoBehaviour
         {
             Fire();
         }
+        else if (Input.GetMouseButtonDown(0) && chainedAttack == AttackType.Bullet)
+        {
+            Instantiate(errorSoundEffect, transform.position, Quaternion.identity);
+        }
+
         if (Input.GetMouseButtonDown(1) && lastSecondaryFireTime >= secondaryFireCooldown && chainedAttack != AttackType.Zag)
         {
             FireSecondary();
+        }
+        else if (Input.GetMouseButtonDown(1) && chainedAttack == AttackType.Zag)
+        {
+            Instantiate(errorSoundEffect, transform.position, Quaternion.identity);
         }
 
         if (Input.GetKeyDown(KeyCode.G) && canThrowGrenade && chainedAttack != AttackType.Grenade)
@@ -103,6 +113,10 @@ public class Pistol : MonoBehaviour
             animator.SetTrigger("grenade");
             grenadeTimer = 0f;
             canThrowGrenade = false;
+        }
+        else if (Input.GetKeyDown(KeyCode.G) && chainedAttack == AttackType.Grenade)
+        {
+            Instantiate(errorSoundEffect, transform.position, Quaternion.identity);
         }
 
         if (chainedAttack != AttackType.Grenade)

@@ -35893,6 +35893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandSound
       objectReference: {fileID: 0}
+    - target: {fileID: 8161490854728125409, guid: 6ac9d7f1b5ce24d4ca991a6621b760b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8285634954521664293, guid: 6ac9d7f1b5ce24d4ca991a6621b760b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 60.83162
@@ -37096,6 +37100,10 @@ PrefabInstance:
       propertyPath: chainedIcon
       value: 
       objectReference: {fileID: 1458724842}
+    - target: {fileID: 4085174475167312581, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: errorSoundEffect
+      value: 
+      objectReference: {fileID: 3022213256104055418, guid: 0b5b875497c394709a9c63d85c39b9fa, type: 3}
     - target: {fileID: 4085174475167312581, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: fireCooldownImage
       value: 

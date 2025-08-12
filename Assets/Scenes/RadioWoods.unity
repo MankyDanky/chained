@@ -122862,6 +122862,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 720305466}
     - target: {fileID: 4085174475167312581, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
+      propertyPath: errorSoundEffect
+      value: 
+      objectReference: {fileID: 3022213256104055418, guid: 0b5b875497c394709a9c63d85c39b9fa, type: 3}
+    - target: {fileID: 4085174475167312581, guid: 00eb15989e5ed4165b24a00ea3237951, type: 3}
       propertyPath: fireCooldownImage
       value: 
       objectReference: {fileID: 1765209925}
