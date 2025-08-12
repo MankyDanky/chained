@@ -164,8 +164,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Multiple instances of GameManager detected. Destroying the new instance.");
-            Destroy(gameObject);
+            bulletDamageDone = Instance.bulletDamageDone;
+            zagDamageDone = Instance.zagDamageDone;
+            grenadeDamageDone = Instance.grenadeDamageDone;
+            Destroy(Instance.gameObject);
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
