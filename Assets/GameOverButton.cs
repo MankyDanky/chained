@@ -34,6 +34,7 @@ public class GameOverButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         audioSource.Play();
         Time.timeScale = 1f;
+        Destroy(GameManager.Instance);
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
     }
 }
