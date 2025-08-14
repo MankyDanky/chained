@@ -6,7 +6,9 @@ public class SkyburstSentinel : Enemy
     Rigidbody rb;
     bool flying = true;
     [SerializeField] ParticleSystem[] thrusterEffects;
+    [SerializeField] AudioSource thrusterSoundEffect;
     [SerializeField] AudioSource slamSound;
+    [SerializeField] AudioSource laserSound;
     [SerializeField] GameObject sludgeBombPrefab;
     [SerializeField] Transform emitterSpawnPoint;
     [SerializeField] float targetYDifference = 6f;
@@ -152,6 +154,7 @@ public class SkyburstSentinel : Enemy
             ps.gameObject.SetActive(true);
             ps.Play();
         }
+        thrusterSoundEffect.Play();
         yield return new WaitForSeconds(10f);
         flying = false;
         rb.useGravity = true;
@@ -159,6 +162,7 @@ public class SkyburstSentinel : Enemy
         {
             ps.Stop();
         }
+        thrusterSoundEffect.Stop();
         StartCoroutine(Slam());
     }
 
@@ -180,6 +184,8 @@ public class SkyburstSentinel : Enemy
         {
             ps.Play();
         }
+        laserSound.Play();
+        thrusterSoundEffect.Play();
         laserStartEffectInstance = Instantiate(laserStartEffect, laserSpawnPoint.position, Quaternion.identity);
         laserEndEffectInstance = Instantiate(laserEndEffect, laserSpawnPoint.position + Vector3.up * 10f, Quaternion.identity);
         laserBeamEffectInstance = Instantiate(laserBeamEffect, laserSpawnPoint.position, Quaternion.identity);
@@ -189,6 +195,7 @@ public class SkyburstSentinel : Enemy
         yield return new WaitForSeconds(7f);
 
         lasering = false;
+        laserSound.Stop();
         Destroy(laserStartEffectInstance);
         Destroy(laserEndEffectInstance);
         Destroy(laserBeamEffectInstance);
