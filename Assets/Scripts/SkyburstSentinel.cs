@@ -104,6 +104,18 @@ public class SkyburstSentinel : Enemy
 
     public override void Die()
     {
+        if (laserBeamEffectInstance != null)
+        {
+            Destroy(laserBeamEffectInstance);
+        }
+        if (laserStartEffectInstance != null)
+        {
+            Destroy(laserStartEffectInstance);
+        }
+        if (laserEndEffectInstance != null)
+        {
+            Destroy(laserEndEffectInstance);
+        }
         isDead = true;
         base.Die();
     }

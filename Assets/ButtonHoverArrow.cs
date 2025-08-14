@@ -20,6 +20,8 @@ public class ButtonHoverArrow : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         audioSource = GetComponent<AudioSource>();
         arrowImage = arrow.GetComponent<Image>();
         arrowImage.enabled = false;
