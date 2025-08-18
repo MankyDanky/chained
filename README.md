@@ -16,6 +16,3 @@ https://github.com/user-attachments/assets/fb7c0713-e4ed-4905-bca1-096d9eb43e23
 - 3 weapon abilities
 - 2 unique maps
 
-# To Do
-- Victory screen
-- More SFX for various stuff
